@@ -149,7 +149,7 @@ export function MatchView(props: MatchViewProps) {
     try {
       const r = await api<{ picks: string[] }>("/api/picks", { key, picked });
       setPicks(r.picks);
-      refreshState().catch(() => {}); // picks steer what Saathi brings up
+      refreshState().catch(() => {}); // picks steer what Buzzer brings up
     } catch (e) {
       setPicks(before);
       setPickError((e as Error).message);
@@ -333,11 +333,11 @@ export function MatchView(props: MatchViewProps) {
   }
 
   const statusLabel: Record<ListenStatus, string> = {
-    idle: "Press play — Saathi listens to the commentary",
+    idle: "Press play — Buzzer listens to the commentary",
     listening: "Listening to the commentary",
     fallback: "Using saved commentary",
     unsupported: "Audio capture isn't supported in this browser",
-    off: "Listening is off — Saathi only looks when you ask",
+    off: "Listening is off — Buzzer only looks when you ask",
   };
   function toggleListening() {
     if (listenEnabled) {
@@ -380,7 +380,7 @@ export function MatchView(props: MatchViewProps) {
               />
               {bubble && (
                 <div className="anim-fade-in absolute inset-x-2 bottom-12 rounded-xl border border-gold/50 bg-black/85 p-2.5 text-[12.5px] leading-snug backdrop-blur">
-                  <span className="mr-1 font-semibold text-gold">Saathi:</span>
+                  <span className="mr-1 font-semibold text-gold">Buzzer:</span>
                   {bubble}
                 </div>
               )}
@@ -460,7 +460,7 @@ export function MatchView(props: MatchViewProps) {
                 </button>
               </form>
               <p className="mt-2 text-[11px] leading-relaxed text-muted">
-                Saathi pauses the match and looks at the last few seconds only when you ask.
+                Buzzer pauses the match and looks at the last few seconds only when you ask.
               </p>
             </div>
           </div>
@@ -470,7 +470,7 @@ export function MatchView(props: MatchViewProps) {
             <p className="mt-1 text-[12px] leading-relaxed text-muted">
               {props.video
                 ? `Add the clip at public${props.video} to enable the watch-along.`
-                : "Saathi can still tell you what to watch for — tap a player below."}
+                : "Buzzer can still tell you what to watch for — tap a player below."}
             </p>
           </div>
         )}

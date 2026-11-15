@@ -1,4 +1,4 @@
-# Saathi — a personal AI sports friend (Dream11-inspired prototype)
+# Buzzer — a personal AI sports friend (Dream11-inspired prototype)
 
 A friend inside a fantasy-sports app that learns what you already care about and pulls you into the wider sport:
 grounded stories, rivalries and history, explained at your level, with memory that evolves as you do.
@@ -8,7 +8,7 @@ grounded stories, rivalries and history, explained at your level, with memory th
 ## What it does
 - **Friend on every screen** (floating button): natural chat, onboarding, explanations adapted to your knowledge level.
 - **Excited, grounded stories**: code retrieves the hand-checked facts, a research step searches the web for more (labelled "found on the web"), and the storyteller writes from both. A fact check rejects any number not in a cited fact. Every story shows its sources and ends with "Go deeper" threads. Research is cached for everyone for 6 hours; about 2 cents per new topic. `STORY_RESEARCH=0` turns it off.
-- **Evolving memory**: stated vs inferred, evidence counts, decay, corrections. Visible and editable on the "What Saathi knows" page. The knowledge level rises as you learn concepts, and your fantasy picks shape what Saathi brings up.
+- **Evolving memory**: stated vs inferred, evidence counts, decay, corrections. Visible and editable on the "What Buzzer knows" page. The knowledge level rises as you learn concepts, and your fantasy picks shape what Buzzer brings up.
 - **Proactive discovery**: code scores the frontier of your interests (rivals, teammates…) and brings up one thing per surface per session. Suggestion chips are chosen the same way, from your memory and the page you are on.
 - **Answers beyond the fact sheet**: the IPL fact sheet is verified and shown with sources. For anything else (other sports, other matches, latest news) the friend does a web lookup, labels the answer "From the web" and links its sources. About 1.5–3 cents and 5–9 seconds per lookup; limited to 10 per user per 10 minutes. `WEB_SEARCH=0` turns it off, and then it says honestly that it can't check.
 - **Watch-along**: plays a real match clip, transcribes the commentary audio continuously, comments at moments that matter to you, and — only when you ask "Why did this happen?" — looks at 3–4 frames from the last ~8 seconds.

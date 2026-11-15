@@ -76,7 +76,7 @@ export function PlayerSheet({ player, onClose }: { player: SheetPlayer; onClose:
           }}
           className="mt-3 w-full rounded-xl py-3 text-sm font-medium text-brand-2"
         >
-          Ask Saathi about {player.name.split(" ")[0]}
+          Ask Buzzer about {player.name.split(" ")[0]}
         </button>
       </section>
     </div>

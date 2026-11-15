@@ -42,7 +42,7 @@ export function MemoryView() {
   }, []);
 
   useEffect(() => {
-    setCtx({ surface: "memory", label: "What Saathi knows about the fan", entityIds: [] });
+    setCtx({ surface: "memory", label: "What Buzzer knows about the fan", entityIds: [] });
   }, [setCtx]);
 
   useEffect(() => {
@@ -77,7 +77,7 @@ export function MemoryView() {
 
   return (
     <main className="px-4 pb-6 pt-5">
-      <h1 className="text-xl font-bold">What Saathi knows about you</h1>
+      <h1 className="text-xl font-bold">What Buzzer knows about you</h1>
       <p className="mt-1 text-[13px] leading-relaxed text-muted">
         Everything is here, marked as <b className="text-fg">told</b> or <b className="text-fg">noticed</b>. Delete anything, or tell me when I&apos;ve got it wrong.
       </p>
@@ -88,7 +88,7 @@ export function MemoryView() {
       {mems && picks.length === 0 && mems.filter((m) => m.status !== "corrected").length === 0 && (
         <div className="mt-5 rounded-2xl border border-dashed border-line p-6 text-center">
           <p className="text-sm font-medium">Nothing yet</p>
-          <p className="mt-1 text-[12px] text-muted">Chat with Saathi or open a story and it will start learning what you like.</p>
+          <p className="mt-1 text-[12px] text-muted">Chat with Buzzer or open a story and it will start learning what you like.</p>
         </div>
       )}
 

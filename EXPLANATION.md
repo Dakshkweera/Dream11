@@ -6,7 +6,7 @@
 
 **Hypothesis.** If an AI friend starts from what a fan already cares about, such as a fantasy pick, and leads them outward to rivals, teammates and history, their interest widens and they follow more.
 
-**Solution.** Saathi is a personal sports friend inside a Dream11-style app. It surfaces one relevant thing at a time, not a feed. An excited storyteller writes from checked facts and live web research, with sources and "go deeper" threads. During a real match clip (Olympic basketball final) it listens to the commentary, and when asked "why did this happen?" it looks at the last few seconds.
+**Solution.** Buzzer is a personal sports friend inside a Dream11-style app. It surfaces one relevant thing at a time, not a feed. An excited storyteller writes from checked facts and live web research, with sources and "go deeper" threads. During a real match clip (Olympic basketball final) it listens to the commentary, and when asked "why did this happen?" it looks at the last few seconds.
 
 **Design.** The model writes; code decides what to surface, how memory merges and what counts as grounded. Memory separates what fans said from what it noticed, fades, and is editable. [FINDING]
 

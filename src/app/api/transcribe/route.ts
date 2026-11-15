@@ -5,7 +5,7 @@ import { correctNames } from "@/lib/match/names";
 
 export const maxDuration = 60;
 
-/** Receives ~10s audio chunks (multipart: audio, matchId) and returns commentary text. */
+/** Receives short audio (multipart: audio, optional matchId) and returns text: commentary chunks, or a fan speaking to the friend. */
 export const POST = route(null, async ({ req }) => {
   const form = await req.formData();
   const audio = form.get("audio");
@@ -16,6 +16,8 @@ export const POST = route(null, async ({ req }) => {
   const match = getMatch(matchId);
   // Biasing the model with the squad list improves player-name spelling.
   const prompt = match ? `${match.sport} commentary. Players: ${squadNames(match).join(", ")}.` : undefined;
-  const t = await transcribe(await audio.arrayBuffer(), "webm", { prompt });
+  // Chrome records webm, Safari records mp4; tell the model which one this is.
+  const format = /mp4|aac/.test(audio.type) ? "mp4" : /ogg/.test(audio.type) ? "ogg" : "webm";
+  const t = await transcribe(await audio.arrayBuffer(), format, { prompt });
   return { text: match ? correctNames(t.text, squadNames(match)) : t.text };
 }, { max: 60 });

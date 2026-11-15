@@ -53,7 +53,7 @@ export function CompareCard() {
   return (
     <section className="mt-8">
       <h2 className="text-sm font-semibold">What a new fan sees vs. you</h2>
-      <p className="mb-2 text-[11px] text-muted">The same screen, before and after Saathi has learned about you.</p>
+      <p className="mb-2 text-[11px] text-muted">The same screen, before and after Buzzer has learned about you.</p>
       <div className="grid grid-cols-2 gap-2">
         {col("A new fan", data.newFan, false)}
         {col("You", data.you, true)}

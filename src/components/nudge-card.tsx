@@ -52,7 +52,7 @@ export function NudgeCard({
       <div className="flex items-start gap-3">
         <span className="brand-gradient mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm">🏏</span>
         <div className="min-w-0 flex-1">
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-2">Saathi noticed</p>
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-2">Buzzer noticed</p>
           <p className={`mt-1 leading-snug ${compact ? "text-[13px]" : "text-[15px]"}`}>{nudge.hook}</p>
           <div className="mt-3 flex items-center gap-2">
             <button

@@ -40,3 +40,34 @@ export function browserSpeak(text: string) {
   u.rate = 1.02;
   window.speechSynthesis.speak(u);
 }
+
+let playing: HTMLAudioElement | null = null;
+
+/** Stop anything the friend is currently saying. */
+export function stopSpeaking() {
+  playing?.pause();
+  playing = null;
+  if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
+}
+
+/** Say something out loud with the real voice; fall back to the browser's voice if that fails. */
+export async function speakAloud(text: string): Promise<void> {
+  stopSpeaking();
+  try {
+    const res = await fetch("/api/tts", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text: text.slice(0, 1200) }) });
+    if (!res.ok) throw new Error("tts");
+    const url = URL.createObjectURL(await res.blob());
+    const audio = new Audio(url);
+    audio.onended = () => URL.revokeObjectURL(url);
+    playing = audio;
+    await audio.play();
+  } catch {
+    browserSpeak(text);
+  }
+}
+
+/** The best audio format this browser can record, or "" to let it choose. */
+export function recorderMime(): string {
+  if (typeof MediaRecorder === "undefined") return "";
+  return ["audio/webm;codecs=opus", "audio/webm", "audio/mp4", "audio/ogg;codecs=opus"].find((t) => MediaRecorder.isTypeSupported(t)) ?? "";
+}

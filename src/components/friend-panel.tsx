@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { api } from "@/lib/client";
+import { api, recorderMime, speakAloud, stopSpeaking } from "@/lib/client";
 import { useFriend } from "./friend-provider";
 import { ListenButton, StoryCard } from "./story-card";
 
@@ -89,7 +89,7 @@ function Onboarding() {
   return (
     <div className="anim-fade-in space-y-4 p-4">
       <div className="rounded-2xl border border-line bg-surface-2 p-4">
-        <p className="text-sm font-semibold">Hey, I&apos;m Saathi 👋</p>
+        <p className="text-sm font-semibold">Hey, I&apos;m Buzzer 👋</p>
         <p className="mt-1 text-[13px] leading-relaxed text-muted">
           {step === 0
             ? "I'm the friend who's watched a lot of sport and loves telling the stories behind it. First — which sports are you into?"
@@ -206,12 +206,97 @@ function Onboarding() {
 }
 
 
+type Mic = "idle" | "recording" | "transcribing";
+
+/** Tap to start talking, tap again to stop (it also stops by itself after 30 s). The words go to the speech model. */
+function useVoiceInput(onText: (t: string) => void, onProblem: (m: string) => void) {
+  const [mic, setMic] = useState<Mic>("idle");
+  const rec = useRef<MediaRecorder | null>(null);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const supported = typeof navigator !== "undefined" && !!navigator.mediaDevices?.getUserMedia && typeof MediaRecorder !== "undefined";
+
+  const stop = () => {
+    if (timer.current) clearTimeout(timer.current);
+    if (rec.current && rec.current.state !== "inactive") rec.current.stop();
+  };
+
+  async function start() {
+    stopSpeaking(); // don't talk over the fan
+    let stream: MediaStream;
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    } catch {
+      onProblem("I can't hear you — allow the microphone for this site and try again.");
+      return;
+    }
+    const mime = recorderMime();
+    const r = new MediaRecorder(stream, mime ? { mimeType: mime } : undefined);
+    const chunks: Blob[] = [];
+    r.ondataavailable = (e) => e.data.size && chunks.push(e.data);
+    r.onstop = async () => {
+      stream.getTracks().forEach((t) => t.stop());
+      const blob = new Blob(chunks, { type: r.mimeType || mime || "audio/webm" });
+      if (blob.size < 2000) {
+        setMic("idle");
+        onProblem("I didn't catch anything — tap the mic and try again.");
+        return;
+      }
+      setMic("transcribing");
+      try {
+        const form = new FormData();
+        form.append("audio", blob, "speech");
+        const res = await fetch("/api/transcribe", { method: "POST", body: form });
+        const data = (await res.json()) as { text?: string; error?: string };
+        if (!res.ok) throw new Error(data.error ?? "failed");
+        if (data.text?.trim()) onText(data.text.trim());
+        else onProblem("I didn't catch that — try again a bit closer to the mic.");
+      } catch {
+        onProblem("Couldn't turn that into text just now. You can type it instead.");
+      }
+      setMic("idle");
+    };
+    rec.current = r;
+    r.start();
+    setMic("recording");
+    timer.current = setTimeout(stop, 30_000);
+  }
+
+  return { mic, supported, toggle: () => (mic === "recording" ? stop() : mic === "idle" ? start() : undefined) };
+}
+
 export function FriendPanel() {
   const { open, setOpen, messages, busy, send, state, toast, ctx, epoch } = useFriend();
   const [text, setText] = useState("");
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const ctxKey = JSON.stringify({ s: ctx.surface, l: ctx.label, e: ctx.entityIds });
   const endRef = useRef<HTMLDivElement>(null);
+  const [voiceReplies, setVoiceReplies] = useState(false);
+  const [micNote, setMicNote] = useState("");
+  const spoken = useRef<string | null>(null);
+
+  // Talking to the friend switches on spoken replies, so it feels like a conversation.
+  const voice = useVoiceInput(
+    (t) => {
+      setMicNote("");
+      setVoiceReplies(true);
+      if (!busy) send(t);
+    },
+    setMicNote,
+  );
+
+  // Read each new reply aloud once it has finished arriving.
+  useEffect(() => {
+    if (!voiceReplies || busy) return;
+    const last = messages[messages.length - 1];
+    if (!last || last.role !== "assistant" || last.pending || spoken.current === last.id) return;
+    spoken.current = last.id;
+    const line = last.story ? `${last.story.title}. ${last.story.body}` : last.text;
+    if (line.trim()) void speakAloud(line);
+  }, [messages, busy, voiceReplies]);
+
+  useEffect(() => {
+    if (!open) stopSpeaking();
+  }, [open]);
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
@@ -257,10 +342,10 @@ export function FriendPanel() {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          aria-label="Open Saathi, your sports friend"
+          aria-label="Open Buzzer, your sports friend"
           className="brand-gradient fixed bottom-20 right-[max(16px,calc(50vw-204px))] z-30 flex h-14 items-center gap-2 rounded-full px-4 text-sm font-semibold text-white shadow-lg shadow-brand/30"
         >
-          <span aria-hidden className="text-lg">💬</span> Saathi
+          <span aria-hidden className="text-lg">💬</span> Buzzer
         </button>
       )}
 
@@ -268,23 +353,36 @@ export function FriendPanel() {
         <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/60" onClick={() => setOpen(false)}>
           <section
             role="dialog"
-            aria-label="Saathi, your sports friend"
+            aria-label="Buzzer, your sports friend"
             onClick={(e) => e.stopPropagation()}
             className="anim-slide-up flex h-[88dvh] w-full max-w-[440px] flex-col rounded-t-3xl border border-line bg-bg"
           >
             <header className="flex items-center justify-between border-b border-line px-4 py-3">
               <div className="flex items-center gap-2.5">
-                <span className="brand-gradient flex h-8 w-8 items-center justify-center rounded-full text-sm">🏏</span>
+                <span className="brand-gradient flex h-8 w-8 items-center justify-center rounded-full text-sm">🏅</span>
                 <div>
-                  <p className="text-sm font-semibold leading-none">Saathi</p>
+                  <p className="text-sm font-semibold leading-none">Buzzer</p>
                   <p className="mt-1 text-[11px] leading-none text-muted">
                     {state?.onboarded ? `Your sports friend · ${state.level} level` : "Your sports friend"}
                   </p>
                 </div>
               </div>
-              <button onClick={() => setOpen(false)} className="rounded-full p-2 text-muted hover:text-fg" aria-label="Close">
-                ✕
-              </button>
+              <div className="flex items-center gap-1">
+                <button
+                  onClick={() => {
+                    if (voiceReplies) stopSpeaking();
+                    setVoiceReplies((v) => !v);
+                  }}
+                  aria-pressed={voiceReplies}
+                  aria-label="Spoken replies"
+                  className={`rounded-full border px-2.5 py-1 text-[11px] ${voiceReplies ? "border-brand bg-brand/15 text-fg" : "border-line text-muted"}`}
+                >
+                  {voiceReplies ? "🔊 Voice on" : "🔈 Voice off"}
+                </button>
+                <button onClick={() => setOpen(false)} className="rounded-full p-2 text-muted hover:text-fg" aria-label="Close">
+                  ✕
+                </button>
+              </div>
             </header>
 
             <div className="flex-1 overflow-y-auto">
@@ -293,7 +391,7 @@ export function FriendPanel() {
               ) : (
                 <div className="space-y-3 p-4">
                   {messages.length === 0 && (
-                    <p className="py-6 text-center text-sm text-muted">Ask me anything about cricket — or just say hi.</p>
+                    <p className="py-6 text-center text-sm text-muted">Ask me anything about sport — or just say hi. Tap the mic to talk.</p>
                   )}
                   {messages.map((m) => (
                     <div key={m.id} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
@@ -303,7 +401,7 @@ export function FriendPanel() {
                           <p className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-brand-2">What just happened</p>
                         )}
                         {m.pending ? (
-                          <div className="inline-flex items-center gap-2 rounded-2xl bg-surface-2 px-4 py-3" aria-label={m.label ?? "Saathi is thinking"}>
+                          <div className="inline-flex items-center gap-2 rounded-2xl bg-surface-2 px-4 py-3" aria-label={m.label ?? "Buzzer is thinking"}>
                             <span className="inline-flex gap-1">
                               <span className="dot h-1.5 w-1.5 rounded-full bg-muted" />
                               <span className="dot h-1.5 w-1.5 rounded-full bg-muted" />
@@ -370,6 +468,11 @@ export function FriendPanel() {
                     ))}
                   </div>
                 )}
+                {(voice.mic !== "idle" || micNote) && (
+                  <p role="status" className="mb-2 text-center text-[12px] text-muted">
+                    {voice.mic === "recording" ? "🎙️ Listening… tap ⏹ when you're done" : voice.mic === "transcribing" ? "Turning your voice into text…" : micNote}
+                  </p>
+                )}
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
@@ -377,11 +480,24 @@ export function FriendPanel() {
                   }}
                   className="flex gap-2"
                 >
+                  {voice.supported && (
+                    <button
+                      type="button"
+                      onClick={voice.toggle}
+                      disabled={voice.mic === "transcribing" || (busy && voice.mic === "idle")}
+                      aria-label={voice.mic === "recording" ? "Stop and send" : "Talk to Buzzer"}
+                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border text-base disabled:opacity-40 ${
+                        voice.mic === "recording" ? "animate-pulse border-brand bg-brand text-white" : "border-line text-muted hover:text-fg"
+                      }`}
+                    >
+                      {voice.mic === "recording" ? "⏹" : voice.mic === "transcribing" ? "…" : "🎙️"}
+                    </button>
+                  )}
                   <input
                     value={text}
                     onChange={(e) => setText(e.target.value)}
-                    placeholder="Ask Saathi anything…"
-                    aria-label="Message Saathi"
+                    placeholder="Ask Buzzer anything…"
+                    aria-label="Message Buzzer"
                     maxLength={1500}
                     className="min-w-0 flex-1 rounded-full border border-line bg-surface px-4 py-2.5 text-sm placeholder:text-muted"
                   />

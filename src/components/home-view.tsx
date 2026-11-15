@@ -27,7 +27,7 @@ export function HomeView({ matches }: { matches: MatchCard[] }) {
         {state && !state.onboarded ? (
           <div className="rounded-2xl border border-brand/40 bg-gradient-to-br from-brand/15 to-surface p-4">
             <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-2">New</p>
-            <h2 className="mt-1 text-[17px] font-semibold leading-snug">Meet Saathi, your sports friend</h2>
+            <h2 className="mt-1 text-[17px] font-semibold leading-snug">Meet Buzzer, your sports friend</h2>
             <p className="mt-1 text-[13px] leading-relaxed text-muted">
               Tell it who you follow. It learns what you care about and shows you the stories, rivalries and history behind them.
             </p>

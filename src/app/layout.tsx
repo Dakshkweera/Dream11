@@ -8,7 +8,7 @@ import { FriendProvider } from "@/components/friend-provider";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Saathi — your sports friend",
+  title: "Buzzer — your sports friend",
   description: "A personal AI sports friend that learns what you care about and shows you the stories behind it.",
 };
 
