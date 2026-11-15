@@ -4,7 +4,8 @@ The watch-along plays a clip from this folder. It must be served from the app it
 
 | File | Match | Search YouTube for |
 |---|---|---|
-| **`clip.mp4`** (main) | IPL 2026 final, RCB vs Gujarat Titans (RCB won by 5 wickets; Kohli 75* off 42, Player of the Match) | `RCB vs GT IPL 2026 final highlights` |
+| **`clip-basketball.mp4`** (bundled demo) | Paris 2024 Olympic final, USA 98-87 France (Curry 24 points, the "Golden Dagger" three) | `USA vs France Paris 2024 Olympic final highlights` |
+| `clip.mp4` (optional) | IPL 2026 final, RCB vs Gujarat Titans (RCB won by 5 wickets; Kohli 75* off 42, Player of the Match) | `RCB vs GT IPL 2026 final highlights` |
 | `clip-2025.mp4` (optional) | IPL 2025 final, RCB vs Punjab Kings (RCB won by 6 runs; first title after 18 years) | `RCB vs PBKS IPL 2025 final highlights` |
 
 Add one or both. A match without its file shows "clip not found" and everything else still works.
