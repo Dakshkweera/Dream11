@@ -46,5 +46,3 @@ next-env.d.ts
 # local dev store
 .data/
 
-# match clips (broadcast footage, not ours to publish)
-public/match/*.mp4

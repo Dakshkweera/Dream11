@@ -30,7 +30,7 @@ npm run db:check   # proves storage works end to end on your real database (7 ch
 ```
 
 ## Video size
-The bundled demo clip (`clip-basketball.mp4`, Paris 2024 Olympic final highlights, ~33 MB) is broadcast footage you don't own: use it for the demo only, don't publish the repo with it (it is in `.gitignore`), and be ready to swap it for a clip you have rights to.
+The bundled demo clip (`clip-basketball.mp4`, Paris 2024 Olympic final highlights, ~33 MB) is broadcast footage you don't own: use it for the demo only, it is committed so the deployed site can play it, and be ready to swap it for a clip you have rights to.
 
 Vercel limits deployed file size. Keep `clip.mp4` under ~100 MB (a 5-10 minute 720p clip is usually 30-80 MB). If it's larger, host it on Vercel Blob or similar and set `video` in `data/matches.json` to the URL — but the video must be **same-origin or CORS-enabled** or the browser will refuse to capture its audio and frames.
 
