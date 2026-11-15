@@ -1,0 +1,789 @@
+[
+  {
+    "from": "player:virat-kohli",
+    "type": "plays_for",
+    "to": "team:rcb"
+  },
+  {
+    "from": "player:virat-kohli",
+    "type": "captained",
+    "to": "team:rcb",
+    "note": "2013 to 2021"
+  },
+  {
+    "from": "player:ms-dhoni",
+    "type": "plays_for",
+    "to": "team:csk"
+  },
+  {
+    "from": "player:ms-dhoni",
+    "type": "captained",
+    "to": "team:csk"
+  },
+  {
+    "from": "player:ravindra-jadeja",
+    "type": "plays_for",
+    "to": "team:csk",
+    "note": "since the 2012 auction"
+  },
+  {
+    "from": "player:rohit-sharma",
+    "type": "plays_for",
+    "to": "team:mi"
+  },
+  {
+    "from": "player:rohit-sharma",
+    "type": "captained",
+    "to": "team:mi"
+  },
+  {
+    "from": "player:jasprit-bumrah",
+    "type": "plays_for",
+    "to": "team:mi"
+  },
+  {
+    "from": "player:suryakumar-yadav",
+    "type": "plays_for",
+    "to": "team:mi"
+  },
+  {
+    "from": "player:suryakumar-yadav",
+    "type": "played_for",
+    "to": "team:kkr",
+    "note": "2014 to 2017"
+  },
+  {
+    "from": "player:sunil-narine",
+    "type": "plays_for",
+    "to": "team:kkr"
+  },
+  {
+    "from": "player:ms-dhoni",
+    "type": "teammate_of",
+    "to": "player:ravindra-jadeja",
+    "note": "CSK"
+  },
+  {
+    "from": "player:rohit-sharma",
+    "type": "teammate_of",
+    "to": "player:jasprit-bumrah",
+    "note": "Mumbai Indians"
+  },
+  {
+    "from": "player:rohit-sharma",
+    "type": "teammate_of",
+    "to": "player:suryakumar-yadav",
+    "note": "Mumbai Indians"
+  },
+  {
+    "from": "player:jasprit-bumrah",
+    "type": "teammate_of",
+    "to": "player:suryakumar-yadav",
+    "note": "Mumbai Indians"
+  },
+  {
+    "from": "team:rcb",
+    "type": "rival_of",
+    "to": "team:csk",
+    "note": "RCB vs CSK"
+  },
+  {
+    "from": "team:csk",
+    "type": "rival_of",
+    "to": "team:mi",
+    "note": "5 IPL titles each"
+  },
+  {
+    "from": "topic:rcb-csk-rivalry",
+    "type": "played_in",
+    "to": "team:rcb"
+  },
+  {
+    "from": "topic:rcb-csk-rivalry",
+    "type": "played_in",
+    "to": "team:csk"
+  },
+  {
+    "from": "team:rcb",
+    "type": "home_ground",
+    "to": "venue:chinnaswamy"
+  },
+  {
+    "from": "team:csk",
+    "type": "home_ground",
+    "to": "venue:chepauk"
+  },
+  {
+    "from": "team:kkr",
+    "type": "home_ground",
+    "to": "venue:eden-gardens"
+  },
+  {
+    "from": "team:mi",
+    "type": "home_ground",
+    "to": "venue:wankhede"
+  },
+  {
+    "from": "player:ms-dhoni",
+    "type": "played_in",
+    "to": "topic:finisher",
+    "note": "recognised for finishing"
+  },
+  {
+    "from": "player:jasprit-bumrah",
+    "type": "played_in",
+    "to": "topic:yorker",
+    "note": "known for his yorker"
+  },
+  {
+    "from": "player:virat-kohli",
+    "type": "played_in",
+    "to": "topic:orange-cap",
+    "note": "won it in 2016 and 2024"
+  },
+  {
+    "from": "player:virat-kohli",
+    "type": "played_in",
+    "to": "match:ipl-2011-final"
+  },
+  {
+    "from": "player:ms-dhoni",
+    "type": "played_in",
+    "to": "match:ipl-2011-final"
+  },
+  {
+    "from": "team:csk",
+    "type": "won",
+    "to": "match:ipl-2011-final"
+  },
+  {
+    "from": "team:rcb",
+    "type": "played_in",
+    "to": "match:ipl-2011-final"
+  },
+  {
+    "from": "venue:chepauk",
+    "type": "played_in",
+    "to": "match:ipl-2011-final"
+  },
+  {
+    "from": "team:csk",
+    "type": "won",
+    "to": "match:ipl-2010-final"
+  },
+  {
+    "from": "team:mi",
+    "type": "played_in",
+    "to": "match:ipl-2010-final"
+  },
+  {
+    "from": "team:mi",
+    "type": "won",
+    "to": "match:ipl-2013-final"
+  },
+  {
+    "from": "team:csk",
+    "type": "played_in",
+    "to": "match:ipl-2013-final"
+  },
+  {
+    "from": "player:rohit-sharma",
+    "type": "played_in",
+    "to": "match:ipl-2013-final"
+  },
+  {
+    "from": "team:mi",
+    "type": "won",
+    "to": "match:ipl-2015-final"
+  },
+  {
+    "from": "team:csk",
+    "type": "played_in",
+    "to": "match:ipl-2015-final"
+  },
+  {
+    "from": "team:rcb",
+    "type": "played_in",
+    "to": "match:ipl-2016-final"
+  },
+  {
+    "from": "player:virat-kohli",
+    "type": "played_in",
+    "to": "match:ipl-2016-final"
+  },
+  {
+    "from": "team:mi",
+    "type": "won",
+    "to": "match:ipl-2019-final"
+  },
+  {
+    "from": "team:csk",
+    "type": "played_in",
+    "to": "match:ipl-2019-final"
+  },
+  {
+    "from": "player:jasprit-bumrah",
+    "type": "played_in",
+    "to": "match:ipl-2019-final"
+  },
+  {
+    "from": "team:csk",
+    "type": "won",
+    "to": "match:ipl-2023-final"
+  },
+  {
+    "from": "player:ravindra-jadeja",
+    "type": "played_in",
+    "to": "match:ipl-2023-final"
+  },
+  {
+    "from": "player:ms-dhoni",
+    "type": "played_in",
+    "to": "match:ipl-2023-final"
+  },
+  {
+    "from": "venue:narendra-modi",
+    "type": "played_in",
+    "to": "match:ipl-2023-final"
+  },
+  {
+    "from": "topic:dls",
+    "type": "played_in",
+    "to": "match:ipl-2023-final"
+  },
+  {
+    "from": "team:kkr",
+    "type": "won",
+    "to": "match:ipl-2024-final"
+  },
+  {
+    "from": "player:sunil-narine",
+    "type": "played_in",
+    "to": "match:ipl-2024-final"
+  },
+  {
+    "from": "team:rcb",
+    "type": "won",
+    "to": "match:ipl-2025-final"
+  },
+  {
+    "from": "player:virat-kohli",
+    "type": "played_in",
+    "to": "match:ipl-2025-final"
+  },
+  {
+    "from": "venue:narendra-modi",
+    "type": "played_in",
+    "to": "match:ipl-2025-final"
+  },
+  {
+    "from": "team:rcb",
+    "type": "played_in",
+    "to": "comp:ipl"
+  },
+  {
+    "from": "team:csk",
+    "type": "played_in",
+    "to": "comp:ipl"
+  },
+  {
+    "from": "team:mi",
+    "type": "played_in",
+    "to": "comp:ipl"
+  },
+  {
+    "from": "team:kkr",
+    "type": "played_in",
+    "to": "comp:ipl"
+  },
+  {
+    "from": "player:rajat-patidar",
+    "type": "plays_for",
+    "to": "team:rcb"
+  },
+  {
+    "from": "player:rajat-patidar",
+    "type": "captained",
+    "to": "team:rcb",
+    "note": "since 2025"
+  },
+  {
+    "from": "player:krunal-pandya",
+    "type": "plays_for",
+    "to": "team:rcb",
+    "note": "2025"
+  },
+  {
+    "from": "player:shreyas-iyer",
+    "type": "plays_for",
+    "to": "team:pbks",
+    "note": "2025"
+  },
+  {
+    "from": "player:shreyas-iyer",
+    "type": "captained",
+    "to": "team:pbks",
+    "note": "2025"
+  },
+  {
+    "from": "player:shreyas-iyer",
+    "type": "played_for",
+    "to": "team:kkr",
+    "note": "captained KKR to the 2024 title"
+  },
+  {
+    "from": "player:shashank-singh",
+    "type": "plays_for",
+    "to": "team:pbks"
+  },
+  {
+    "from": "player:arshdeep-singh",
+    "type": "plays_for",
+    "to": "team:pbks"
+  },
+  {
+    "from": "player:virat-kohli",
+    "type": "teammate_of",
+    "to": "player:rajat-patidar",
+    "note": "RCB"
+  },
+  {
+    "from": "player:virat-kohli",
+    "type": "teammate_of",
+    "to": "player:krunal-pandya",
+    "note": "RCB 2025"
+  },
+  {
+    "from": "player:shashank-singh",
+    "type": "teammate_of",
+    "to": "player:shreyas-iyer",
+    "note": "Punjab Kings"
+  },
+  {
+    "from": "player:arshdeep-singh",
+    "type": "teammate_of",
+    "to": "player:shreyas-iyer",
+    "note": "Punjab Kings"
+  },
+  {
+    "from": "team:pbks",
+    "type": "played_in",
+    "to": "comp:ipl"
+  },
+  {
+    "from": "team:pbks",
+    "type": "played_in",
+    "to": "match:ipl-2025-final"
+  },
+  {
+    "from": "team:pbks",
+    "type": "played_in",
+    "to": "match:ipl-2014-final"
+  },
+  {
+    "from": "team:kkr",
+    "type": "won",
+    "to": "match:ipl-2014-final"
+  },
+  {
+    "from": "team:rcb",
+    "type": "rival_of",
+    "to": "team:pbks",
+    "note": "2025 final"
+  },
+  {
+    "from": "player:rajat-patidar",
+    "type": "played_in",
+    "to": "match:ipl-2025-final"
+  },
+  {
+    "from": "player:krunal-pandya",
+    "type": "played_in",
+    "to": "match:ipl-2025-final"
+  },
+  {
+    "from": "player:shreyas-iyer",
+    "type": "played_in",
+    "to": "match:ipl-2025-final"
+  },
+  {
+    "from": "player:shashank-singh",
+    "type": "played_in",
+    "to": "match:ipl-2025-final"
+  },
+  {
+    "from": "player:arshdeep-singh",
+    "type": "played_in",
+    "to": "match:ipl-2025-final"
+  },
+  {
+    "from": "team:kkr",
+    "type": "rival_of",
+    "to": "team:pbks",
+    "note": "2014 final"
+  },
+  {
+    "from": "player:shubman-gill",
+    "type": "plays_for",
+    "to": "team:gt"
+  },
+  {
+    "from": "player:sai-sudharsan",
+    "type": "plays_for",
+    "to": "team:gt"
+  },
+  {
+    "from": "player:washington-sundar",
+    "type": "plays_for",
+    "to": "team:gt"
+  },
+  {
+    "from": "player:rasikh-salam",
+    "type": "plays_for",
+    "to": "team:rcb",
+    "note": "2026"
+  },
+  {
+    "from": "player:venkatesh-iyer",
+    "type": "plays_for",
+    "to": "team:rcb",
+    "note": "2026"
+  },
+  {
+    "from": "player:shubman-gill",
+    "type": "teammate_of",
+    "to": "player:sai-sudharsan",
+    "note": "Gujarat Titans"
+  },
+  {
+    "from": "player:washington-sundar",
+    "type": "teammate_of",
+    "to": "player:shubman-gill",
+    "note": "Gujarat Titans"
+  },
+  {
+    "from": "player:virat-kohli",
+    "type": "teammate_of",
+    "to": "player:venkatesh-iyer",
+    "note": "RCB 2026"
+  },
+  {
+    "from": "player:rasikh-salam",
+    "type": "teammate_of",
+    "to": "player:virat-kohli",
+    "note": "RCB 2026"
+  },
+  {
+    "from": "team:gt",
+    "type": "played_in",
+    "to": "comp:ipl"
+  },
+  {
+    "from": "team:gt",
+    "type": "played_in",
+    "to": "match:ipl-2026-final"
+  },
+  {
+    "from": "team:gt",
+    "type": "played_in",
+    "to": "match:ipl-2023-final"
+  },
+  {
+    "from": "team:rcb",
+    "type": "won",
+    "to": "match:ipl-2026-final"
+  },
+  {
+    "from": "team:rcb",
+    "type": "rival_of",
+    "to": "team:gt",
+    "note": "2026 final"
+  },
+  {
+    "from": "venue:narendra-modi",
+    "type": "played_in",
+    "to": "match:ipl-2026-final"
+  },
+  {
+    "from": "player:virat-kohli",
+    "type": "played_in",
+    "to": "match:ipl-2026-final"
+  },
+  {
+    "from": "player:venkatesh-iyer",
+    "type": "played_in",
+    "to": "match:ipl-2026-final"
+  },
+  {
+    "from": "player:rasikh-salam",
+    "type": "played_in",
+    "to": "match:ipl-2026-final"
+  },
+  {
+    "from": "player:washington-sundar",
+    "type": "played_in",
+    "to": "match:ipl-2026-final"
+  },
+  {
+    "from": "player:shubman-gill",
+    "type": "played_in",
+    "to": "match:ipl-2026-final"
+  },
+  {
+    "from": "player:sai-sudharsan",
+    "type": "played_in",
+    "to": "match:ipl-2026-final"
+  },
+  {
+    "from": "player:shubman-gill",
+    "type": "played_in",
+    "to": "match:ipl-2023-final"
+  },
+  {
+    "from": "player:sai-sudharsan",
+    "type": "played_in",
+    "to": "match:ipl-2023-final"
+  },
+  {
+    "from": "team:gt",
+    "type": "rival_of",
+    "to": "team:csk",
+    "note": "2023 final"
+  },
+  {
+    "from": "player:stephen-curry",
+    "type": "plays_for",
+    "to": "team:usa-basketball",
+    "note": "2024 Olympics"
+  },
+  {
+    "from": "player:stephen-curry",
+    "type": "played_in",
+    "to": "match:paris-2024-basketball-final"
+  },
+  {
+    "from": "player:kevin-durant",
+    "type": "plays_for",
+    "to": "team:usa-basketball",
+    "note": "2024 Olympics"
+  },
+  {
+    "from": "player:kevin-durant",
+    "type": "played_in",
+    "to": "match:paris-2024-basketball-final"
+  },
+  {
+    "from": "player:lebron-james",
+    "type": "plays_for",
+    "to": "team:usa-basketball",
+    "note": "2024 Olympics"
+  },
+  {
+    "from": "player:lebron-james",
+    "type": "played_in",
+    "to": "match:paris-2024-basketball-final"
+  },
+  {
+    "from": "player:anthony-davis",
+    "type": "plays_for",
+    "to": "team:usa-basketball",
+    "note": "2024 Olympics"
+  },
+  {
+    "from": "player:anthony-davis",
+    "type": "played_in",
+    "to": "match:paris-2024-basketball-final"
+  },
+  {
+    "from": "player:victor-wembanyama",
+    "type": "plays_for",
+    "to": "team:france-basketball",
+    "note": "2024 Olympics"
+  },
+  {
+    "from": "player:victor-wembanyama",
+    "type": "played_in",
+    "to": "match:paris-2024-basketball-final"
+  },
+  {
+    "from": "player:nicolas-batum",
+    "type": "plays_for",
+    "to": "team:france-basketball",
+    "note": "2024 Olympics"
+  },
+  {
+    "from": "player:nicolas-batum",
+    "type": "played_in",
+    "to": "match:paris-2024-basketball-final"
+  },
+  {
+    "from": "player:guerschon-yabusele",
+    "type": "plays_for",
+    "to": "team:france-basketball",
+    "note": "2024 Olympics"
+  },
+  {
+    "from": "player:guerschon-yabusele",
+    "type": "played_in",
+    "to": "match:paris-2024-basketball-final"
+  },
+  {
+    "from": "player:rudy-gobert",
+    "type": "plays_for",
+    "to": "team:france-basketball",
+    "note": "2024 Olympics"
+  },
+  {
+    "from": "player:rudy-gobert",
+    "type": "played_in",
+    "to": "match:paris-2024-basketball-final"
+  },
+  {
+    "from": "player:tony-parker",
+    "type": "played_for",
+    "to": "team:france-basketball",
+    "note": "retired from the national team after the 2016 Olympics"
+  },
+  {
+    "from": "player:stephen-curry",
+    "type": "teammate_of",
+    "to": "player:kevin-durant",
+    "note": "USA, 2024"
+  },
+  {
+    "from": "player:stephen-curry",
+    "type": "teammate_of",
+    "to": "player:lebron-james",
+    "note": "USA, 2024"
+  },
+  {
+    "from": "player:kevin-durant",
+    "type": "teammate_of",
+    "to": "player:lebron-james",
+    "note": "USA, 2024"
+  },
+  {
+    "from": "player:lebron-james",
+    "type": "teammate_of",
+    "to": "player:anthony-davis",
+    "note": "USA, 2024"
+  },
+  {
+    "from": "player:victor-wembanyama",
+    "type": "teammate_of",
+    "to": "player:nicolas-batum",
+    "note": "France, 2024"
+  },
+  {
+    "from": "player:victor-wembanyama",
+    "type": "teammate_of",
+    "to": "player:guerschon-yabusele",
+    "note": "France, 2024"
+  },
+  {
+    "from": "player:victor-wembanyama",
+    "type": "teammate_of",
+    "to": "player:rudy-gobert",
+    "note": "France, 2024"
+  },
+  {
+    "from": "player:nicolas-batum",
+    "type": "teammate_of",
+    "to": "player:tony-parker",
+    "note": "France"
+  },
+  {
+    "from": "team:usa-basketball",
+    "type": "won",
+    "to": "match:paris-2024-basketball-final"
+  },
+  {
+    "from": "team:usa-basketball",
+    "type": "played_in",
+    "to": "match:paris-2024-basketball-final"
+  },
+  {
+    "from": "team:france-basketball",
+    "type": "played_in",
+    "to": "match:paris-2024-basketball-final"
+  },
+  {
+    "from": "team:usa-basketball",
+    "type": "won",
+    "to": "match:tokyo-2020-basketball-final"
+  },
+  {
+    "from": "team:usa-basketball",
+    "type": "played_in",
+    "to": "match:tokyo-2020-basketball-final"
+  },
+  {
+    "from": "team:france-basketball",
+    "type": "played_in",
+    "to": "match:tokyo-2020-basketball-final"
+  },
+  {
+    "from": "venue:accor-arena",
+    "type": "played_in",
+    "to": "match:paris-2024-basketball-final"
+  },
+  {
+    "from": "team:usa-basketball",
+    "type": "won",
+    "to": "match:paris-2024-basketball-semi-usa-serbia"
+  },
+  {
+    "from": "team:france-basketball",
+    "type": "won",
+    "to": "match:paris-2024-basketball-semi-fra-ger"
+  },
+  {
+    "from": "player:stephen-curry",
+    "type": "played_in",
+    "to": "match:paris-2024-basketball-semi-usa-serbia"
+  },
+  {
+    "from": "player:guerschon-yabusele",
+    "type": "played_in",
+    "to": "match:paris-2024-basketball-semi-fra-ger"
+  },
+  {
+    "from": "team:usa-basketball",
+    "type": "played_in",
+    "to": "comp:paris-2024-basketball"
+  },
+  {
+    "from": "team:france-basketball",
+    "type": "played_in",
+    "to": "comp:paris-2024-basketball"
+  },
+  {
+    "from": "match:paris-2024-basketball-final",
+    "type": "played_in",
+    "to": "comp:paris-2024-basketball"
+  },
+  {
+    "from": "player:stephen-curry",
+    "type": "played_in",
+    "to": "topic:three-pointer",
+    "note": "all-time NBA leader in three-pointers"
+  },
+  {
+    "from": "player:stephen-curry",
+    "type": "played_in",
+    "to": "topic:pick-and-roll",
+    "note": "known for his version with Draymond Green"
+  },
+  {
+    "from": "player:lebron-james",
+    "type": "played_in",
+    "to": "comp:paris-2024-basketball",
+    "note": "Olympic MVP"
+  },
+  {
+    "from": "player:kevin-durant",
+    "type": "played_in",
+    "to": "comp:paris-2024-basketball",
+    "note": "4th gold medal"
+  }
+]

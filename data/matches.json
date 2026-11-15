@@ -1,0 +1,427 @@
+[
+  {
+    "id": "usa-vs-fra",
+    "title": "USA vs France",
+    "subtitle": "Paris 2024 Olympic Final · Watch-along",
+    "status": "replay",
+    "season": "2024",
+    "sport": "basketball",
+    "venue": "venue:accor-arena",
+    "teams": [
+      "team:usa-basketball",
+      "team:france-basketball"
+    ],
+    "video": "/match/clip-basketball.mp4",
+    "squads": {
+      "team:usa-basketball": [
+        {
+          "name": "Stephen Curry",
+          "entityId": "player:stephen-curry"
+        },
+        {
+          "name": "LeBron James",
+          "entityId": "player:lebron-james"
+        },
+        {
+          "name": "Kevin Durant",
+          "entityId": "player:kevin-durant"
+        },
+        {
+          "name": "Anthony Davis",
+          "entityId": "player:anthony-davis"
+        }
+      ],
+      "team:france-basketball": [
+        {
+          "name": "Victor Wembanyama",
+          "entityId": "player:victor-wembanyama"
+        },
+        {
+          "name": "Nicolas Batum",
+          "entityId": "player:nicolas-batum"
+        },
+        {
+          "name": "Guerschon Yabusele",
+          "entityId": "player:guerschon-yabusele"
+        },
+        {
+          "name": "Rudy Gobert",
+          "entityId": "player:rudy-gobert"
+        }
+      ]
+    },
+    "timeline": []
+  },
+  {
+    "id": "rcb-vs-gt",
+    "title": "RCB vs GT",
+    "subtitle": "IPL 2026 Final · Watch-along",
+    "status": "replay",
+    "season": "2026",
+    "venue": "venue:narendra-modi",
+    "teams": [
+      "team:rcb",
+      "team:gt"
+    ],
+    "video": "/match/clip.mp4",
+    "squads": {
+      "team:rcb": [
+        {
+          "name": "Virat Kohli",
+          "entityId": "player:virat-kohli",
+          "role": "BAT"
+        },
+        {
+          "name": "Venkatesh Iyer",
+          "entityId": "player:venkatesh-iyer",
+          "role": "BAT"
+        },
+        {
+          "name": "Rajat Patidar",
+          "entityId": "player:rajat-patidar",
+          "role": "BAT"
+        },
+        {
+          "name": "Bhuvneshwar Kumar",
+          "role": "BOWL"
+        },
+        {
+          "name": "Josh Hazlewood",
+          "role": "BOWL"
+        },
+        {
+          "name": "Rasikh Salam",
+          "entityId": "player:rasikh-salam",
+          "role": "BOWL"
+        }
+      ],
+      "team:gt": [
+        {
+          "name": "Shubman Gill",
+          "entityId": "player:shubman-gill",
+          "role": "BAT"
+        },
+        {
+          "name": "Sai Sudharsan",
+          "entityId": "player:sai-sudharsan",
+          "role": "BAT"
+        },
+        {
+          "name": "Washington Sundar",
+          "entityId": "player:washington-sundar",
+          "role": "AR"
+        },
+        {
+          "name": "Rashid Khan",
+          "role": "BOWL"
+        }
+      ]
+    },
+    "timeline": [],
+    "sport": "cricket"
+  },
+  {
+    "id": "rcb-vs-pbks",
+    "title": "RCB vs PBKS",
+    "subtitle": "IPL 2025 Final · Watch-along",
+    "status": "replay",
+    "season": "2025",
+    "venue": "venue:narendra-modi",
+    "teams": [
+      "team:rcb",
+      "team:pbks"
+    ],
+    "video": "/match/clip-2025.mp4",
+    "squads": {
+      "team:rcb": [
+        {
+          "name": "Virat Kohli",
+          "entityId": "player:virat-kohli",
+          "role": "BAT"
+        },
+        {
+          "name": "Phil Salt",
+          "role": "WK"
+        },
+        {
+          "name": "Mayank Agarwal",
+          "role": "BAT"
+        },
+        {
+          "name": "Rajat Patidar",
+          "entityId": "player:rajat-patidar",
+          "role": "BAT"
+        },
+        {
+          "name": "Liam Livingstone",
+          "role": "AR"
+        },
+        {
+          "name": "Jitesh Sharma",
+          "role": "WK"
+        },
+        {
+          "name": "Romario Shepherd",
+          "role": "AR"
+        },
+        {
+          "name": "Krunal Pandya",
+          "entityId": "player:krunal-pandya",
+          "role": "AR"
+        },
+        {
+          "name": "Bhuvneshwar Kumar",
+          "role": "BOWL"
+        },
+        {
+          "name": "Yash Dayal",
+          "role": "BOWL"
+        },
+        {
+          "name": "Josh Hazlewood",
+          "role": "BOWL"
+        },
+        {
+          "name": "Suyash Sharma",
+          "role": "BOWL"
+        }
+      ],
+      "team:pbks": [
+        {
+          "name": "Prabhsimran Singh",
+          "role": "WK"
+        },
+        {
+          "name": "Priyansh Arya",
+          "role": "BAT"
+        },
+        {
+          "name": "Josh Inglis",
+          "role": "WK"
+        },
+        {
+          "name": "Shreyas Iyer",
+          "entityId": "player:shreyas-iyer",
+          "role": "BAT"
+        },
+        {
+          "name": "Nehal Wadhera",
+          "role": "BAT"
+        },
+        {
+          "name": "Shashank Singh",
+          "entityId": "player:shashank-singh",
+          "role": "BAT"
+        },
+        {
+          "name": "Marcus Stoinis",
+          "role": "AR"
+        },
+        {
+          "name": "Azmatullah Omarzai",
+          "role": "AR"
+        },
+        {
+          "name": "Kyle Jamieson",
+          "role": "BOWL"
+        },
+        {
+          "name": "Vijaykumar Vyshak",
+          "role": "BOWL"
+        },
+        {
+          "name": "Arshdeep Singh",
+          "entityId": "player:arshdeep-singh",
+          "role": "BOWL"
+        },
+        {
+          "name": "Yuzvendra Chahal",
+          "role": "BOWL"
+        }
+      ]
+    },
+    "timeline": [],
+    "sport": "cricket"
+  },
+  {
+    "id": "rcb-vs-csk",
+    "title": "RCB vs CSK",
+    "subtitle": "Bengaluru vs Chennai",
+    "status": "upcoming",
+    "season": "TBD",
+    "venue": "venue:chinnaswamy",
+    "teams": [
+      "team:rcb",
+      "team:csk"
+    ],
+    "video": null,
+    "squads": {
+      "team:rcb": [
+        {
+          "name": "Virat Kohli",
+          "entityId": "player:virat-kohli",
+          "role": "BAT"
+        },
+        {
+          "name": "Phil Salt",
+          "role": "WK"
+        },
+        {
+          "name": "Rajat Patidar",
+          "role": "BAT"
+        },
+        {
+          "name": "Krunal Pandya",
+          "role": "AR"
+        },
+        {
+          "name": "Josh Hazlewood",
+          "role": "BOWL"
+        },
+        {
+          "name": "Bhuvneshwar Kumar",
+          "role": "BOWL"
+        }
+      ],
+      "team:csk": [
+        {
+          "name": "MS Dhoni",
+          "entityId": "player:ms-dhoni",
+          "role": "WK"
+        },
+        {
+          "name": "Ravindra Jadeja",
+          "entityId": "player:ravindra-jadeja",
+          "role": "AR"
+        },
+        {
+          "name": "Ruturaj Gaikwad",
+          "role": "BAT"
+        },
+        {
+          "name": "Shivam Dube",
+          "role": "AR"
+        },
+        {
+          "name": "Noor Ahmad",
+          "role": "BOWL"
+        },
+        {
+          "name": "Matheesha Pathirana",
+          "role": "BOWL"
+        }
+      ]
+    },
+    "timeline": [],
+    "sport": "cricket"
+  },
+  {
+    "id": "csk-vs-mi",
+    "title": "CSK vs MI",
+    "subtitle": "5 IPL titles each",
+    "status": "upcoming",
+    "season": "TBD",
+    "venue": "venue:chepauk",
+    "teams": [
+      "team:csk",
+      "team:mi"
+    ],
+    "video": null,
+    "squads": {
+      "team:csk": [
+        {
+          "name": "MS Dhoni",
+          "entityId": "player:ms-dhoni",
+          "role": "WK"
+        },
+        {
+          "name": "Ravindra Jadeja",
+          "entityId": "player:ravindra-jadeja",
+          "role": "AR"
+        },
+        {
+          "name": "Ruturaj Gaikwad",
+          "role": "BAT"
+        },
+        {
+          "name": "Shivam Dube",
+          "role": "AR"
+        }
+      ],
+      "team:mi": [
+        {
+          "name": "Rohit Sharma",
+          "entityId": "player:rohit-sharma",
+          "role": "BAT"
+        },
+        {
+          "name": "Suryakumar Yadav",
+          "role": "BAT",
+          "entityId": "player:suryakumar-yadav"
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "role": "BOWL",
+          "entityId": "player:jasprit-bumrah"
+        }
+      ]
+    },
+    "timeline": [],
+    "sport": "cricket"
+  },
+  {
+    "id": "kkr-vs-rcb",
+    "title": "KKR vs RCB",
+    "subtitle": "Eden Gardens",
+    "status": "upcoming",
+    "season": "TBD",
+    "venue": null,
+    "teams": [
+      "team:kkr",
+      "team:rcb"
+    ],
+    "video": null,
+    "squads": {
+      "team:kkr": [
+        {
+          "name": "Sunil Narine",
+          "role": "AR",
+          "entityId": "player:sunil-narine"
+        },
+        {
+          "name": "Andre Russell",
+          "role": "AR"
+        },
+        {
+          "name": "Rinku Singh",
+          "role": "BAT"
+        },
+        {
+          "name": "Varun Chakaravarthy",
+          "role": "BOWL"
+        }
+      ],
+      "team:rcb": [
+        {
+          "name": "Virat Kohli",
+          "entityId": "player:virat-kohli",
+          "role": "BAT"
+        },
+        {
+          "name": "Phil Salt",
+          "role": "WK"
+        },
+        {
+          "name": "Rajat Patidar",
+          "role": "BAT"
+        },
+        {
+          "name": "Josh Hazlewood",
+          "role": "BOWL"
+        }
+      ]
+    },
+    "timeline": [],
+    "sport": "cricket"
+  }
+]

@@ -1,0 +1,702 @@
+[
+  {
+    "id": "comp:ipl",
+    "type": "competition",
+    "name": "Indian Premier League",
+    "aliases": [
+      "IPL"
+    ],
+    "summary": "India's franchise T20 cricket league, first played in 2008."
+  },
+  {
+    "id": "team:rcb",
+    "type": "team",
+    "name": "Royal Challengers Bengaluru",
+    "aliases": [
+      "RCB",
+      "Royal Challengers Bangalore",
+      "Bengaluru",
+      "Bangalore"
+    ],
+    "summary": "IPL franchise from Bengaluru, founded in 2008; IPL champions in 2025 and 2026."
+  },
+  {
+    "id": "team:csk",
+    "type": "team",
+    "name": "Chennai Super Kings",
+    "aliases": [
+      "CSK",
+      "Chennai",
+      "Super Kings",
+      "Yellow Army"
+    ],
+    "summary": "IPL franchise from Chennai, founded in 2008; 5-time IPL champions."
+  },
+  {
+    "id": "team:mi",
+    "type": "team",
+    "name": "Mumbai Indians",
+    "aliases": [
+      "MI",
+      "Mumbai"
+    ],
+    "summary": "IPL franchise from Mumbai, founded in 2008; 5-time IPL champions."
+  },
+  {
+    "id": "team:kkr",
+    "type": "team",
+    "name": "Kolkata Knight Riders",
+    "aliases": [
+      "KKR",
+      "Kolkata",
+      "Knight Riders"
+    ],
+    "summary": "IPL franchise from Kolkata, founded in 2008; 3-time IPL champions."
+  },
+  {
+    "id": "player:virat-kohli",
+    "type": "player",
+    "name": "Virat Kohli",
+    "aliases": [
+      "Kohli",
+      "King Kohli",
+      "Cheeku"
+    ],
+    "summary": "Indian batter, born in Delhi in 1988, who has represented RCB since the first IPL in 2008."
+  },
+  {
+    "id": "player:ms-dhoni",
+    "type": "player",
+    "name": "MS Dhoni",
+    "aliases": [
+      "Dhoni",
+      "MSD",
+      "Mahi",
+      "Thala",
+      "Captain Cool"
+    ],
+    "summary": "Indian wicketkeeper-batter from Ranchi, long-time CSK captain, known for finishing matches."
+  },
+  {
+    "id": "player:ravindra-jadeja",
+    "type": "player",
+    "name": "Ravindra Jadeja",
+    "aliases": [
+      "Jadeja",
+      "Jaddu",
+      "Sir Jadeja"
+    ],
+    "summary": "Indian all-rounder: slow left-arm spin, left-handed batting and elite fielding."
+  },
+  {
+    "id": "player:rohit-sharma",
+    "type": "player",
+    "name": "Rohit Sharma",
+    "aliases": [
+      "Rohit",
+      "Hitman"
+    ],
+    "summary": "Indian opening batter from Nagpur who captained Mumbai Indians to 5 IPL titles."
+  },
+  {
+    "id": "player:jasprit-bumrah",
+    "type": "player",
+    "name": "Jasprit Bumrah",
+    "aliases": [
+      "Bumrah",
+      "Boom"
+    ],
+    "summary": "Indian fast bowler from Ahmedabad with an unorthodox action, a Mumbai Indians player since 2013."
+  },
+  {
+    "id": "player:suryakumar-yadav",
+    "type": "player",
+    "name": "Suryakumar Yadav",
+    "aliases": [
+      "Suryakumar",
+      "SKY",
+      "Surya",
+      "Mr 360"
+    ],
+    "summary": "Indian middle-order batter from Mumbai, known as Mr. 360 for his shot-making all around the ground."
+  },
+  {
+    "id": "player:sunil-narine",
+    "type": "player",
+    "name": "Sunil Narine",
+    "aliases": [
+      "Narine"
+    ],
+    "summary": "Trinidadian mystery spinner and batter who has played for Kolkata Knight Riders since 2012."
+  },
+  {
+    "id": "venue:chinnaswamy",
+    "type": "venue",
+    "name": "M. Chinnaswamy Stadium",
+    "aliases": [
+      "Chinnaswamy"
+    ],
+    "summary": "Cricket ground in Bengaluru, RCB's home ground since 2008, known for small boundaries and high scores."
+  },
+  {
+    "id": "venue:chepauk",
+    "type": "venue",
+    "name": "M. A. Chidambaram Stadium",
+    "aliases": [
+      "Chepauk",
+      "Fortress Chepauk"
+    ],
+    "summary": "Cricket ground in Chennai, home of CSK."
+  },
+  {
+    "id": "venue:narendra-modi",
+    "type": "venue",
+    "name": "Narendra Modi Stadium",
+    "aliases": [
+      "Ahmedabad stadium"
+    ],
+    "summary": "Cricket stadium in Ahmedabad that hosted the 2023 and 2025 IPL finals."
+  },
+  {
+    "id": "venue:eden-gardens",
+    "type": "venue",
+    "name": "Eden Gardens",
+    "aliases": [
+      "Eden"
+    ],
+    "summary": "Cricket ground in Kolkata, home of KKR."
+  },
+  {
+    "id": "venue:wankhede",
+    "type": "venue",
+    "name": "Wankhede Stadium",
+    "aliases": [
+      "Wankhede"
+    ],
+    "summary": "Cricket ground in Mumbai, Mumbai Indians' primary home since 2011."
+  },
+  {
+    "id": "match:ipl-2010-final",
+    "type": "match",
+    "name": "IPL 2010 final",
+    "aliases": [
+      "2010 final"
+    ],
+    "summary": "CSK beat Mumbai Indians in the 2010 final."
+  },
+  {
+    "id": "match:ipl-2011-final",
+    "type": "match",
+    "name": "IPL 2011 final",
+    "aliases": [
+      "2011 final"
+    ],
+    "summary": "CSK beat RCB in the 2011 final at Chepauk."
+  },
+  {
+    "id": "match:ipl-2013-final",
+    "type": "match",
+    "name": "IPL 2013 final",
+    "aliases": [
+      "2013 final"
+    ],
+    "summary": "Mumbai Indians beat CSK in the 2013 final at Eden Gardens."
+  },
+  {
+    "id": "match:ipl-2015-final",
+    "type": "match",
+    "name": "IPL 2015 final",
+    "aliases": [
+      "2015 final"
+    ],
+    "summary": "Mumbai Indians beat CSK in the 2015 final at Eden Gardens."
+  },
+  {
+    "id": "match:ipl-2016-final",
+    "type": "match",
+    "name": "IPL 2016 final",
+    "aliases": [
+      "2016 final"
+    ],
+    "summary": "Sunrisers Hyderabad beat RCB in the 2016 final in Bangalore."
+  },
+  {
+    "id": "match:ipl-2019-final",
+    "type": "match",
+    "name": "IPL 2019 final",
+    "aliases": [
+      "2019 final"
+    ],
+    "summary": "Mumbai Indians beat CSK by 1 run in the 2019 final in Hyderabad."
+  },
+  {
+    "id": "match:ipl-2023-final",
+    "type": "match",
+    "name": "IPL 2023 final",
+    "aliases": [
+      "2023 final"
+    ],
+    "summary": "CSK beat Gujarat Titans in a rain-affected final in Ahmedabad, won off the last ball."
+  },
+  {
+    "id": "match:ipl-2024-final",
+    "type": "match",
+    "name": "IPL 2024 final",
+    "aliases": [
+      "2024 final"
+    ],
+    "summary": "KKR beat Sunrisers Hyderabad in the 2024 final at Chepauk."
+  },
+  {
+    "id": "match:ipl-2025-final",
+    "type": "match",
+    "name": "IPL 2025 final",
+    "aliases": [
+      "2025 final"
+    ],
+    "summary": "RCB beat Punjab Kings by 6 runs in Ahmedabad to win their first IPL title."
+  },
+  {
+    "id": "topic:finisher",
+    "type": "topic",
+    "name": "Finisher",
+    "aliases": [
+      "finishing",
+      "finishers"
+    ],
+    "summary": "A batter recognised for finishing matches under pressure in the closing overs.",
+    "concept": true
+  },
+  {
+    "id": "topic:yorker",
+    "type": "topic",
+    "name": "Yorker",
+    "aliases": [
+      "yorkers"
+    ],
+    "summary": "A delivery that lands right at the batter's feet, which makes it very hard to play.",
+    "concept": true
+  },
+  {
+    "id": "topic:dls",
+    "type": "topic",
+    "name": "DLS method",
+    "aliases": [
+      "DLS",
+      "Duckworth-Lewis",
+      "Duckworth Lewis Stern"
+    ],
+    "summary": "A mathematical method for resetting the target in a rain-shortened limited-overs match.",
+    "concept": true
+  },
+  {
+    "id": "topic:orange-cap",
+    "type": "topic",
+    "name": "Orange Cap",
+    "aliases": [
+      "Purple Cap",
+      "orange cap"
+    ],
+    "summary": "The IPL award for the season's leading run-scorer; the Purple Cap goes to the leading wicket-taker.",
+    "concept": true
+  },
+  {
+    "id": "topic:rcb-csk-rivalry",
+    "type": "topic",
+    "name": "RCB vs CSK",
+    "aliases": [
+      "CSK vs RCB",
+      "RCB CSK rivalry",
+      "Bengaluru vs Chennai"
+    ],
+    "summary": "The IPL rivalry between Bengaluru and Chennai."
+  },
+  {
+    "sport": "cricket",
+    "id": "team:pbks",
+    "type": "team",
+    "name": "Punjab Kings",
+    "aliases": [
+      "PBKS",
+      "Punjab",
+      "Kings XI Punjab",
+      "KXIP"
+    ],
+    "summary": "IPL franchise founded in 2008 (as Kings XI Punjab); runners-up in 2014 and 2025."
+  },
+  {
+    "sport": "cricket",
+    "id": "player:shreyas-iyer",
+    "type": "player",
+    "name": "Shreyas Iyer",
+    "aliases": [
+      "Shreyas",
+      "Iyer"
+    ],
+    "summary": "Indian batter who captained KKR to the 2024 title and led Punjab Kings to the 2025 final."
+  },
+  {
+    "sport": "cricket",
+    "id": "player:krunal-pandya",
+    "type": "player",
+    "name": "Krunal Pandya",
+    "aliases": [
+      "Krunal"
+    ],
+    "summary": "Indian left-arm spin all-rounder, Player of the Match in the 2025 IPL final for RCB."
+  },
+  {
+    "sport": "cricket",
+    "id": "player:shashank-singh",
+    "type": "player",
+    "name": "Shashank Singh",
+    "aliases": [
+      "Shashank"
+    ],
+    "summary": "Punjab Kings batter who hit an unbeaten 61 in the 2025 final chase."
+  },
+  {
+    "sport": "cricket",
+    "id": "player:rajat-patidar",
+    "type": "player",
+    "name": "Rajat Patidar",
+    "aliases": [
+      "Patidar"
+    ],
+    "summary": "RCB batter who became captain in 2025."
+  },
+  {
+    "sport": "cricket",
+    "id": "player:arshdeep-singh",
+    "type": "player",
+    "name": "Arshdeep Singh",
+    "aliases": [
+      "Arshdeep"
+    ],
+    "summary": "Indian left-arm fast bowler who plays for Punjab Kings."
+  },
+  {
+    "sport": "cricket",
+    "id": "match:ipl-2014-final",
+    "type": "match",
+    "name": "IPL 2014 final",
+    "aliases": [
+      "2014 final"
+    ],
+    "summary": "KKR beat Kings XI Punjab in the 2014 final."
+  },
+  {
+    "sport": "cricket",
+    "id": "team:gt",
+    "type": "team",
+    "name": "Gujarat Titans",
+    "aliases": [
+      "GT",
+      "Gujarat"
+    ],
+    "summary": "IPL franchise that lost the 2023 final to CSK and the 2026 final to RCB."
+  },
+  {
+    "sport": "cricket",
+    "id": "match:ipl-2026-final",
+    "type": "match",
+    "name": "IPL 2026 final",
+    "aliases": [
+      "2026 final"
+    ],
+    "summary": "RCB beat Gujarat Titans by 5 wickets in Ahmedabad to win a second title in a row."
+  },
+  {
+    "sport": "cricket",
+    "id": "player:shubman-gill",
+    "type": "player",
+    "name": "Shubman Gill",
+    "aliases": [
+      "Gill"
+    ],
+    "summary": "Indian opening batter who plays for Gujarat Titans."
+  },
+  {
+    "sport": "cricket",
+    "id": "player:sai-sudharsan",
+    "type": "player",
+    "name": "Sai Sudharsan",
+    "aliases": [
+      "Sudharsan"
+    ],
+    "summary": "Gujarat Titans opening batter who scored the most runs in the 2025 IPL."
+  },
+  {
+    "sport": "cricket",
+    "id": "player:washington-sundar",
+    "type": "player",
+    "name": "Washington Sundar",
+    "aliases": [
+      "Sundar"
+    ],
+    "summary": "Gujarat Titans player who top-scored in the 2026 final."
+  },
+  {
+    "sport": "cricket",
+    "id": "player:rasikh-salam",
+    "type": "player",
+    "name": "Rasikh Salam",
+    "aliases": [
+      "Rasikh"
+    ],
+    "summary": "RCB bowler who took 3 wickets in the 2026 final."
+  },
+  {
+    "sport": "cricket",
+    "id": "player:venkatesh-iyer",
+    "type": "player",
+    "name": "Venkatesh Iyer",
+    "aliases": [
+      "Venkatesh"
+    ],
+    "summary": "Batter who opened for RCB in the 2026 final."
+  },
+  {
+    "aliases": [
+      "Olympic basketball",
+      "Paris 2024",
+      "Olympics"
+    ],
+    "sport": "basketball",
+    "id": "comp:paris-2024-basketball",
+    "type": "competition",
+    "name": "Paris 2024 Olympic men's basketball",
+    "summary": "The men's basketball tournament at the Paris 2024 Olympics, 27 July to 10 August 2024."
+  },
+  {
+    "aliases": [
+      "Team USA",
+      "USA",
+      "United States",
+      "Americans"
+    ],
+    "sport": "basketball",
+    "id": "team:usa-basketball",
+    "type": "team",
+    "name": "USA men's basketball team",
+    "summary": "The United States men's national basketball team, 17-time Olympic champions."
+  },
+  {
+    "aliases": [
+      "France",
+      "Les Bleus",
+      "French team"
+    ],
+    "sport": "basketball",
+    "id": "team:france-basketball",
+    "type": "team",
+    "name": "France men's basketball team",
+    "summary": "The France men's national basketball team, known as Les Bleus; Olympic silver medallists in 2020 and 2024."
+  },
+  {
+    "aliases": [
+      "Curry",
+      "Steph Curry",
+      "Steph",
+      "Chef Curry"
+    ],
+    "sport": "basketball",
+    "id": "player:stephen-curry",
+    "type": "player",
+    "name": "Stephen Curry",
+    "summary": "Golden State Warriors point guard and the NBA's all-time leader in three-pointers made."
+  },
+  {
+    "aliases": [
+      "Durant",
+      "KD"
+    ],
+    "sport": "basketball",
+    "id": "player:kevin-durant",
+    "type": "player",
+    "name": "Kevin Durant",
+    "summary": "NBA scorer and the only male basketball player with 4 Olympic gold medals."
+  },
+  {
+    "aliases": [
+      "LeBron",
+      "King James"
+    ],
+    "sport": "basketball",
+    "id": "player:lebron-james",
+    "type": "player",
+    "name": "LeBron James",
+    "summary": "NBA's all-time leading scorer and the MVP of the 2024 Olympic basketball tournament."
+  },
+  {
+    "aliases": [
+      "Davis"
+    ],
+    "sport": "basketball",
+    "id": "player:anthony-davis",
+    "type": "player",
+    "name": "Anthony Davis",
+    "summary": "USA big man who grabbed 9 rebounds in the 2024 Olympic final."
+  },
+  {
+    "aliases": [
+      "Wembanyama",
+      "Wemby",
+      "the Alien"
+    ],
+    "sport": "basketball",
+    "id": "player:victor-wembanyama",
+    "type": "player",
+    "name": "Victor Wembanyama",
+    "summary": "French 7 ft 4 in San Antonio Spurs star who scored 26 in the 2024 Olympic final."
+  },
+  {
+    "aliases": [
+      "Batum"
+    ],
+    "sport": "basketball",
+    "id": "player:nicolas-batum",
+    "type": "player",
+    "name": "Nicolas Batum",
+    "summary": "French forward and veteran of Les Bleus."
+  },
+  {
+    "aliases": [
+      "Yabusele"
+    ],
+    "sport": "basketball",
+    "id": "player:guerschon-yabusele",
+    "type": "player",
+    "name": "Guerschon Yabusele",
+    "summary": "French forward who was a scoring leader for France at the 2024 Olympics."
+  },
+  {
+    "aliases": [
+      "Gobert"
+    ],
+    "sport": "basketball",
+    "id": "player:rudy-gobert",
+    "type": "player",
+    "name": "Rudy Gobert",
+    "summary": "French centre and a key big man for Les Bleus."
+  },
+  {
+    "aliases": [
+      "Parker"
+    ],
+    "sport": "basketball",
+    "id": "player:tony-parker",
+    "type": "player",
+    "name": "Tony Parker",
+    "summary": "French legend whose number 9 was retired by the national team in 2024."
+  },
+  {
+    "aliases": [
+      "Bercy Arena",
+      "Bercy"
+    ],
+    "sport": "basketball",
+    "id": "venue:accor-arena",
+    "type": "venue",
+    "name": "Accor Arena",
+    "summary": "Paris arena that hosted the final phase of Olympic basketball in 2024, called Bercy Arena for the Games."
+  },
+  {
+    "aliases": [
+      "Olympic final",
+      "gold medal game",
+      "2024 Olympic final"
+    ],
+    "sport": "basketball",
+    "id": "match:paris-2024-basketball-final",
+    "type": "match",
+    "name": "Paris 2024 Olympic basketball final",
+    "summary": "USA beat France 98-87 on 10 August 2024 for gold."
+  },
+  {
+    "aliases": [
+      "2020 Olympic final",
+      "Tokyo final"
+    ],
+    "sport": "basketball",
+    "id": "match:tokyo-2020-basketball-final",
+    "type": "match",
+    "name": "Tokyo 2020 Olympic basketball final",
+    "summary": "USA beat France 87-82 in the Tokyo 2020 final."
+  },
+  {
+    "aliases": [
+      "USA Serbia semifinal"
+    ],
+    "sport": "basketball",
+    "id": "match:paris-2024-basketball-semi-usa-serbia",
+    "type": "match",
+    "name": "Paris 2024 semifinal USA vs Serbia",
+    "summary": "USA beat Serbia 95-91 in the 2024 Olympic semifinal."
+  },
+  {
+    "aliases": [
+      "France Germany semifinal"
+    ],
+    "sport": "basketball",
+    "id": "match:paris-2024-basketball-semi-fra-ger",
+    "type": "match",
+    "name": "Paris 2024 semifinal France vs Germany",
+    "summary": "France beat Germany 73-69 in the 2024 Olympic semifinal."
+  },
+  {
+    "aliases": [
+      "pick-and-roll",
+      "pick and rolls",
+      "screen and roll"
+    ],
+    "sport": "basketball",
+    "id": "topic:pick-and-roll",
+    "type": "topic",
+    "concept": true,
+    "name": "Pick and roll",
+    "summary": "A play where one player screens for the ball handler, then moves to the basket to receive a pass."
+  },
+  {
+    "aliases": [
+      "three-point",
+      "three pointer",
+      "3-pointer",
+      "threes",
+      "three-point line",
+      "three-pointers"
+    ],
+    "sport": "basketball",
+    "id": "topic:three-pointer",
+    "type": "topic",
+    "concept": true,
+    "name": "Three-pointer",
+    "summary": "A basket made from behind the three-point arc, worth 3 points."
+  },
+  {
+    "aliases": [
+      "alley oop",
+      "lob"
+    ],
+    "sport": "basketball",
+    "id": "topic:alley-oop",
+    "type": "topic",
+    "concept": true,
+    "name": "Alley-oop",
+    "summary": "A play where a player throws the ball near the rim and a teammate catches it in the air and finishes."
+  },
+  {
+    "aliases": [
+      "free throws",
+      "and-one",
+      "and one",
+      "foul shot"
+    ],
+    "sport": "basketball",
+    "id": "topic:free-throw",
+    "type": "topic",
+    "concept": true,
+    "name": "Free throw",
+    "summary": "An unopposed shot worth 1 point, taken from the foul line after a foul."
+  }
+]

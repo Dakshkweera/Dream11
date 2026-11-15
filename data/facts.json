@@ -1,0 +1,3333 @@
+[
+  {
+    "id": "f-0001",
+    "entities": [
+      "team:rcb",
+      "venue:chinnaswamy"
+    ],
+    "type": "team_history",
+    "text": "Royal Challengers Bengaluru were founded in 2008, play their home matches at the M. Chinnaswamy Stadium, and were formerly known as the Royal Challengers Bangalore.",
+    "numbers": [
+      2008
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Royal_Challengers_Bengaluru",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0002",
+    "entities": [
+      "team:rcb",
+      "match:ipl-2025-final",
+      "venue:narendra-modi",
+      "comp:ipl",
+      "team:pbks"
+    ],
+    "type": "team_history",
+    "text": "RCB won their first IPL title in 2025, beating Punjab Kings by 6 runs in the final in Ahmedabad on 3 June 2025, after waiting 18 years.",
+    "numbers": [
+      2025,
+      6,
+      3,
+      18
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Royal_Challengers_Bengaluru",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0003",
+    "entities": [
+      "team:rcb",
+      "comp:ipl",
+      "team:gt",
+      "match:ipl-2026-final"
+    ],
+    "type": "team_history",
+    "text": "RCB beat Gujarat Titans in the 2026 final to win a second title in a row, becoming only the third team to win back-to-back IPL trophies.",
+    "numbers": [
+      2026
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Royal_Challengers_Bengaluru",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0004",
+    "entities": [
+      "team:rcb",
+      "team:csk",
+      "match:ipl-2011-final",
+      "match:ipl-2016-final"
+    ],
+    "type": "team_history",
+    "text": "Before 2025, RCB lost 3 IPL finals: to Deccan Chargers by 6 runs in 2009, to Chennai Super Kings by 58 runs in 2011, and to Sunrisers Hyderabad by 8 runs in 2016.",
+    "numbers": [
+      2025,
+      3,
+      6,
+      2009,
+      58,
+      2011,
+      8,
+      2016
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Royal_Challengers_Bengaluru",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0005",
+    "entities": [
+      "team:rcb"
+    ],
+    "type": "record",
+    "text": "RCB's 144-run win over Gujarat Lions in 2016 is the biggest winning margin in IPL history.",
+    "numbers": [
+      144,
+      2016
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Royal_Challengers_Bengaluru",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0006",
+    "entities": [
+      "team:rcb",
+      "team:kkr"
+    ],
+    "type": "record",
+    "text": "RCB were bowled out for 49 against Kolkata Knight Riders in 2017, the lowest team score in IPL history.",
+    "numbers": [
+      49,
+      2017
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Royal_Challengers_Bengaluru",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0007",
+    "entities": [
+      "team:rcb",
+      "player:virat-kohli",
+      "player:rajat-patidar"
+    ],
+    "type": "team_history",
+    "text": "Virat Kohli captained RCB from 2013 to 2021; Faf du Plessis led the team in 2022 and Rajat Patidar has been captain since 2025.",
+    "numbers": [
+      2013,
+      2021,
+      2022,
+      2025
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Royal_Challengers_Bengaluru",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0008",
+    "entities": [
+      "player:virat-kohli",
+      "team:rcb"
+    ],
+    "type": "profile",
+    "text": "Virat Kohli was born on 5 November 1988 in New Delhi, and was bought by Bangalore for $50,000 at the 2008 IPL auction.",
+    "numbers": [
+      5,
+      1988,
+      50000,
+      2008
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Virat_Kohli",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0009",
+    "entities": [
+      "player:virat-kohli",
+      "team:rcb"
+    ],
+    "type": "career_milestone",
+    "text": "Virat Kohli has represented RCB since the first IPL season in 2008.",
+    "numbers": [
+      2008
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Virat_Kohli",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0010",
+    "entities": [
+      "player:virat-kohli",
+      "topic:orange-cap",
+      "comp:ipl"
+    ],
+    "type": "record",
+    "text": "In 2016 Virat Kohli scored a record 973 runs in a single IPL season at an average of 81.08, with 4 centuries, and won the Orange Cap.",
+    "numbers": [
+      2016,
+      973,
+      81.08,
+      4
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Virat_Kohli",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0011",
+    "entities": [
+      "player:virat-kohli",
+      "topic:orange-cap"
+    ],
+    "type": "career_milestone",
+    "text": "Virat Kohli won the Orange Cap for the second time in 2024, scoring 741 runs at an average of 61.75.",
+    "numbers": [
+      2024,
+      741,
+      61.75
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Virat_Kohli",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0012",
+    "entities": [
+      "player:virat-kohli",
+      "match:ipl-2025-final",
+      "team:rcb",
+      "team:pbks"
+    ],
+    "type": "career_milestone",
+    "text": "In 2025 Virat Kohli scored 657 runs in 15 innings, and made 43 off 35 balls in the final as RCB beat Punjab Kings by 6 runs.",
+    "numbers": [
+      2025,
+      657,
+      15,
+      43,
+      35,
+      6
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Virat_Kohli",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0013",
+    "entities": [
+      "player:virat-kohli",
+      "match:ipl-2011-final",
+      "match:ipl-2016-final"
+    ],
+    "type": "career_milestone",
+    "text": "Virat Kohli lost 3 IPL finals before 2025: in 2009 he was dismissed for 7, in 2011 he made 35 runs, and in 2016 RCB lost by 8 runs.",
+    "numbers": [
+      3,
+      2025,
+      2009,
+      7,
+      2011,
+      35,
+      2016,
+      8
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Virat_Kohli",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0014",
+    "entities": [
+      "player:virat-kohli"
+    ],
+    "type": "career_milestone",
+    "text": "Virat Kohli scored his maiden T20 century against Gujarat Lions in 2016.",
+    "numbers": [
+      2016
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Virat_Kohli",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0015",
+    "entities": [
+      "player:virat-kohli",
+      "team:rcb"
+    ],
+    "type": "career_milestone",
+    "text": "In 2012 Virat Kohli made an unbeaten 73 in a then-record 203-run partnership with Chris Gayle against Delhi Daredevils.",
+    "numbers": [
+      2012,
+      73,
+      203
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Virat_Kohli",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0016",
+    "entities": [
+      "player:virat-kohli",
+      "team:rcb"
+    ],
+    "type": "career_milestone",
+    "text": "In 2023 Virat Kohli scored 639 runs and ended the season with back-to-back centuries, surpassing Chris Gayle's record for most IPL hundreds.",
+    "numbers": [
+      2023,
+      639
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Virat_Kohli",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0017",
+    "entities": [
+      "player:virat-kohli"
+    ],
+    "type": "career_milestone",
+    "text": "Virat Kohli was part of India's 2011 World Cup win, the 2013 Champions Trophy win and the 2024 T20 World Cup win, scoring 76 in that final.",
+    "numbers": [
+      2011,
+      2013,
+      2024,
+      76
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Virat_Kohli",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0018",
+    "entities": [
+      "player:ms-dhoni"
+    ],
+    "type": "profile",
+    "text": "MS Dhoni was born on 7 July 1981 in Ranchi, and is known as Thala, Mahi and Captain Cool.",
+    "numbers": [
+      7,
+      1981
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0019",
+    "entities": [
+      "player:ms-dhoni",
+      "team:csk"
+    ],
+    "type": "career_milestone",
+    "text": "Chennai Super Kings bought MS Dhoni for $1.5 million at the 2008 IPL auction, the most expensive signing of that auction.",
+    "numbers": [
+      1.5,
+      2008
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0020",
+    "entities": [
+      "player:ms-dhoni",
+      "team:csk"
+    ],
+    "type": "record",
+    "text": "MS Dhoni led CSK to the IPL title 5 times, in 2010, 2011, 2018, 2021 and 2023, and to the final 10 times.",
+    "numbers": [
+      5,
+      2010,
+      2011,
+      2018,
+      2021,
+      2023,
+      10
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0021",
+    "entities": [
+      "player:ms-dhoni"
+    ],
+    "type": "record",
+    "text": "MS Dhoni was the first wicketkeeper to pass 5,000 IPL runs.",
+    "numbers": [
+      5000
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0022",
+    "entities": [
+      "player:ms-dhoni"
+    ],
+    "type": "record",
+    "text": "MS Dhoni captained India to 3 ICC trophies, the 2007 T20 World Cup, the 2011 World Cup and the 2013 Champions Trophy, and is the only captain to win all 3 limited-overs ICC tournaments.",
+    "numbers": [
+      3,
+      2007,
+      2011,
+      2013
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0023",
+    "entities": [
+      "player:ms-dhoni"
+    ],
+    "type": "memorable_match",
+    "text": "In the 2011 World Cup final MS Dhoni scored an unbeaten 91 and was named Man of the Match.",
+    "numbers": [
+      2011,
+      91
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0024",
+    "entities": [
+      "player:ms-dhoni"
+    ],
+    "type": "record",
+    "text": "MS Dhoni holds the record for most stumpings in international cricket, with 195.",
+    "numbers": [
+      195
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0025",
+    "entities": [
+      "player:ms-dhoni"
+    ],
+    "type": "career_milestone",
+    "text": "MS Dhoni played his last Test on 26 December 2014 and announced his international retirement on 15 August 2020.",
+    "numbers": [
+      26,
+      2014,
+      15,
+      2020
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0026",
+    "entities": [
+      "player:ms-dhoni",
+      "topic:finisher"
+    ],
+    "type": "profile",
+    "text": "MS Dhoni is recognised for his finishing skills in high-pressure situations.",
+    "numbers": [],
+    "source_url": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0027",
+    "entities": [
+      "player:ms-dhoni",
+      "team:csk"
+    ],
+    "type": "career_milestone",
+    "text": "MS Dhoni played for Rising Pune Supergiant in 2016 and 2017 while CSK were suspended, and returned to CSK in 2018.",
+    "numbers": [
+      2016,
+      2017,
+      2018
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0028",
+    "entities": [
+      "player:ms-dhoni",
+      "team:csk"
+    ],
+    "type": "career_milestone",
+    "text": "MS Dhoni handed CSK's captaincy to Ruturaj Gaikwad before 2024, and was made captain again after Gaikwad was ruled out of IPL 2025.",
+    "numbers": [
+      2024,
+      2025
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0029",
+    "entities": [
+      "player:ms-dhoni"
+    ],
+    "type": "career_milestone",
+    "text": "MS Dhoni was inducted into the ICC Cricket Hall of Fame in June 2025.",
+    "numbers": [
+      2025
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0030",
+    "entities": [
+      "team:csk",
+      "venue:chepauk"
+    ],
+    "type": "team_history",
+    "text": "Chennai Super Kings were founded on 24 January 2008, are based in Chennai, and play at the M. A. Chidambaram Stadium, known as Chepauk.",
+    "numbers": [
+      24,
+      2008
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0031",
+    "entities": [
+      "team:csk",
+      "player:ms-dhoni",
+      "comp:ipl"
+    ],
+    "type": "team_history",
+    "text": "CSK have won the IPL 5 times, in 2010, 2011, 2018, 2021 and 2023, and the Champions League Twenty20 in 2010 and 2014.",
+    "numbers": [
+      5,
+      2010,
+      2011,
+      2018,
+      2021,
+      2023,
+      2014
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0032",
+    "entities": [
+      "team:csk"
+    ],
+    "type": "team_history",
+    "text": "CSK have played 10 IPL finals, winning 5 and losing 5, in 2008, 2012, 2013, 2015 and 2019.",
+    "numbers": [
+      10,
+      5,
+      2008,
+      2012,
+      2013,
+      2015,
+      2019
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0033",
+    "entities": [
+      "team:csk"
+    ],
+    "type": "record",
+    "text": "CSK have qualified for the IPL playoffs 12 times, more than any other team.",
+    "numbers": [
+      12
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0034",
+    "entities": [
+      "team:csk"
+    ],
+    "type": "team_history",
+    "text": "CSK were suspended from the IPL for 2 years from July 2015, after the Lodha committee acted over the owners' involvement in the 2013 betting case, and won the title in 2018.",
+    "numbers": [
+      2,
+      2015,
+      2013,
+      2018
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0035",
+    "entities": [
+      "team:csk"
+    ],
+    "type": "team_history",
+    "text": "CSK have the largest social media following of any IPL team, over 33 million as of March 2023, and their fans are known as the Yellow Army.",
+    "numbers": [
+      33,
+      2023
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0036",
+    "entities": [
+      "team:csk",
+      "player:ms-dhoni"
+    ],
+    "type": "record",
+    "text": "MS Dhoni's CSK captaincy record shows 244 matches and 145 wins, a win rate of 59.43%, through 2025.",
+    "numbers": [
+      244,
+      145,
+      59.43,
+      2025
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0037",
+    "entities": [
+      "team:csk"
+    ],
+    "type": "record",
+    "text": "Matthew Hayden won the 2009 Orange Cap with 572 runs, and Michael Hussey won it in 2013 with 733 runs, both for CSK.",
+    "numbers": [
+      2009,
+      572,
+      2013,
+      733
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0038",
+    "entities": [
+      "team:mi",
+      "venue:wankhede"
+    ],
+    "type": "team_history",
+    "text": "Mumbai Indians were founded on 24 January 2008, are owned by Reliance Industries, and have played mainly at the Wankhede Stadium (capacity 33,108) since 2011.",
+    "numbers": [
+      24,
+      2008,
+      33108,
+      2011
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Mumbai_Indians",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0039",
+    "entities": [
+      "team:mi",
+      "comp:ipl"
+    ],
+    "type": "team_history",
+    "text": "Mumbai Indians have won the IPL 5 times, in 2013, 2015, 2017, 2019 and 2020, and the Champions League T20 in 2011 and 2013.",
+    "numbers": [
+      5,
+      2013,
+      2015,
+      2017,
+      2019,
+      2020,
+      2011
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Mumbai_Indians",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0040",
+    "entities": [
+      "team:mi",
+      "player:rohit-sharma"
+    ],
+    "type": "record",
+    "text": "Rohit Sharma captained Mumbai Indians in 163 matches, with 91 wins, between 2011 and 2023, leading them to the titles of 2013, 2015, 2017, 2019 and 2020.",
+    "numbers": [
+      163,
+      91,
+      2011,
+      2023,
+      2013,
+      2015,
+      2017,
+      2019,
+      2020
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Mumbai_Indians",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0041",
+    "entities": [
+      "team:mi"
+    ],
+    "type": "record",
+    "text": "Mumbai Indians were the first team to win both the IPL and the Champions League T20 in the same year, 2013.",
+    "numbers": [
+      2013
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Mumbai_Indians",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0042",
+    "entities": [
+      "team:mi"
+    ],
+    "type": "record",
+    "text": "Mumbai Indians were the first team to win 3 IPL titles, in 2017, and the first to win 5, in 2020.",
+    "numbers": [
+      3,
+      2017,
+      5,
+      2020
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Mumbai_Indians",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0043",
+    "entities": [
+      "team:mi"
+    ],
+    "type": "memorable_match",
+    "text": "Mumbai Indians won the 2017 IPL final by 1 run against Rising Pune Supergiant, after defending a total of 129.",
+    "numbers": [
+      2017,
+      1,
+      129
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Mumbai_Indians",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0044",
+    "entities": [
+      "team:mi",
+      "player:rohit-sharma"
+    ],
+    "type": "record",
+    "text": "Rohit Sharma is Mumbai Indians' leading run-scorer, with 5,698 runs for the franchise.",
+    "numbers": [
+      5698
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Mumbai_Indians",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0045",
+    "entities": [
+      "team:mi",
+      "player:suryakumar-yadav"
+    ],
+    "type": "record",
+    "text": "Suryakumar Yadav scored 717 runs in the 2025 IPL season, a record for a non-opener in a single season.",
+    "numbers": [
+      717,
+      2025
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Mumbai_Indians",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0046",
+    "entities": [
+      "team:csk",
+      "team:mi"
+    ],
+    "type": "head_to_head",
+    "text": "In the IPL and the Champions League T20, CSK and MI have met 43 times: MI have won 22 and CSK 21. In their finals, MI have won 3 and CSK 1.",
+    "numbers": [
+      43,
+      22,
+      21,
+      3,
+      1
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings%E2%80%93Mumbai_Indians_rivalry",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0047",
+    "entities": [
+      "match:ipl-2010-final",
+      "team:csk",
+      "team:mi"
+    ],
+    "type": "memorable_match",
+    "text": "CSK beat Mumbai Indians by 22 runs in the 2010 IPL final at DY Patil Stadium in Mumbai, scoring 168/5 to MI's 146/9.",
+    "numbers": [
+      22,
+      2010,
+      168,
+      5,
+      146,
+      9
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings%E2%80%93Mumbai_Indians_rivalry",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0048",
+    "entities": [
+      "match:ipl-2013-final",
+      "team:mi",
+      "team:csk",
+      "player:rohit-sharma"
+    ],
+    "type": "memorable_match",
+    "text": "Mumbai Indians beat CSK by 23 runs in the 2013 IPL final at Eden Gardens, scoring 148/9 to CSK's 125/9.",
+    "numbers": [
+      23,
+      2013,
+      148,
+      9,
+      125
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings%E2%80%93Mumbai_Indians_rivalry",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0049",
+    "entities": [
+      "match:ipl-2015-final",
+      "team:mi",
+      "team:csk"
+    ],
+    "type": "memorable_match",
+    "text": "Mumbai Indians beat CSK by 41 runs in the 2015 IPL final at Eden Gardens, scoring 202/5 to CSK's 161/8.",
+    "numbers": [
+      41,
+      2015,
+      202,
+      5,
+      161,
+      8
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings%E2%80%93Mumbai_Indians_rivalry",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0050",
+    "entities": [
+      "match:ipl-2019-final",
+      "team:mi",
+      "team:csk",
+      "player:jasprit-bumrah"
+    ],
+    "type": "memorable_match",
+    "text": "Mumbai Indians beat CSK by 1 run in the 2019 IPL final in Hyderabad, scoring 149/8 to CSK's 148/7. Jasprit Bumrah was Player of the Match, and Shane Watson scored 80 for CSK.",
+    "numbers": [
+      1,
+      2019,
+      149,
+      8,
+      148,
+      7,
+      80
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings%E2%80%93Mumbai_Indians_rivalry",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0051",
+    "entities": [
+      "match:ipl-2019-final",
+      "team:mi",
+      "team:csk"
+    ],
+    "type": "memorable_match",
+    "text": "In the 2019 IPL final Lasith Malinga trapped Shardul Thakur lbw on the final ball to win the match for Mumbai Indians by 1 run.",
+    "numbers": [
+      2019,
+      1
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Mumbai_Indians",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0052",
+    "entities": [
+      "player:rohit-sharma",
+      "team:mi",
+      "team:csk"
+    ],
+    "type": "record",
+    "text": "Rohit Sharma has scored 913 runs against CSK in IPL and Champions League matches, in 30 innings, the most in the rivalry.",
+    "numbers": [
+      913,
+      30
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings%E2%80%93Mumbai_Indians_rivalry",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0053",
+    "entities": [
+      "player:ms-dhoni",
+      "team:csk",
+      "team:mi"
+    ],
+    "type": "memorable_match",
+    "text": "In the 2012 IPL eliminator against Mumbai Indians, MS Dhoni hit the tournament's biggest six, 112 metres, off James Franklin.",
+    "numbers": [
+      2012,
+      112
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings%E2%80%93Mumbai_Indians_rivalry",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0054",
+    "entities": [
+      "player:ms-dhoni",
+      "player:rohit-sharma"
+    ],
+    "type": "memorable_match",
+    "text": "The 2014 CSK versus MI match in Dubai was the 100th IPL match for both MS Dhoni and Rohit Sharma.",
+    "numbers": [
+      2014,
+      100
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Chennai_Super_Kings%E2%80%93Mumbai_Indians_rivalry",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0055",
+    "entities": [
+      "team:rcb",
+      "team:csk",
+      "topic:rcb-csk-rivalry"
+    ],
+    "type": "head_to_head",
+    "text": "In the IPL, CSK lead the head-to-head against RCB. A 2026 tally shows 36 meetings: 21 CSK wins, 14 RCB wins and 1 no result. Counts differ between sites depending on the date.",
+    "numbers": [
+      2026,
+      36,
+      21,
+      14,
+      1
+    ],
+    "source_url": "https://www.mykhel.com/cricket/ipl-bangalore-vs-chennai-head-to-head-s4/?team_id=58",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0056",
+    "entities": [
+      "match:ipl-2011-final",
+      "team:csk",
+      "team:rcb",
+      "venue:chepauk",
+      "player:ms-dhoni"
+    ],
+    "type": "memorable_match",
+    "text": "CSK beat RCB by 58 runs in the 2011 IPL final, played at Chepauk in Chennai, with MS Dhoni as CSK's captain.",
+    "numbers": [
+      58,
+      2011
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Royal_Challengers_Bengaluru",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0057",
+    "entities": [
+      "match:ipl-2011-final",
+      "team:csk",
+      "venue:chepauk"
+    ],
+    "type": "memorable_match",
+    "text": "The 2011 IPL final was played at Chepauk, and made CSK the first team to win an IPL final at their home ground and to successfully defend the title.",
+    "numbers": [
+      2011
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/M._A._Chidambaram_Stadium",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0058",
+    "entities": [
+      "team:kkr",
+      "venue:eden-gardens"
+    ],
+    "type": "team_history",
+    "text": "Kolkata Knight Riders were founded on 24 January 2008, are co-owned by Shah Rukh Khan (55%) and the Mehta Group (45%), and play at Eden Gardens in Kolkata.",
+    "numbers": [
+      24,
+      2008,
+      55,
+      45
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Kolkata_Knight_Riders",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0059",
+    "entities": [
+      "team:kkr",
+      "comp:ipl"
+    ],
+    "type": "team_history",
+    "text": "KKR have won the IPL 3 times: in 2012 beating CSK, in 2014 beating Kings XI Punjab, and in 2024 beating Sunrisers Hyderabad.",
+    "numbers": [
+      3,
+      2012,
+      2014,
+      2024
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Kolkata_Knight_Riders",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0060",
+    "entities": [
+      "match:ipl-2024-final",
+      "team:kkr",
+      "venue:chepauk"
+    ],
+    "type": "memorable_match",
+    "text": "KKR won the 2024 IPL final at Chepauk by 8 wickets, chasing the target in 10.3 overs after Sunrisers Hyderabad were bowled out for 113, the lowest total in an IPL final.",
+    "numbers": [
+      2024,
+      8,
+      10.3,
+      113
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Kolkata_Knight_Riders",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0061",
+    "entities": [
+      "team:kkr"
+    ],
+    "type": "record",
+    "text": "KKR hold the record for the longest winning streak by any IPL team, 14 games.",
+    "numbers": [
+      14
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Kolkata_Knight_Riders",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0062",
+    "entities": [
+      "team:kkr"
+    ],
+    "type": "team_history",
+    "text": "Gautam Gambhir captained KKR from 2011 to 2017, in 122 matches with 69 wins, winning the title in 2012 and 2014. He was bought for a record $2.4 million at the 2011 auction.",
+    "numbers": [
+      2011,
+      2017,
+      122,
+      69,
+      2012,
+      2014,
+      2.4
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Kolkata_Knight_Riders",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0063",
+    "entities": [
+      "team:kkr",
+      "match:ipl-2024-final",
+      "player:shreyas-iyer"
+    ],
+    "type": "team_history",
+    "text": "Shreyas Iyer captained KKR to the 2024 IPL title.",
+    "numbers": [
+      2024
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Kolkata_Knight_Riders",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0064",
+    "entities": [
+      "venue:eden-gardens",
+      "team:kkr"
+    ],
+    "type": "profile",
+    "text": "Eden Gardens in Kolkata has a capacity of 68,000 after its 2011 renovation, down from over 90,000.",
+    "numbers": [
+      68000,
+      2011,
+      90000
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Kolkata_Knight_Riders",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0065",
+    "entities": [
+      "player:sunil-narine",
+      "team:kkr"
+    ],
+    "type": "career_milestone",
+    "text": "KKR bought Sunil Narine in February 2012 for $700,000. He has won the IPL Most Valuable Player award 3 times, in 2012, 2018 and 2024, the most by any player.",
+    "numbers": [
+      2012,
+      700000,
+      3,
+      2018,
+      2024
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Sunil_Narine",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0066",
+    "entities": [
+      "player:sunil-narine",
+      "team:kkr",
+      "match:ipl-2024-final"
+    ],
+    "type": "career_milestone",
+    "text": "On 16 April 2024 Sunil Narine scored his first IPL century, 109 off 56 balls against Rajasthan Royals, and KKR went on to win the 2024 title.",
+    "numbers": [
+      16,
+      2024,
+      109,
+      56
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Sunil_Narine",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0067",
+    "entities": [
+      "player:sunil-narine"
+    ],
+    "type": "profile",
+    "text": "Sunil Narine is known as a mystery spinner because of the variations he disguises in his off breaks.",
+    "numbers": [],
+    "source_url": "https://en.wikipedia.org/wiki/Sunil_Narine",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0068",
+    "entities": [
+      "player:sunil-narine",
+      "team:kkr"
+    ],
+    "type": "record",
+    "text": "On 3 May 2026 Sunil Narine became the first overseas bowler to take 200 IPL wickets.",
+    "numbers": [
+      3,
+      2026,
+      200
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Sunil_Narine",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0069",
+    "entities": [
+      "player:ravindra-jadeja"
+    ],
+    "type": "profile",
+    "text": "Ravindra Jadeja was born on 6 December 1988 in Jamnagar, Gujarat, and is a slow left-arm orthodox bowler and a left-handed batter.",
+    "numbers": [
+      6,
+      1988
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Ravindra_Jadeja",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0070",
+    "entities": [
+      "player:ravindra-jadeja",
+      "player:ms-dhoni"
+    ],
+    "type": "profile",
+    "text": "The 'Sir Jadeja' title began as an online joke that went viral, and teammates MS Dhoni, Suresh Raina and Ravichandran Ashwin joined in during April 2013.",
+    "numbers": [
+      2013
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Ravindra_Jadeja",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0071",
+    "entities": [
+      "player:ravindra-jadeja"
+    ],
+    "type": "career_milestone",
+    "text": "Ravindra Jadeja was part of the Rajasthan Royals squad that won the first IPL in 2008, scoring 135 runs in 14 matches.",
+    "numbers": [
+      2008,
+      135,
+      14
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Ravindra_Jadeja",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0072",
+    "entities": [
+      "player:ravindra-jadeja",
+      "team:csk"
+    ],
+    "type": "career_milestone",
+    "text": "Chennai Super Kings bought Ravindra Jadeja for $2 million at the 2012 auction, after a tie-breaker with Deccan Chargers.",
+    "numbers": [
+      2,
+      2012
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Ravindra_Jadeja",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0073",
+    "entities": [
+      "player:ravindra-jadeja",
+      "player:ms-dhoni",
+      "team:csk"
+    ],
+    "type": "career_milestone",
+    "text": "Ravindra Jadeja was named CSK captain in 2022, succeeding MS Dhoni, but stepped down mid-season and Dhoni returned as captain.",
+    "numbers": [
+      2022
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Ravindra_Jadeja",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0074",
+    "entities": [
+      "player:ravindra-jadeja",
+      "team:csk",
+      "match:ipl-2023-final",
+      "player:ms-dhoni"
+    ],
+    "type": "memorable_match",
+    "text": "In the 2023 IPL final CSK needed 10 runs from the last 2 balls, and Ravindra Jadeja hit a six off Mohit Sharma's penultimate ball and then a four to win the title.",
+    "numbers": [
+      2023,
+      10,
+      2
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2023_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0075",
+    "entities": [
+      "match:ipl-2023-final",
+      "topic:dls",
+      "team:csk"
+    ],
+    "type": "memorable_match",
+    "text": "The 2023 IPL final was moved from 28 May to 29 May by rain, the first IPL final postponed because of weather, and CSK's chase was reset to 171 runs from 15 overs by the DLS method.",
+    "numbers": [
+      2023,
+      28,
+      29,
+      171,
+      15
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2023_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0076",
+    "entities": [
+      "match:ipl-2023-final",
+      "team:gt",
+      "player:sai-sudharsan"
+    ],
+    "type": "memorable_match",
+    "text": "Gujarat Titans scored 214/4 in the 2023 IPL final, the highest total in an IPL final, with Sai Sudharsan making 96 off 47 balls.",
+    "numbers": [
+      214,
+      4,
+      2023,
+      96,
+      47
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2023_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0077",
+    "entities": [
+      "match:ipl-2023-final",
+      "team:csk"
+    ],
+    "type": "memorable_match",
+    "text": "CSK won the 2023 IPL final by 5 wickets under the DLS method, their fifth title, equalling Mumbai Indians' record. Devon Conway was Player of the Match.",
+    "numbers": [
+      2023,
+      5
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2023_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0078",
+    "entities": [
+      "match:ipl-2023-final",
+      "player:ms-dhoni",
+      "player:ravindra-jadeja",
+      "player:shubman-gill",
+      "team:gt"
+    ],
+    "type": "memorable_match",
+    "text": "In the 2023 IPL final MS Dhoni stumped Shubman Gill off Ravindra Jadeja for 39, and was dismissed for a duck when he batted.",
+    "numbers": [
+      2023,
+      39
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2023_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0079",
+    "entities": [
+      "venue:narendra-modi",
+      "match:ipl-2023-final",
+      "match:ipl-2025-final"
+    ],
+    "type": "profile",
+    "text": "The Narendra Modi Stadium in Ahmedabad hosted the 2023 IPL final on 29 May 2023, watched by 101,566 people, and the 2025 final on 3 June 2025.",
+    "numbers": [
+      2023,
+      29,
+      101566,
+      2025,
+      3
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2023_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0080",
+    "entities": [
+      "player:ravindra-jadeja"
+    ],
+    "type": "record",
+    "text": "Ravindra Jadeja became the world's top-ranked Test bowler in March 2017, and in February 2023 became the fastest Indian to 250 Test wickets and 2,500 Test runs.",
+    "numbers": [
+      2017,
+      2023,
+      250,
+      2500
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Ravindra_Jadeja",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0081",
+    "entities": [
+      "player:ravindra-jadeja"
+    ],
+    "type": "record",
+    "text": "Ravindra Jadeja has taken 348 Test wickets and scored 4,095 Test runs in 89 Tests.",
+    "numbers": [
+      348,
+      4095,
+      89
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Ravindra_Jadeja",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0082",
+    "entities": [
+      "player:ravindra-jadeja"
+    ],
+    "type": "career_milestone",
+    "text": "Ravindra Jadeja retired from T20 internationals after India won the 2024 T20 World Cup; his last T20I was on 29 June 2024.",
+    "numbers": [
+      2024,
+      29
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Ravindra_Jadeja",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0083",
+    "entities": [
+      "player:ravindra-jadeja",
+      "team:csk"
+    ],
+    "type": "career_milestone",
+    "text": "In 2026 Ravindra Jadeja rejoined Rajasthan Royals through a trade with CSK.",
+    "numbers": [
+      2026
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Ravindra_Jadeja",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0084",
+    "entities": [
+      "player:rohit-sharma"
+    ],
+    "type": "profile",
+    "text": "Rohit Sharma was born on 30 April 1987 in Nagpur, and is nicknamed Hitman.",
+    "numbers": [
+      30,
+      1987
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Rohit_Sharma",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0085",
+    "entities": [
+      "player:rohit-sharma",
+      "team:mi"
+    ],
+    "type": "career_milestone",
+    "text": "Rohit Sharma won the IPL as Deccan Chargers' vice-captain in 2009, and joined Mumbai Indians for $2 million at the 2011 auction.",
+    "numbers": [
+      2009,
+      2,
+      2011
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Rohit_Sharma",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0086",
+    "entities": [
+      "player:rohit-sharma",
+      "team:mi"
+    ],
+    "type": "career_milestone",
+    "text": "Rohit Sharma was replaced as Mumbai Indians captain by Hardik Pandya in 2024.",
+    "numbers": [
+      2024
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Rohit_Sharma",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0087",
+    "entities": [
+      "player:rohit-sharma",
+      "venue:eden-gardens"
+    ],
+    "type": "record",
+    "text": "Rohit Sharma has scored 3 ODI double centuries, the most by any player, including the highest ODI score of 264 against Sri Lanka at Eden Gardens on 13 November 2014.",
+    "numbers": [
+      3,
+      264,
+      13,
+      2014
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Rohit_Sharma",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0088",
+    "entities": [
+      "player:rohit-sharma"
+    ],
+    "type": "career_milestone",
+    "text": "Rohit Sharma captained India to the 2024 T20 World Cup title, beating South Africa in the final on 29 June 2024, and then retired from T20 internationals.",
+    "numbers": [
+      2024,
+      29
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Rohit_Sharma",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0089",
+    "entities": [
+      "player:rohit-sharma"
+    ],
+    "type": "career_milestone",
+    "text": "Rohit Sharma announced his Test retirement on 7 May 2025.",
+    "numbers": [
+      7,
+      2025
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Rohit_Sharma",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0090",
+    "entities": [
+      "player:jasprit-bumrah",
+      "topic:yorker"
+    ],
+    "type": "profile",
+    "text": "Jasprit Bumrah was born on 6 December 1993 in Ahmedabad, and bowls with an unorthodox, stiff-armed action off a short run-up. His hyperextended elbow lets him release the ball from beyond the crease, shortening its travel by nearly half a metre.",
+    "numbers": [
+      6,
+      1993
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Jasprit_Bumrah",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0091",
+    "entities": [
+      "player:jasprit-bumrah",
+      "team:mi"
+    ],
+    "type": "career_milestone",
+    "text": "Jasprit Bumrah made his IPL debut in 2013 at age 19 for Mumbai Indians, against RCB, and has won 5 titles with MI, in 2013, 2015, 2017, 2019 and 2020.",
+    "numbers": [
+      2013,
+      19,
+      5,
+      2015,
+      2017,
+      2019,
+      2020
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Jasprit_Bumrah",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0092",
+    "entities": [
+      "player:jasprit-bumrah",
+      "team:mi"
+    ],
+    "type": "record",
+    "text": "Jasprit Bumrah's best IPL figures are 5/10 against Kolkata Knight Riders in 2022.",
+    "numbers": [
+      5,
+      10,
+      2022
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Jasprit_Bumrah",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0093",
+    "entities": [
+      "player:jasprit-bumrah"
+    ],
+    "type": "record",
+    "text": "Jasprit Bumrah was Player of the Tournament at the 2024 T20 World Cup, taking 15 wickets at an economy rate of 4.17.",
+    "numbers": [
+      2024,
+      15,
+      4.17
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Jasprit_Bumrah",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0094",
+    "entities": [
+      "player:jasprit-bumrah",
+      "topic:yorker"
+    ],
+    "type": "profile",
+    "text": "In January 2019 Wasim Akram said Jasprit Bumrah has the best and most effective yorker among fast bowlers playing international cricket.",
+    "numbers": [
+      2019
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Jasprit_Bumrah",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0095",
+    "entities": [
+      "player:jasprit-bumrah"
+    ],
+    "type": "record",
+    "text": "Jasprit Bumrah is the fastest Indian fast bowler to reach 200 Test wickets, doing so in his 44th Test.",
+    "numbers": [
+      200,
+      44
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Jasprit_Bumrah",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0096",
+    "entities": [
+      "player:jasprit-bumrah"
+    ],
+    "type": "career_milestone",
+    "text": "Jasprit Bumrah won the ICC Men's Test Cricketer of the Year award and the Sir Garfield Sobers Trophy as ICC Men's Cricketer of the Year for 2024.",
+    "numbers": [
+      2024
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Jasprit_Bumrah",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0097",
+    "entities": [
+      "player:suryakumar-yadav"
+    ],
+    "type": "profile",
+    "text": "Suryakumar Yadav was born on 14 September 1990 in Bombay, and is known as Mr. 360 and by his initials SKY.",
+    "numbers": [
+      14,
+      1990,
+      360
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Suryakumar_Yadav",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0098",
+    "entities": [
+      "player:suryakumar-yadav",
+      "team:kkr",
+      "team:mi"
+    ],
+    "type": "career_milestone",
+    "text": "Suryakumar Yadav played for KKR from 2014 to 2017, scoring 608 runs in 54 matches, and returned to Mumbai Indians in 2018, who bought him for 32 million rupees.",
+    "numbers": [
+      2014,
+      2017,
+      608,
+      54,
+      2018,
+      32
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Suryakumar_Yadav",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0099",
+    "entities": [
+      "player:suryakumar-yadav",
+      "team:mi"
+    ],
+    "type": "career_milestone",
+    "text": "Suryakumar Yadav scored 605 runs in 16 matches in the 2023 IPL season, including his maiden IPL century, against Gujarat Titans.",
+    "numbers": [
+      605,
+      16,
+      2023
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Suryakumar_Yadav",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0100",
+    "entities": [
+      "player:suryakumar-yadav"
+    ],
+    "type": "record",
+    "text": "Suryakumar Yadav made his T20I debut on 14 March 2021, has scored 4 T20I centuries, and held the No. 1 T20I batter ranking from 30 October 2022 to June 2024.",
+    "numbers": [
+      14,
+      2021,
+      4,
+      1,
+      30,
+      2022,
+      2024
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Suryakumar_Yadav",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0101",
+    "entities": [
+      "player:suryakumar-yadav"
+    ],
+    "type": "memorable_match",
+    "text": "In the 2024 T20 World Cup final Suryakumar Yadav took a catch near the boundary to dismiss David Miller in the last over, and India won by 7 runs. A controversy followed over whether he touched the boundary cushion.",
+    "numbers": [
+      2024,
+      7
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Suryakumar_Yadav",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0102",
+    "entities": [
+      "match:ipl-2025-final",
+      "team:rcb",
+      "player:krunal-pandya",
+      "team:pbks"
+    ],
+    "type": "memorable_match",
+    "text": "In the 2025 IPL final RCB scored 190/9 and Punjab Kings chased 191 but reached 184/7. Krunal Pandya was Player of the Match with 2/17 in 4 overs.",
+    "numbers": [
+      2025,
+      190,
+      9,
+      191,
+      184,
+      7,
+      2,
+      17,
+      4
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0103",
+    "entities": [
+      "comp:ipl"
+    ],
+    "type": "profile",
+    "text": "The 2025 IPL was the 18th edition of the tournament.",
+    "numbers": [
+      2025,
+      18
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0104",
+    "entities": [
+      "venue:chinnaswamy",
+      "team:rcb"
+    ],
+    "type": "profile",
+    "text": "The M. Chinnaswamy Stadium is known for small boundaries and high scores; in 2024 Sunrisers Hyderabad scored 287 there against RCB, the highest IPL total at the ground.",
+    "numbers": [
+      2024,
+      287
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/M._Chinnaswamy_Stadium",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0105",
+    "entities": [
+      "venue:chinnaswamy",
+      "team:rcb"
+    ],
+    "type": "record",
+    "text": "Chris Gayle scored 175 off 66 balls for RCB against Pune Warriors in 2013, the highest individual IPL score at the M. Chinnaswamy Stadium.",
+    "numbers": [
+      175,
+      66,
+      2013
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/M._Chinnaswamy_Stadium",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0106",
+    "entities": [
+      "venue:chepauk",
+      "team:csk",
+      "match:ipl-2011-final",
+      "match:ipl-2024-final"
+    ],
+    "type": "profile",
+    "text": "The M. A. Chidambaram Stadium in Chennai is CSK's home ground, has a capacity of 38,200, and hosted the IPL finals of 2011, 2012 and 2024.",
+    "numbers": [
+      38200,
+      2011,
+      2012,
+      2024
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/M._A._Chidambaram_Stadium",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0107",
+    "entities": [
+      "topic:yorker"
+    ],
+    "type": "rule",
+    "text": "A yorker is a delivery that lands right at the batter's feet, which makes it very difficult to play.",
+    "numbers": [],
+    "source_url": "https://en.wikipedia.org/wiki/Yorker",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0108",
+    "entities": [
+      "topic:dls"
+    ],
+    "type": "rule",
+    "text": "The DLS method is a mathematical way of recalculating the target for the team batting second when rain or another interruption shortens a limited-overs match.",
+    "numbers": [],
+    "source_url": "https://en.wikipedia.org/wiki/Duckworth%E2%80%93Lewis%E2%80%93Stern_method",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0109",
+    "entities": [
+      "topic:orange-cap",
+      "comp:ipl"
+    ],
+    "type": "rule",
+    "text": "The Orange Cap goes to the leading run-scorer of each IPL season, and was introduced in April 2008; the Purple Cap goes to the season's leading wicket-taker.",
+    "numbers": [
+      2008
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Orange_Cap_(IPL)",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0110",
+    "entities": [
+      "match:ipl-2025-final",
+      "venue:narendra-modi",
+      "comp:ipl"
+    ],
+    "type": "memorable_match",
+    "text": "The 2025 IPL final was played on 3 June 2025 at the Narendra Modi Stadium in Ahmedabad, in front of 91,419 people. It had originally been scheduled for Eden Gardens in Kolkata on 25 May.",
+    "numbers": [
+      2025,
+      3,
+      91419,
+      25
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0111",
+    "entities": [
+      "match:ipl-2025-final",
+      "team:pbks",
+      "player:shreyas-iyer"
+    ],
+    "type": "memorable_match",
+    "text": "Punjab Kings captain Shreyas Iyer won the toss in the 2025 final and chose to field.",
+    "numbers": [
+      2025
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0112",
+    "entities": [
+      "match:ipl-2025-final",
+      "player:virat-kohli",
+      "team:rcb"
+    ],
+    "type": "memorable_match",
+    "text": "Virat Kohli top-scored for RCB in the 2025 final with 43 off 35 balls. He was out in the 15th over with RCB on 131/4.",
+    "numbers": [
+      2025,
+      43,
+      35,
+      15,
+      131,
+      4
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0113",
+    "entities": [
+      "match:ipl-2025-final",
+      "team:rcb",
+      "player:rajat-patidar"
+    ],
+    "type": "memorable_match",
+    "text": "Rajat Patidar, in his first season as RCB captain, made 26 off 16 balls in the 2025 final.",
+    "numbers": [
+      26,
+      16,
+      2025
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0114",
+    "entities": [
+      "match:ipl-2025-final",
+      "team:rcb"
+    ],
+    "type": "memorable_match",
+    "text": "In the 2025 final Liam Livingstone made 25 off 15 balls, Mayank Agarwal 24 off 18 and Jitesh Sharma 24 off 10 as RCB reached 190/9.",
+    "numbers": [
+      2025,
+      25,
+      15,
+      24,
+      18,
+      10,
+      190,
+      9
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0115",
+    "entities": [
+      "match:ipl-2025-final",
+      "team:pbks",
+      "player:arshdeep-singh"
+    ],
+    "type": "memorable_match",
+    "text": "Arshdeep Singh took 3 wickets for 40 runs in the 2025 final, including a last over that cost only 3 runs and took 3 wickets. Kyle Jamieson also took 3 wickets, for 48 runs.",
+    "numbers": [
+      3,
+      40,
+      2025,
+      48
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0116",
+    "entities": [
+      "match:ipl-2025-final",
+      "team:pbks",
+      "player:shashank-singh"
+    ],
+    "type": "memorable_match",
+    "text": "Shashank Singh hit an unbeaten 61 off 30 balls in the 2025 final, the top score of the chase, as Punjab Kings finished on 184/7 against RCB's 190/9.",
+    "numbers": [
+      61,
+      30,
+      2025,
+      184,
+      7,
+      190,
+      9
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0117",
+    "entities": [
+      "match:ipl-2025-final",
+      "team:pbks"
+    ],
+    "type": "memorable_match",
+    "text": "In the 2025 final Punjab Kings were 79/3 after 9.4 overs and 145/7 after 17.2 overs. Josh Inglis made 39 off 23 balls and Prabhsimran Singh 26 off 22.",
+    "numbers": [
+      2025,
+      79,
+      3,
+      9.4,
+      145,
+      7,
+      17.2,
+      39,
+      23,
+      26,
+      22
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0118",
+    "entities": [
+      "match:ipl-2025-final",
+      "team:rcb",
+      "player:krunal-pandya"
+    ],
+    "type": "memorable_match",
+    "text": "In the 2025 final Bhuvneshwar Kumar took 2 wickets for 38 runs, Romario Shepherd 1 for 30, Yash Dayal 1 for 18 in 3 overs and Josh Hazlewood 1 for 54, alongside Krunal Pandya's 2 for 17.",
+    "numbers": [
+      2025,
+      2,
+      38,
+      1,
+      30,
+      18,
+      3,
+      54,
+      17
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0119",
+    "entities": [
+      "team:rcb",
+      "team:pbks",
+      "match:ipl-2025-final"
+    ],
+    "type": "team_history",
+    "text": "RCB finished 2nd in the 2025 league stage with 9 wins from 14 matches, then beat Punjab Kings in Qualifier 1 on 29 May to reach their fourth final.",
+    "numbers": [
+      2,
+      2025,
+      9,
+      14,
+      1,
+      29
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0120",
+    "entities": [
+      "team:pbks",
+      "team:rcb",
+      "match:ipl-2025-final"
+    ],
+    "type": "team_history",
+    "text": "Punjab Kings finished 1st in the 2025 league stage with 9 wins from 14 matches and 19 points. They lost Qualifier 1 to RCB, then beat Mumbai Indians in Qualifier 2 on 1 June to reach their second final.",
+    "numbers": [
+      1,
+      2025,
+      9,
+      14,
+      19,
+      2
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0121",
+    "entities": [
+      "player:virat-kohli",
+      "team:rcb",
+      "match:ipl-2025-final"
+    ],
+    "type": "career_milestone",
+    "text": "After RCB's 2025 title Virat Kohli said the wait had been 18 long years, and that the win was as much for the fans as for the team.",
+    "numbers": [
+      2025,
+      18
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0122",
+    "entities": [
+      "team:rcb",
+      "team:pbks",
+      "match:ipl-2025-final"
+    ],
+    "type": "record",
+    "text": "RCB received 20 crore rupees and Punjab Kings 12.5 crore rupees in prize money for the 2025 final.",
+    "numbers": [
+      20,
+      12.5,
+      2025
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0123",
+    "entities": [
+      "comp:ipl"
+    ],
+    "type": "profile",
+    "text": "The 2025 IPL had 10 teams and 74 matches, played from 22 March to 3 June 2025.",
+    "numbers": [
+      2025,
+      10,
+      74,
+      22,
+      3
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0124",
+    "entities": [
+      "comp:ipl"
+    ],
+    "type": "team_history",
+    "text": "The 2025 IPL was suspended on 9 May 2025 because of the India-Pakistan crisis, and play resumed on 17 May.",
+    "numbers": [
+      2025,
+      9,
+      17
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0125",
+    "entities": [
+      "comp:ipl",
+      "topic:orange-cap",
+      "player:sai-sudharsan",
+      "team:gt"
+    ],
+    "type": "record",
+    "text": "Sai Sudharsan scored the most runs in the 2025 IPL, 759, and Prasidh Krishna took the most wickets, 25, both for Gujarat Titans.",
+    "numbers": [
+      2025,
+      759,
+      25
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0126",
+    "entities": [
+      "player:suryakumar-yadav",
+      "comp:ipl"
+    ],
+    "type": "career_milestone",
+    "text": "Suryakumar Yadav was named Most Valuable Player of the 2025 IPL.",
+    "numbers": [
+      2025
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0127",
+    "entities": [
+      "comp:ipl",
+      "match:ipl-2025-final"
+    ],
+    "type": "record",
+    "text": "The 2025 IPL final drew a reported record 169 million viewers.",
+    "numbers": [
+      2025,
+      169
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0128",
+    "entities": [
+      "team:pbks"
+    ],
+    "type": "team_history",
+    "text": "Punjab Kings were founded in 2008 as Kings XI Punjab and were renamed Punjab Kings in February 2021.",
+    "numbers": [
+      2008,
+      2021
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Punjab_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0129",
+    "entities": [
+      "team:pbks"
+    ],
+    "type": "profile",
+    "text": "Punjab Kings' home grounds are the Maharaja Yadavindra Singh International Cricket Stadium in New Chandigarh (2021 to present) and the PCA Stadium in Mohali (2008 to 2023), with HPCA Stadium in Dharamsala as a secondary home.",
+    "numbers": [
+      2021,
+      2008,
+      2023
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Punjab_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0130",
+    "entities": [
+      "team:pbks",
+      "team:kkr",
+      "match:ipl-2014-final"
+    ],
+    "type": "memorable_match",
+    "text": "Punjab Kings' only IPL final before 2025 was in 2014, when they lost to Kolkata Knight Riders, who chased 200 with 3 balls to spare.",
+    "numbers": [
+      2025,
+      2014,
+      200,
+      3
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Punjab_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0131",
+    "entities": [
+      "match:ipl-2014-final",
+      "team:pbks"
+    ],
+    "type": "record",
+    "text": "Wriddhiman Saha scored an unbeaten 115 for Punjab Kings in the 2014 final, the first century in an IPL final.",
+    "numbers": [
+      115,
+      2014
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Punjab_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0132",
+    "entities": [
+      "team:pbks",
+      "comp:ipl"
+    ],
+    "type": "team_history",
+    "text": "Punjab Kings have finished runners-up in the IPL twice, in 2014 and 2025, and have never won the title.",
+    "numbers": [
+      2014,
+      2025
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Punjab_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0133",
+    "entities": [
+      "team:pbks",
+      "team:kkr"
+    ],
+    "type": "record",
+    "text": "In 2024 Punjab Kings completed the highest successful run chase in T20 history, overhauling KKR's 261/6 with 8 balls to spare.",
+    "numbers": [
+      2024,
+      261,
+      6,
+      8
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Punjab_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0134",
+    "entities": [
+      "team:pbks",
+      "player:shreyas-iyer"
+    ],
+    "type": "career_milestone",
+    "text": "Punjab Kings bought Shreyas Iyer for 26.75 crore rupees at the 2025 auction, the second-highest bid ever in the IPL, and made him captain for 2025.",
+    "numbers": [
+      26.75,
+      2025
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Punjab_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0135",
+    "entities": [
+      "team:pbks"
+    ],
+    "type": "team_history",
+    "text": "Ricky Ponting was Punjab Kings' head coach in 2025.",
+    "numbers": [
+      2025
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Punjab_Kings",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0136",
+    "entities": [
+      "match:ipl-2025-final",
+      "player:shreyas-iyer",
+      "team:pbks"
+    ],
+    "type": "memorable_match",
+    "text": "Shreyas Iyer made only 1 off 2 balls in the 2025 final, and Marcus Stoinis 6 off 2, as Punjab Kings fell short of RCB.",
+    "numbers": [
+      1,
+      2,
+      2025,
+      6
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2025_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0137",
+    "entities": [
+      "match:ipl-2026-final",
+      "venue:narendra-modi",
+      "comp:ipl"
+    ],
+    "type": "memorable_match",
+    "text": "The 2026 IPL final was played on 31 May 2026 at the Narendra Modi Stadium in Ahmedabad, the fourth IPL final at that ground.",
+    "numbers": [
+      2026,
+      31
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2026_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0138",
+    "entities": [
+      "match:ipl-2026-final",
+      "team:rcb",
+      "team:gt"
+    ],
+    "type": "memorable_match",
+    "text": "RCB won the toss in the 2026 final and chose to field. Gujarat Titans made 155/8, and RCB replied with 161/5 in 18 overs to win by 5 wickets.",
+    "numbers": [
+      2026,
+      155,
+      8,
+      161,
+      5,
+      18
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2026_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0139",
+    "entities": [
+      "match:ipl-2026-final",
+      "player:virat-kohli",
+      "team:rcb"
+    ],
+    "type": "memorable_match",
+    "text": "Virat Kohli was Player of the Match in the 2026 final, scoring an unbeaten 75 off 42 balls with 9 fours and 3 sixes, a strike rate of 178.57.",
+    "numbers": [
+      2026,
+      75,
+      42,
+      9,
+      3,
+      178.57
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2026_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0140",
+    "entities": [
+      "match:ipl-2026-final",
+      "player:washington-sundar",
+      "team:gt"
+    ],
+    "type": "memorable_match",
+    "text": "Washington Sundar made an unbeaten 50 off 37 balls, the top score for Gujarat Titans in the 2026 final.",
+    "numbers": [
+      50,
+      37,
+      2026
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2026_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0141",
+    "entities": [
+      "match:ipl-2026-final",
+      "player:rasikh-salam",
+      "team:rcb",
+      "team:gt"
+    ],
+    "type": "memorable_match",
+    "text": "In the 2026 final Rasikh Salam took 3 wickets for 27 runs in 4 overs for RCB, Bhuvneshwar Kumar took 2 for 29 and Josh Hazlewood 2 for 37, while Rashid Khan took 2 for 25 for Gujarat Titans.",
+    "numbers": [
+      2026,
+      3,
+      27,
+      4,
+      2,
+      29,
+      37,
+      25
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2026_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0142",
+    "entities": [
+      "match:ipl-2026-final",
+      "player:shubman-gill",
+      "player:sai-sudharsan",
+      "team:gt"
+    ],
+    "type": "memorable_match",
+    "text": "Gujarat Titans' openers Shubman Gill and Sai Sudharsan were dismissed in the 3rd and 4th overs of the 2026 final.",
+    "numbers": [
+      3,
+      4,
+      2026
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2026_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0143",
+    "entities": [
+      "match:ipl-2026-final",
+      "player:venkatesh-iyer",
+      "player:virat-kohli",
+      "team:rcb"
+    ],
+    "type": "memorable_match",
+    "text": "In the 2026 final Venkatesh Iyer made 32 and put on 62 with Virat Kohli for RCB's first wicket. RCB were 91/4 after 8.5 overs, and Kohli stayed unbeaten through the chase.",
+    "numbers": [
+      2026,
+      32,
+      62,
+      91,
+      4,
+      8.5
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2026_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0144",
+    "entities": [
+      "match:ipl-2026-final",
+      "team:rcb",
+      "team:csk",
+      "team:mi"
+    ],
+    "type": "record",
+    "text": "RCB won a second IPL title in a row in 2026, becoming the third team to win consecutive finals after Chennai and Mumbai.",
+    "numbers": [
+      2026
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2026_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0145",
+    "entities": [
+      "match:ipl-2026-final",
+      "team:rcb",
+      "comp:ipl"
+    ],
+    "type": "record",
+    "text": "In 2026 RCB became the first team to win the IPL and the Women's Premier League in the same year.",
+    "numbers": [
+      2026
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2026_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0146",
+    "entities": [
+      "team:rcb",
+      "team:gt",
+      "match:ipl-2026-final"
+    ],
+    "type": "team_history",
+    "text": "RCB finished 1st in the 2026 league stage with 9 wins from 14 matches, then beat Gujarat Titans by 92 runs in Qualifier 1, scoring 254/5 to GT's 162.",
+    "numbers": [
+      1,
+      2026,
+      9,
+      14,
+      92,
+      254,
+      5,
+      162
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2026_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0147",
+    "entities": [
+      "team:gt",
+      "team:rcb",
+      "match:ipl-2026-final"
+    ],
+    "type": "team_history",
+    "text": "Gujarat Titans finished 2nd in the 2026 league stage on net run rate, also with 9 wins from 14 matches. They lost Qualifier 1 to RCB, then beat Rajasthan Royals in Qualifier 2 to reach the final.",
+    "numbers": [
+      2,
+      2026,
+      9,
+      14,
+      1
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2026_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0148",
+    "entities": [
+      "match:ipl-2026-final",
+      "team:rcb",
+      "team:gt"
+    ],
+    "type": "record",
+    "text": "RCB received 20 crore rupees and Gujarat Titans 12.5 crore rupees in prize money for the 2026 final.",
+    "numbers": [
+      20,
+      12.5,
+      2026
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2026_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0149",
+    "entities": [
+      "player:virat-kohli",
+      "team:rcb",
+      "match:ipl-2026-final",
+      "match:ipl-2025-final"
+    ],
+    "type": "career_milestone",
+    "text": "Virat Kohli won the IPL with RCB in 2025 and again in 2026, when he was Player of the Match in the final.",
+    "numbers": [
+      2025,
+      2026
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/2026_Indian_Premier_League_final",
+    "as_of": "2026-11-14",
+    "verified": false
+  },
+  {
+    "id": "f-0150",
+    "entities": [
+      "match:paris-2024-basketball-final",
+      "team:usa-basketball",
+      "team:france-basketball",
+      "venue:accor-arena",
+      "comp:paris-2024-basketball"
+    ],
+    "type": "memorable_match",
+    "text": "The USA beat France 98-87 in the Paris 2024 Olympic men's basketball gold medal game on 10 August 2024 at the Accor Arena, called Bercy Arena for the Games. It was a rematch of the 2020 final.",
+    "numbers": [
+      98,
+      87,
+      2024,
+      10,
+      2020
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Basketball_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_tournament",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0151",
+    "entities": [
+      "match:paris-2024-basketball-final",
+      "team:usa-basketball",
+      "team:france-basketball"
+    ],
+    "type": "memorable_match",
+    "text": "By quarter in the 2024 final the USA led 20-15 and 29-26, France won the 3rd quarter 25-23, and the USA took the 4th 26-21.",
+    "numbers": [
+      2024,
+      20,
+      15,
+      29,
+      26,
+      3,
+      25,
+      23,
+      4,
+      21
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Basketball_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_tournament",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0152",
+    "entities": [
+      "match:paris-2024-basketball-final",
+      "player:stephen-curry",
+      "player:anthony-davis",
+      "player:lebron-james",
+      "team:usa-basketball"
+    ],
+    "type": "memorable_match",
+    "text": "In the 2024 Olympic final Stephen Curry scored 24 points for the USA, Anthony Davis grabbed 9 rebounds and LeBron James gave 10 assists.",
+    "numbers": [
+      2024,
+      24,
+      9,
+      10
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Basketball_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_tournament",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0153",
+    "entities": [
+      "match:paris-2024-basketball-final",
+      "player:victor-wembanyama",
+      "player:nicolas-batum",
+      "team:france-basketball"
+    ],
+    "type": "memorable_match",
+    "text": "Victor Wembanyama scored a team-high 26 points for France in the 2024 final, and Nicolas Batum led France with 8 rebounds and 4 assists.",
+    "numbers": [
+      26,
+      2024,
+      8,
+      4
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Basketball_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_tournament",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0154",
+    "entities": [
+      "match:paris-2024-basketball-final",
+      "venue:accor-arena"
+    ],
+    "type": "profile",
+    "text": "The crowd for the 2024 Olympic basketball final was 12,121 at the Accor Arena.",
+    "numbers": [
+      2024,
+      12121
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Basketball_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_tournament",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0155",
+    "entities": [
+      "match:paris-2024-basketball-final",
+      "team:usa-basketball",
+      "player:lebron-james",
+      "comp:paris-2024-basketball"
+    ],
+    "type": "record",
+    "text": "The USA won its 17th Olympic title and its 5th in a row in Paris, and LeBron James was named MVP of the 2024 Olympic basketball tournament.",
+    "numbers": [
+      17,
+      5,
+      2024
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Basketball_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_tournament",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0156",
+    "entities": [
+      "match:paris-2024-basketball-semi-usa-serbia",
+      "team:usa-basketball",
+      "player:stephen-curry"
+    ],
+    "type": "memorable_match",
+    "text": "In the 2024 semifinal the USA beat Serbia 95-91 as Stephen Curry scored 36 points, and the USA outscored Serbia 32-15 in the 4th quarter.",
+    "numbers": [
+      2024,
+      95,
+      91,
+      36,
+      32,
+      15,
+      4
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Basketball_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_tournament",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0157",
+    "entities": [
+      "match:paris-2024-basketball-semi-fra-ger",
+      "team:france-basketball",
+      "player:guerschon-yabusele"
+    ],
+    "type": "memorable_match",
+    "text": "France beat Germany 73-69 in the 2024 Olympic semifinal, led by Guerschon Yabusele with 17 points.",
+    "numbers": [
+      73,
+      69,
+      2024,
+      17
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Basketball_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_tournament",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0158",
+    "entities": [
+      "comp:paris-2024-basketball",
+      "team:france-basketball"
+    ],
+    "type": "team_history",
+    "text": "France's 2024 Olympic run: they beat Brazil 78-66 in the opener, beat Japan 94-90 in overtime, lost 71-85 to Germany, beat Canada 82-73 in the quarterfinals and Germany 73-69 in the semifinals.",
+    "numbers": [
+      2024,
+      78,
+      66,
+      94,
+      90,
+      71,
+      85,
+      82,
+      73,
+      69
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Basketball_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_tournament",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0159",
+    "entities": [
+      "comp:paris-2024-basketball",
+      "team:usa-basketball",
+      "team:france-basketball"
+    ],
+    "type": "record",
+    "text": "The 2024 Olympic basketball final standings were USA gold (6-0), France silver (4-2) and Serbia bronze, after Serbia beat Germany 93-83 in the bronze medal game.",
+    "numbers": [
+      2024,
+      6,
+      0,
+      4,
+      2,
+      93,
+      83
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Basketball_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_tournament",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0160",
+    "entities": [
+      "comp:paris-2024-basketball",
+      "venue:accor-arena"
+    ],
+    "type": "profile",
+    "text": "The 2024 Olympic men's basketball tournament ran from 27 July to 10 August 2024, with the preliminary games at Stade Pierre-Mauroy in Villeneuve d'Ascq and the final phase at the Accor Arena in Paris.",
+    "numbers": [
+      2024,
+      27,
+      10
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Basketball_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_tournament",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0161",
+    "entities": [
+      "comp:paris-2024-basketball"
+    ],
+    "type": "record",
+    "text": "Giannis Antetokounmpo of Greece was the top scorer of the 2024 Olympic basketball tournament, averaging 25.8 points per game.",
+    "numbers": [
+      2024,
+      25.8
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Basketball_at_the_2024_Summer_Olympics_%E2%80%93_Men%27s_tournament",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0162",
+    "entities": [
+      "team:usa-basketball"
+    ],
+    "type": "team_history",
+    "text": "The USA has won a medal in all 20 Olympic basketball tournaments it has entered, including 17 golds, the latest in 2024.",
+    "numbers": [
+      20,
+      17,
+      2024
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/United_States_men%27s_national_basketball_team",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0163",
+    "entities": [
+      "team:usa-basketball"
+    ],
+    "type": "team_history",
+    "text": "The USA won 7 straight Olympic golds from 1936 to 1968, and its first Olympic loss came in the 1972 final.",
+    "numbers": [
+      7,
+      1936,
+      1968,
+      1972
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/United_States_men%27s_national_basketball_team",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0164",
+    "entities": [
+      "team:usa-basketball"
+    ],
+    "type": "team_history",
+    "text": "The 1992 Dream Team won Olympic gold in Barcelona by an average of 43.8 points per game, and coach Chuck Daly did not call a single timeout.",
+    "numbers": [
+      1992,
+      43.8
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/United_States_men%27s_national_basketball_team",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0165",
+    "entities": [
+      "match:tokyo-2020-basketball-final",
+      "team:usa-basketball",
+      "team:france-basketball"
+    ],
+    "type": "memorable_match",
+    "text": "The USA beat France 87-82 in the Tokyo 2020 Olympic final for its 4th straight gold and 16th overall.",
+    "numbers": [
+      87,
+      82,
+      2020,
+      4,
+      16
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/United_States_men%27s_national_basketball_team",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0166",
+    "entities": [
+      "team:usa-basketball"
+    ],
+    "type": "team_history",
+    "text": "The USA lost 3 games at the 2004 Olympics, more than its teams had lost in all previous Games combined, and finished with the bronze medal.",
+    "numbers": [
+      2004,
+      3
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/United_States_men%27s_national_basketball_team",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0167",
+    "entities": [
+      "team:france-basketball"
+    ],
+    "type": "team_history",
+    "text": "France won Olympic silver in 1948, 2000, 2020 and 2024, and won EuroBasket gold in 2013. The team is known as Les Bleus.",
+    "numbers": [
+      1948,
+      2000,
+      2020,
+      2024,
+      2013
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/France_men%27s_national_basketball_team",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0168",
+    "entities": [
+      "team:france-basketball",
+      "player:tony-parker"
+    ],
+    "type": "career_milestone",
+    "text": "Tony Parker was MVP of EuroBasket 2013, retired from the national team after the 2016 Olympics, and had his number 9 retired in 2024.",
+    "numbers": [
+      2013,
+      2016,
+      9,
+      2024
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/France_men%27s_national_basketball_team",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0169",
+    "entities": [
+      "team:france-basketball",
+      "player:nicolas-batum"
+    ],
+    "type": "career_milestone",
+    "text": "Nicolas Batum scored 35 points against Serbia in the 2014 World Cup semifinal and made a game-saving buzzer block against Slovenia at the 2020 Olympics.",
+    "numbers": [
+      35,
+      2014,
+      2020
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/France_men%27s_national_basketball_team",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0170",
+    "entities": [
+      "team:france-basketball",
+      "comp:paris-2024-basketball",
+      "match:paris-2024-basketball-semi-fra-ger"
+    ],
+    "type": "team_history",
+    "text": "Vincent Collet, the national team's longest-tenured head coach, stepped down after the 2024 Olympics, and Frederic Fauthoux was named head coach in September 2024.",
+    "numbers": [
+      2024
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/France_men%27s_national_basketball_team",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0171",
+    "entities": [
+      "player:stephen-curry"
+    ],
+    "type": "profile",
+    "text": "Stephen Curry was born on 14 March 1988 in Akron, Ohio, and has played for the Golden State Warriors since they drafted him 7th overall in 2009. His father Dell Curry also played in the NBA.",
+    "numbers": [
+      14,
+      1988,
+      7,
+      2009
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Stephen_Curry",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0172",
+    "entities": [
+      "player:stephen-curry"
+    ],
+    "type": "career_milestone",
+    "text": "Stephen Curry has won 4 NBA championships, in 2015, 2017, 2018 and 2022, and was league MVP in 2015 and 2016, the second time unanimously.",
+    "numbers": [
+      4,
+      2015,
+      2017,
+      2018,
+      2022,
+      2016
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Stephen_Curry",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0173",
+    "entities": [
+      "player:stephen-curry",
+      "topic:three-pointer"
+    ],
+    "type": "record",
+    "text": "Stephen Curry became the NBA's all-time leader in three-pointers made in 2021-22 by passing Ray Allen, set the single-season record with 402 in 2015-16, and has led the league in threes a record 8 times.",
+    "numbers": [
+      2021,
+      22,
+      402,
+      2015,
+      16,
+      8
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Stephen_Curry",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0174",
+    "entities": [
+      "player:kevin-durant"
+    ],
+    "type": "record",
+    "text": "Kevin Durant has won 4 Olympic gold medals, in 2012, 2016, 2020 and 2024, the only male basketball player to do so and the first male athlete to win 4 golds in a team sport.",
+    "numbers": [
+      4,
+      2012,
+      2016,
+      2020,
+      2024
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Kevin_Durant",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0175",
+    "entities": [
+      "player:kevin-durant",
+      "team:usa-basketball"
+    ],
+    "type": "record",
+    "text": "Kevin Durant is the leading scorer in Team USA's Olympic basketball history.",
+    "numbers": [],
+    "source_url": "https://en.wikipedia.org/wiki/Kevin_Durant",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0176",
+    "entities": [
+      "player:kevin-durant"
+    ],
+    "type": "career_milestone",
+    "text": "Kevin Durant won the NBA title and Finals MVP in 2017 and 2018 with the Golden State Warriors, the NBA MVP in 2013-14, 4 scoring titles and 16 All-Star selections.",
+    "numbers": [
+      2017,
+      2018,
+      2013,
+      14,
+      4,
+      16
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Kevin_Durant",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0177",
+    "entities": [
+      "player:lebron-james"
+    ],
+    "type": "career_milestone",
+    "text": "LeBron James has won 4 NBA titles, in 2012 and 2013 with the Miami Heat, 2016 with the Cavaliers and 2020 with the Lakers, and 4 NBA MVP awards, in 2009, 2010, 2012 and 2013.",
+    "numbers": [
+      4,
+      2012,
+      2013,
+      2016,
+      2020,
+      2009,
+      2010
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/LeBron_James",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0178",
+    "entities": [
+      "player:lebron-james"
+    ],
+    "type": "record",
+    "text": "LeBron James passed Kareem Abdul-Jabbar as the NBA's all-time leading scorer on 7 February 2023.",
+    "numbers": [
+      7,
+      2023
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/LeBron_James",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0179",
+    "entities": [
+      "player:lebron-james",
+      "team:usa-basketball"
+    ],
+    "type": "career_milestone",
+    "text": "LeBron James won Olympic gold with the USA in 2008, 2012 and 2024, plus bronze in 2004, and was named FIBA's Olympic MVP in 2024.",
+    "numbers": [
+      2008,
+      2012,
+      2024,
+      2004
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/LeBron_James",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0180",
+    "entities": [
+      "player:victor-wembanyama"
+    ],
+    "type": "profile",
+    "text": "Victor Wembanyama was born on 4 January 2004 in Le Chesnay, France, and stands 7 ft 4 in (2.24 m). He is nicknamed Wemby and the Alien.",
+    "numbers": [
+      4,
+      2004,
+      7,
+      2.24
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Victor_Wembanyama",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0181",
+    "entities": [
+      "player:victor-wembanyama"
+    ],
+    "type": "career_milestone",
+    "text": "Victor Wembanyama was the 1st overall pick in the 2023 NBA draft by the San Antonio Spurs, the first French player taken 1st overall, and was the unanimous 2024 Rookie of the Year.",
+    "numbers": [
+      1,
+      2023,
+      2024
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Victor_Wembanyama",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0182",
+    "entities": [
+      "player:victor-wembanyama"
+    ],
+    "type": "record",
+    "text": "Victor Wembanyama led the NBA in blocks per game in 2023-24 with 3.6, becoming the youngest player to lead the league in blocks, at 20 years and 101 days.",
+    "numbers": [
+      2023,
+      24,
+      3.6,
+      20,
+      101
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Victor_Wembanyama",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0183",
+    "entities": [
+      "player:rudy-gobert",
+      "team:france-basketball"
+    ],
+    "type": "career_milestone",
+    "text": "Rudy Gobert was a key big man in France's 2019 World Cup quarterfinal win over the USA.",
+    "numbers": [
+      2019
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/France_men%27s_national_basketball_team",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0184",
+    "entities": [
+      "topic:pick-and-roll"
+    ],
+    "type": "rule",
+    "text": "In a pick and roll, a player screens for a teammate with the ball, then moves toward the basket to receive a pass.",
+    "numbers": [],
+    "source_url": "https://en.wikipedia.org/wiki/Pick_and_roll",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0185",
+    "entities": [
+      "topic:pick-and-roll",
+      "player:stephen-curry"
+    ],
+    "type": "profile",
+    "text": "The pick and roll became the NBA's most common offensive action after the 1990s, and Stephen Curry and Draymond Green of the Warriors are noted for their version of it.",
+    "numbers": [
+      1990
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Pick_and_roll",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0186",
+    "entities": [
+      "topic:three-pointer"
+    ],
+    "type": "rule",
+    "text": "A three-point field goal is a basket made from beyond the three-point arc and is worth 3 points.",
+    "numbers": [
+      3
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Three-point_field_goal",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0187",
+    "entities": [
+      "topic:three-pointer"
+    ],
+    "type": "rule",
+    "text": "The NBA's three-point arc is 23 ft 9 in (7.24 m) from the centre of the basket and FIBA's is 6.75 m. FIBA first introduced the line in 1984 at 6.25 m.",
+    "numbers": [
+      23,
+      9,
+      7.24,
+      6.75,
+      1984,
+      6.25
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Three-point_field_goal",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0188",
+    "entities": [
+      "topic:alley-oop"
+    ],
+    "type": "rule",
+    "text": "An alley-oop, also called a lob, is a play where a player throws the ball up near the basket and a teammate catches it in the air and finishes with a dunk or layup.",
+    "numbers": [],
+    "source_url": "https://en.wikipedia.org/wiki/Alley-oop",
+    "as_of": "2026-11-15",
+    "verified": false
+  },
+  {
+    "id": "f-0189",
+    "entities": [
+      "topic:free-throw"
+    ],
+    "type": "rule",
+    "text": "A free throw is an unopposed shot worth 1 point, taken from behind the foul line, which is 4.6 m (15 ft) from the basket. An and-one is a made basket on which the shooter is also fouled, earning 1 more free throw.",
+    "numbers": [
+      1,
+      4.6,
+      15
+    ],
+    "source_url": "https://en.wikipedia.org/wiki/Free_throw",
+    "as_of": "2026-11-15",
+    "verified": false
+  }
+]

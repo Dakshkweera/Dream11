@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# keep the template
+!.env.example
+
+# local dev store
+.data/
+
+# match clips (broadcast footage, not ours to publish)
+public/match/*.mp4
