@@ -1,78 +1,95 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useSyncExternalStore } from "react";
+import type { DiscoverItem, Rivalry } from "@/lib/discover/catalog";
+import type { MatchSummary } from "@/lib/match/view";
+import { VoiceHero } from "./buzzer/voice-hero";
+import { EntityCard, RivalryCard, usePlayerSheet } from "./discover-cards";
 import { useFriend } from "./friend-provider";
 import { NudgeCard } from "./nudge-card";
+import { MatchCard, SectionHeader } from "./ui/sport";
+import { useProfileSignals } from "./use-profile-signals";
 
-type MatchCard = { id: string; title: string; subtitle: string; status: string; teams: [string, string]; teamNames: [string, string]; hasClip: boolean };
+function greeting(h: number) {
+  return h < 5 ? "Up late" : h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening";
+}
+const noSubscribe = () => () => {};
+/** "Good evening" from the fan's own clock; the prerendered page says "Welcome back" until it hydrates. */
+const useGreeting = () => useSyncExternalStore(noSubscribe, () => greeting(new Date().getHours()), () => "Welcome back");
 
-export function HomeView({ matches }: { matches: MatchCard[] }) {
-  const { state, setCtx, setOpen } = useFriend();
+export function HomeView({ matches, discover, rivalries }: { matches: MatchSummary[]; discover: DiscoverItem[]; rivalries: Rivalry[] }) {
+  const { state, setCtx } = useFriend();
   const context = useMemo(() => ({ surface: "home" as const, label: "Home screen", entityIds: [] as string[] }), []);
-
   useEffect(() => setCtx(context), [context, setCtx]);
+  const hello = useGreeting();
+  const signals = useProfileSignals();
+  const sheet = usePlayerSheet();
+
+  // Watch-alongs first, then results, then fixtures.
+  const ordered = [...matches].sort((a, b) => Number(b.hasClip) - Number(a.hasClip) || Number(!!b.result) - Number(!!a.result));
+
+  // Discover: what you follow, then what Buzzer thinks you'd like, then the rest; never what you're "not into".
+  const rank = (i: DiscoverItem) => {
+    const s = signals.signal(i.name);
+    return s?.kind === "follow" ? 3 + s.strength : s?.kind === "interest" ? 2 + s.strength : s?.kind === "not" ? -1 : i.type === "player" ? 1 : 0.5;
+  };
+  const picks = discover.filter((i) => i.type !== "competition" && rank(i) >= 0).sort((a, b) => rank(b) - rank(a)).slice(0, 8);
 
   return (
-    <main>
-      <header className="flex items-center justify-between px-4 pb-3 pt-5">
-        <div>
-          <p className="text-[11px] uppercase tracking-widest text-muted">Fantasy · Sports</p>
-          <h1 className="text-xl font-bold">{state?.name ? `Hey ${state.name}` : "Welcome"} 👋</h1>
+    <main className="page @container pb-nav pt-5 md:pt-8">
+      <header className="mb-5 flex items-end justify-between gap-4 md:mb-7">
+        <div className="min-w-0">
+          <p className="text-[14px] text-muted">{hello}</p>
+          <h1 className="truncate text-[26px] font-bold leading-tight md:text-[30px]">{state?.name ?? "Hey there"}</h1>
         </div>
-        <span className="brand-gradient rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white">Prototype</span>
       </header>
 
-      <section className="space-y-4 px-4">
-        {state && !state.onboarded ? (
-          <div className="rounded-2xl border border-brand/40 bg-gradient-to-br from-brand/15 to-surface p-4">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-2">New</p>
-            <h2 className="mt-1 text-[17px] font-semibold leading-snug">Meet Buzzer, your sports friend</h2>
-            <p className="mt-1 text-[13px] leading-relaxed text-muted">
-              Tell it who you follow. It learns what you care about and shows you the stories, rivalries and history behind them.
-            </p>
-            <button onClick={() => setOpen(true)} className="brand-gradient mt-3 rounded-full px-5 py-2 text-sm font-semibold text-white">
-              Say hello
-            </button>
-          </div>
-        ) : (
-          <NudgeCard surface="home" context={context} />
-        )}
+      {/* Buzzer first: the hero and what it noticed */}
+      <div className="grid gap-5 @5xl:grid-cols-[minmax(0,1.6fr)_minmax(340px,1fr)] @5xl:gap-6">
+        <VoiceHero />
+        {state?.onboarded && <NudgeCard surface="home" context={context} variant="spotlight" />}
+      </div>
 
-        <div>
-          <h2 className="mb-2 text-sm font-semibold">Matches</h2>
-          <div className="space-y-3">
-            {matches.map((m) => (
-              <Link
-                key={m.id}
-                href={`/match/${m.id}`}
-                className="block rounded-2xl border border-line bg-surface p-4 transition-colors hover:border-brand/60"
-              >
-                <div className="flex items-center justify-between">
-                  <span
-                    className={`rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider ${
-                      m.hasClip ? "bg-brand/20 text-brand-2" : "bg-surface-2 text-muted"
-                    }`}
-                  >
-                    {m.hasClip ? "● Watch-along" : "Upcoming"}
-                  </span>
-                  <span className="text-[11px] text-muted">{m.subtitle}</span>
-                </div>
-                <div className="mt-3 grid grid-cols-[1fr_auto_1fr] items-center gap-3 text-[16px] font-semibold leading-snug">
-                  <span>{m.teamNames[0]}</span>
-                  <span className="text-xs font-normal text-muted">vs</span>
-                  <span className="text-right">{m.teamNames[1]}</span>
-                </div>
-              </Link>
+      <section className="@container mt-10 md:mt-12" aria-labelledby="matches-h">
+        <div id="matches-h">
+          <SectionHeader title="Matches" eyebrow="Watch with Buzzer" hint="Replays you can watch along to, results and what's next." href="/matches" />
+        </div>
+        <div className="scroller -mx-4 px-4 md:mx-0 md:grid md:grid-cols-1 md:gap-4 md:overflow-visible md:px-0 @2xl:md:grid-cols-2 @5xl:md:grid-cols-3">
+          {ordered.slice(0, 6).map((m, i) => (
+            <MatchCard key={m.id} m={m} featured={i === 0 && m.hasClip} className="w-[86%] shrink-0 sm:w-[380px] md:w-auto" />
+          ))}
+        </div>
+      </section>
+
+      <section className="@container mt-10 md:mt-12" aria-labelledby="discover-h">
+        <div id="discover-h">
+          <SectionHeader
+            title="Discover"
+            eyebrow={signals.ready ? "Picked from what you follow" : "Players & teams"}
+            hint="Tap anyone for their story — Buzzer pitches it at your level."
+            href="/discover"
+          />
+        </div>
+        <div className="scroller -mx-4 px-4 md:mx-0 md:grid md:grid-cols-2 md:gap-4 md:overflow-visible md:px-0 @2xl:md:grid-cols-3 @5xl:md:grid-cols-4">
+          {picks.map((i) => (
+            <div key={i.id} className="w-[220px] shrink-0 md:w-auto">
+              <EntityCard item={i} signal={signals.signal(i.name)} onPlayer={sheet.open} />
+            </div>
+          ))}
+        </div>
+        {rivalries.length > 0 && (
+          <div className="mt-5 grid gap-3 @xl:grid-cols-2 @5xl:grid-cols-3">
+            {rivalries.slice(0, 3).map((r) => (
+              <RivalryCard key={`${r.a}-${r.b}`} r={r} />
             ))}
           </div>
-        </div>
-
-        <p className="pb-4 text-center text-[11px] leading-relaxed text-muted">
-          Independent prototype inspired by fantasy-sports apps — not affiliated with Dream11. Facts as of 2025 (IPL) and Paris 2024; items marked
-          &ldquo;awaiting human check&rdquo; are still being verified.
-        </p>
+        )}
       </section>
+
+      <p className="mx-auto mt-12 max-w-2xl text-center text-[12px] leading-relaxed text-subtle">
+        Independent prototype, not affiliated with Dream11. Facts as of 2025 (IPL) and Paris 2024; some are still awaiting a human check.
+      </p>
+      {sheet.node}
     </main>
   );
 }

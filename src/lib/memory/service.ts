@@ -25,11 +25,11 @@ export type Profile = {
   /** Entity ids of concepts the fan has learned (e.g. topic:finisher). */
   learnedEntities: Set<string>;
   discoveries: string[];
-  /** Fantasy team picks (entity ids, or "name:<Player>" outside the dataset). */
+  /** Players picked for their team (entity ids, or "name:<Player>" outside the dataset). */
   picks: string[];
 };
 
-/** A fantasy pick is an explicit choice, so it steers discovery almost as strongly as a stated interest. */
+/** A team pick is an explicit choice, so it steers discovery almost as strongly as a stated interest. */
 export const PICK_WEIGHT = 0.55;
 
 export async function loadProfile(user: User, now: Date): Promise<Profile> {
@@ -106,7 +106,7 @@ export function profileToPrompt(p: Profile, now: Date, sport?: string): string {
     `Knowledge level${sport ? "" : " by sport"}: ${levels}`,
     `Told me: ${stated.join("; ") || "nothing yet"}`,
     `Noticed interest in: ${inferred.join("; ") || "nothing yet"}`,
-    `Fantasy team picks: ${p.picks.filter((k) => (sport ? inSport(k) : true)).map((k) => (k.startsWith("name:") ? k.slice(5) : name(k))).join(", ") || "none yet"}`,
+    `Players they picked for their team: ${p.picks.filter((k) => (sport ? inSport(k) : true)).map((k) => (k.startsWith("name:") ? k.slice(5) : name(k))).join(", ") || "none yet"}`,
     `Not interested in: ${[...p.negatives].filter((id) => inSport(id)).map(name).join("; ") || "—"}`,
     `Already learned: ${learned.slice(0, 6).join("; ") || "—"}`,
     `Recent shared discoveries (do not repeat; may reference at most once): ${p.discoveries.slice(0, 5).join("; ") || "—"}`,

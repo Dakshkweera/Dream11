@@ -76,7 +76,7 @@ export interface Store {
 
   addEvent(e: AppEvent): Promise<void>;
 
-  /** The fan's fantasy team: entity ids (or "name:<Player>" for players outside the dataset). */
+  /** The fan's team picks: entity ids (or "name:<Player>" for players outside the dataset). */
   listPicks(userId: string): Promise<string[]>;
   setPick(userId: string, key: string, picked: boolean): Promise<void>;
 

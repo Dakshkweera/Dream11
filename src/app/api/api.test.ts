@@ -41,6 +41,26 @@ async function call(path: string, mod: string, method: "GET" | "POST" | "PATCH" 
 }
 const R = (name: string) => `@/app/api/${name}/route`;
 
+describe("player statistics", () => {
+  it("returns a scorecard with photos, and a plain 'none' (not an error) for a match without statistics", async () => {
+    const card = await call("/api/stats?match=rcb-vs-pbks", R("stats"), "GET");
+    expect(card.status).toBe(200);
+    const d = await json(card);
+    expect(d.stats.cricket.innings).toHaveLength(2);
+    expect(d.portraits["player:virat-kohli"].license).toBeTruthy();
+    const none = await call("/api/stats?match=rcb-vs-csk", R("stats"), "GET");
+    expect(none.status).toBe(200);
+    expect((await json(none)).stats).toBeNull();
+  });
+
+  it("lists a player's matches with match labels, and rejects a request with no query", async () => {
+    const d = await json(await call("/api/stats?player=player:virat-kohli", R("stats"), "GET"));
+    expect(d.records.map((r: { matchId: string }) => r.matchId).sort()).toEqual(["rcb-vs-gt", "rcb-vs-pbks"]);
+    expect(d.records[0].match.title).toBeTruthy();
+    expect((await call("/api/stats", R("stats"), "GET")).status).toBe(400);
+  });
+});
+
 describe("picks", () => {
   it("saves, lists and removes picks", async () => {
     await call("/api/picks", R("picks"), "POST", { key: "player:ms-dhoni", picked: true });

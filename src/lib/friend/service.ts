@@ -3,7 +3,7 @@
  * "why did this happen?" — each combines memory + facts + page context.
  */
 import { z } from "zod";
-import { chatStream, json, vision, type ChatMessage } from "../ai/openrouter";
+import { chatStream, hedge, json, vision, type ChatMessage } from "../ai/openrouter";
 import { MODELS } from "../ai/models";
 import { angleFor, selectDiscovery } from "../discovery/select";
 import { sportOfEntities, sportOfEntity } from "../facts/concepts";
@@ -15,8 +15,9 @@ import { checkGrounding } from "../story/grounding";
 import { contextToPrompt, type PageContext } from "./context";
 import { shouldComment } from "./live-gate";
 import { stripFactIds } from "./sanitize";
-import { CHAT_PERSONA, FRIEND_NAME, NO_WEB_NOTE, PERSONA, WEB_ADDENDUM, levelGuide } from "./persona";
+import { CHAT_PERSONA, FRIEND_NAME, NO_WEB_NOTE, PERSONA, VOICE_NOTE, WEB_ADDENDUM, levelGuide } from "./persona";
 import { shouldSearchWeb } from "./routing";
+import { statsForChat, statsPlayersMentioned } from "../stats/prompt";
 
 const name = (id: string) => getEntity(id)?.name ?? id;
 
@@ -49,6 +50,22 @@ function historyToMessages(history: StoredMessage[]): ChatMessage[] {
   });
 }
 
+/**
+ * In a spoken conversation the fan can cut a reply off, which leaves two of their messages in a row (or an empty
+ * reply). Models expect turns to alternate, so empty turns are dropped and back-to-back turns are joined.
+ */
+export function mergeTurns(messages: ChatMessage[]): ChatMessage[] {
+  const out: ChatMessage[] = [];
+  for (const m of messages) {
+    if (typeof m.content === "string" && !m.content.trim()) continue;
+    const prev = out[out.length - 1];
+    if (prev && prev.role === m.role && m.role !== "system" && typeof prev.content === "string" && typeof m.content === "string") {
+      out[out.length - 1] = { ...prev, content: `${prev.content}\n${m.content}` };
+    } else out.push(m);
+  }
+  return out;
+}
+
 // ---------------------------------------------------------------------------
 // Chat
 // ---------------------------------------------------------------------------
@@ -75,6 +92,8 @@ export async function prepareChat(user: User, message: string, ctx: PageContext 
   ];
   const facts = gatherFacts(focus);
   const sport = sportOf(ctx, [...mentioned, ...earlier]);
+  // [stats] Exact player statistics for the match on screen and any player in focus or named in the message.
+  const stats = statsForChat({ matchId: ctx?.stats?.matchId ?? ctx?.match?.id, playerIds: ctx?.stats?.playerIds ?? [], message });
 
   const system = [
     CHAT_PERSONA,
@@ -82,18 +101,38 @@ export async function prepareChat(user: User, message: string, ctx: PageContext 
     `WHAT YOU KNOW ABOUT THIS FAN:\n${profileToPrompt(profile, now)}`,
     contextToPrompt(ctx),
     facts.prompt,
+    stats,
   ]
     .filter(Boolean)
     .join("\n\n");
 
-  const messages: ChatMessage[] = [{ role: "system", content: system }, ...historyToMessages(history), { role: "user", content: message }];
+  const messages = mergeTurns([{ role: "system", content: system }, ...historyToMessages(history), { role: "user", content: message }]);
   // A real question the IPL fact sheet can't cover (another sport, another match, latest news) needs a lookup.
-  const outside = shouldSearchWeb({ message, knownEntityMentioned: mentioned.length > 0, onMatchPage: ctx?.surface === "match" });
+  // A question about players we have statistics for is answered from those, not the web.
+  const outside = shouldSearchWeb({
+    message,
+    knownEntityMentioned: mentioned.length > 0 || statsPlayersMentioned(message).length > 0 || !!ctx?.stats?.playerIds?.length,
+    onMatchPage: ctx?.surface === "match",
+  });
   return { messages, mentioned, profile, outside };
 }
 
-export function streamReply(messages: ChatMessage[]) {
-  return chatStream(messages, { model: MODELS.chat, maxTokens: 1500 });
+/**
+ * In a spoken conversation the friend should answer like a person: fast, with no thinking pause, from
+ * the fastest provider, and with a hedged backup request if the first word hasn't arrived within 1.3 s.
+ */
+export async function* streamReply(messages: ChatMessage[], opts: { voice?: boolean } = {}): AsyncGenerator<string> {
+  if (!opts.voice) {
+    yield* chatStream(messages, { model: MODELS.chat, maxTokens: 1500 });
+    return;
+  }
+  const { stream, first } = await hedge(async (signal) => {
+    const stream = chatStream(messages, { model: MODELS.chat, maxTokens: 220, effort: "none", fastest: true, signal });
+    return { stream, first: await stream.next() };
+  }, 1300);
+  if (first.done) return;
+  yield first.value;
+  yield* stream;
 }
 
 // ---------------------------------------------------------------------------
@@ -314,10 +353,12 @@ Max 5 sentences. Facts beyond what's visible or said must come from FACTS. ${lev
 export const GREETING = (level: string) =>
   `Nice to meet you! I'm ${FRIEND_NAME} — think of me as your sports friend. I'll keep it ${level === "expert" ? "nerdy" : "simple"} and bring you the stories worth knowing.`;
 
-/** Append a note to the chat's system prompt (used for web mode and for "could not look it up"). */
-export function withSystemNote(messages: ChatMessage[], note: "web" | "no-web"): ChatMessage[] {
+const NOTES = { web: WEB_ADDENDUM, "no-web": NO_WEB_NOTE, voice: VOICE_NOTE } as const;
+
+/** Append a note to the chat's system prompt: web mode, "could not look it up", or spoken conversation. */
+export function withSystemNote(messages: ChatMessage[], note: keyof typeof NOTES): ChatMessage[] {
   const [first, ...rest] = messages;
   return [{ ...first, content: `${first.content}
 
-${note === "web" ? WEB_ADDENDUM : NO_WEB_NOTE}` }, ...rest];
+${NOTES[note]}` }, ...rest];
 }

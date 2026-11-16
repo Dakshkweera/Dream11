@@ -46,3 +46,6 @@ next-env.d.ts
 # local dev store
 .data/
 
+
+# voice samples for choosing the friend's voice
+voice-samples/

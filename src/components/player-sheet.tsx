@@ -2,13 +2,19 @@
 
 import { useEffect, useMemo } from "react";
 import { api } from "@/lib/client";
+import { identityOf, teamIdentity } from "@/lib/ui/identity";
 import { useFriend } from "./friend-provider";
 import { NudgeCard } from "./nudge-card";
+import { IconBook, IconChat, IconX } from "./ui/icons";
+import { EntityAvatar } from "./ui/sport";
 
 export type SheetPlayer = { name: string; role?: string; entityId?: string; summary?: string };
 
+/** A player's profile: a bottom sheet on phones, a centred dialog on larger screens. */
 export function PlayerSheet({ player, onClose }: { player: SheetPlayer; onClose: () => void }) {
   const { setCtx, openStory, send, setOpen } = useFriend();
+  const who = identityOf(player.entityId, player.name);
+  const team = who.teamId ? teamIdentity(who.teamId) : null;
   const context = useMemo(
     () => ({
       surface: "player" as const,
@@ -29,55 +35,69 @@ export function PlayerSheet({ player, onClose }: { player: SheetPlayer; onClose:
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
 
+  const first = player.name.split(" ")[0];
+
   return (
-    <div className="fixed inset-0 z-40 flex items-end justify-center bg-black/60" onClick={onClose}>
+    <div className="fixed inset-0 z-[65] flex items-end justify-center bg-black/65 backdrop-blur-[2px] md:items-center md:p-6" onClick={onClose}>
       <section
         role="dialog"
-        aria-label={`${player.name}`}
+        aria-label={player.name}
         onClick={(e) => e.stopPropagation()}
-        className="anim-slide-up max-h-[85dvh] w-full max-w-[440px] overflow-y-auto rounded-t-3xl border border-line bg-bg p-4 pb-8"
+        className="sheet-anim thin-scroll max-h-[88dvh] w-full overflow-y-auto rounded-t-[28px] border border-line bg-bg-2 md:max-w-lg md:rounded-[var(--r-xl)]"
       >
-        <div className="mb-4 flex items-start justify-between">
-          <div>
-            {player.role && <p className="text-[11px] uppercase tracking-widest text-muted">{player.role}</p>}
-            <h2 className="text-xl font-bold">{player.name}</h2>
-            {player.summary && <p className="mt-1 text-[13px] leading-relaxed text-muted">{player.summary}</p>}
+        <header
+          className="relative overflow-hidden px-5 pb-5 pt-5"
+          style={{ background: `radial-gradient(120% 150% at 100% 0%, ${who.primary}cc 0%, ${who.primary}2e 55%, transparent 85%), var(--surface)` }}
+        >
+          <div className="pitch-lines absolute inset-0 opacity-50" aria-hidden />
+          <span aria-hidden className="pointer-events-none absolute -right-1 bottom-0 select-none font-display text-[96px] font-extrabold uppercase leading-none text-white/[0.07]">
+            {team?.code ?? who.code}
+          </span>
+          <button onClick={onClose} aria-label="Close" className="icon-btn absolute right-3 top-3 h-10 w-10 bg-black/30 text-fg">
+            <IconX size={18} />
+          </button>
+          <div className="relative flex items-center gap-4">
+            <EntityAvatar id={player.entityId} name={player.name} size={68} />
+            <div className="min-w-0">
+              <p className="eyebrow !text-fg/75">{[player.role, team?.code].filter(Boolean).join(" · ") || "Player"}</p>
+              <h2 className="mt-0.5 text-[24px] font-bold leading-tight">{player.name}</h2>
+            </div>
           </div>
-          <button onClick={onClose} aria-label="Close" className="rounded-full p-2 text-muted hover:text-fg">
-            ✕
+          {player.summary && <p className="relative mt-3 text-[14px] leading-relaxed text-fg/80">{player.summary}</p>}
+        </header>
+
+        <div className="space-y-3 p-5 pb-8">
+          {player.entityId ? (
+            <>
+              <NudgeCard surface="player" context={context} focusEntity={player.entityId} />
+              <button
+                onClick={() => {
+                  onClose();
+                  void openStory(player.entityId!);
+                }}
+                className="btn-quiet h-12 w-full text-[15px]"
+              >
+                <IconBook size={17} /> Read {first}&apos;s story
+              </button>
+            </>
+          ) : (
+            <div className="rounded-[var(--r-md)] border border-line bg-surface p-4 text-[13px] leading-relaxed text-muted">
+              I don&apos;t have verified facts on {player.name} yet, and I&apos;d rather say so than guess. I can still chat about the match or the
+              teams.
+            </div>
+          )}
+
+          <button
+            onClick={() => {
+              onClose();
+              setOpen(true);
+              void send(`Tell me about ${player.name}`);
+            }}
+            className="btn-primary h-12 w-full text-[15px]"
+          >
+            <IconChat size={17} /> Ask Buzzer about {first}
           </button>
         </div>
-
-        {player.entityId ? (
-          <div className="space-y-3">
-            <NudgeCard surface="player" context={context} focusEntity={player.entityId} compact />
-            <button
-              onClick={() => {
-                onClose();
-                openStory(player.entityId!);
-              }}
-              className="w-full rounded-xl border border-line bg-surface py-3 text-sm font-medium hover:border-brand"
-            >
-              Read {player.name.split(" ")[0]}&apos;s story
-            </button>
-          </div>
-        ) : (
-          <div className="rounded-2xl border border-line bg-surface p-4 text-[13px] leading-relaxed text-muted">
-            I don&apos;t have verified facts on {player.name} yet, and I&apos;d rather say so than guess. I can still chat about the
-            match or the teams.
-          </div>
-        )}
-
-        <button
-          onClick={() => {
-            onClose();
-            setOpen(true);
-            send(`Tell me about ${player.name}`);
-          }}
-          className="mt-3 w-full rounded-xl py-3 text-sm font-medium text-brand-2"
-        >
-          Ask Buzzer about {player.name.split(" ")[0]}
-        </button>
       </section>
     </div>
   );

@@ -1,0 +1,852 @@
+{
+  "matchId": "rcb-vs-gt",
+  "sport": "cricket",
+  "classification": "historical",
+  "verification": "source-imported",
+  "source": {
+    "name": "Cricsheet",
+    "url": "https://cricsheet.org/",
+    "license": "Open Data Commons Attribution License (ODC-By 1.0)",
+    "attribution": "Data: Cricsheet (cricsheet.org)",
+    "retrievedAt": "2026-11-16"
+  },
+  "notes": [
+    "Counted ball by ball from Cricsheet file 1535465.json (in the IPL archive ipl_json.zip).",
+    "Player names are Cricsheet's (initials + surname) unless the player is in Buzzer's dataset.",
+    "Cricsheet does not record minutes batted, so they are not shown."
+  ],
+  "cricket": {
+    "innings": [
+      {
+        "number": 1,
+        "teamId": "team:gt",
+        "runs": 155,
+        "wickets": 8,
+        "balls": 120,
+        "overs": "20.0",
+        "extras": {
+          "byes": 0,
+          "legbyes": 1,
+          "wides": 4,
+          "noballs": 0,
+          "penalty": 0,
+          "total": 5
+        },
+        "target": null,
+        "battingOrder": [
+          "cricsheet:d5130a30",
+          "player:shubman-gill",
+          "cricsheet:3cea23da",
+          "cricsheet:99b75528",
+          "player:washington-sundar",
+          "cricsheet:12314277",
+          "cricsheet:39a2dfa8",
+          "cricsheet:0f721006",
+          "cricsheet:5f547c8b",
+          "cricsheet:e62dd25d"
+        ],
+        "bowlingOrder": [
+          "cricsheet:dadbdb68",
+          "cricsheet:2e81a32d",
+          "cricsheet:03806cf8",
+          "player:rasikh-salam",
+          "player:krunal-pandya"
+        ],
+        "didNotBat": [
+          "cricsheet:85e0cf10",
+          "cricsheet:2f49c897"
+        ]
+      },
+      {
+        "number": 2,
+        "teamId": "team:rcb",
+        "runs": 161,
+        "wickets": 5,
+        "balls": 108,
+        "overs": "18.0",
+        "extras": {
+          "byes": 0,
+          "legbyes": 1,
+          "wides": 1,
+          "noballs": 0,
+          "penalty": 0,
+          "total": 2
+        },
+        "target": 156,
+        "battingOrder": [
+          "player:venkatesh-iyer",
+          "player:virat-kohli",
+          "cricsheet:2c25d4f5",
+          "player:rajat-patidar",
+          "player:krunal-pandya",
+          "cricsheet:f1f99156",
+          "cricsheet:800d2d97"
+        ],
+        "bowlingOrder": [
+          "cricsheet:2f49c897",
+          "cricsheet:e62dd25d",
+          "cricsheet:0f721006",
+          "cricsheet:5f547c8b",
+          "cricsheet:12314277",
+          "cricsheet:85e0cf10"
+        ],
+        "didNotBat": [
+          "cricsheet:dadbdb68",
+          "cricsheet:c5aef772",
+          "cricsheet:2e81a32d",
+          "cricsheet:03806cf8",
+          "player:rasikh-salam"
+        ]
+      }
+    ]
+  },
+  "players": [
+    {
+      "playerId": "cricsheet:d5130a30",
+      "name": "B Sai Sudharsan",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:gt",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 1,
+          "runs": 12,
+          "balls": 12,
+          "fours": 2,
+          "sixes": 0,
+          "strikeRate": 100,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "B Kumar",
+            "fielders": [
+              "JM Sharma"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "player:shubman-gill",
+      "name": "Shubman Gill",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:gt",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 2,
+          "runs": 10,
+          "balls": 8,
+          "fours": 2,
+          "sixes": 0,
+          "strikeRate": 125,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "JR Hazlewood",
+            "fielders": [
+              "Rajat Patidar"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:3cea23da",
+      "name": "N Sindhu",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:gt",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 3,
+          "runs": 20,
+          "balls": 18,
+          "fours": 3,
+          "sixes": 0,
+          "strikeRate": 111.11,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "Rasikh Salam",
+            "fielders": [
+              "D Padikkal"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:99b75528",
+      "name": "JC Buttler",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:gt",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 4,
+          "runs": 19,
+          "balls": 23,
+          "fours": 1,
+          "sixes": 0,
+          "strikeRate": 82.61,
+          "notOut": false,
+          "dismissal": {
+            "kind": "stumped",
+            "bowler": "Krunal Pandya",
+            "fielders": [
+              "JM Sharma"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "player:washington-sundar",
+      "name": "Washington Sundar",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:gt",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 5,
+          "runs": 50,
+          "balls": 37,
+          "fours": 5,
+          "sixes": 0,
+          "strikeRate": 135.14,
+          "notOut": true,
+          "dismissal": null
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:12314277",
+      "name": "Arshad Khan",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:gt",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 6,
+          "runs": 15,
+          "balls": 6,
+          "fours": 0,
+          "sixes": 2,
+          "strikeRate": 250,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "JR Hazlewood",
+            "fielders": [
+              "Rasikh Salam"
+            ]
+          }
+        },
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 32,
+          "wickets": 1,
+          "economy": 8,
+          "dots": 9,
+          "wides": 0,
+          "noballs": 0
+        },
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:39a2dfa8",
+      "name": "R Tewatia",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:gt",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 7,
+          "runs": 7,
+          "balls": 5,
+          "fours": 1,
+          "sixes": 0,
+          "strikeRate": 140,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "Rasikh Salam",
+            "fielders": [
+              "Rajat Patidar"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:0f721006",
+      "name": "JO Holder",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:gt",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 8,
+          "runs": 7,
+          "balls": 5,
+          "fours": 1,
+          "sixes": 0,
+          "strikeRate": 140,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "B Kumar",
+            "fielders": [
+              "JR Hazlewood"
+            ]
+          }
+        },
+        "bowling": {
+          "balls": 12,
+          "overs": "2.0",
+          "maidens": 0,
+          "runs": 16,
+          "wickets": 0,
+          "economy": 8,
+          "dots": 5,
+          "wides": 0,
+          "noballs": 0
+        },
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:5f547c8b",
+      "name": "Rashid Khan",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:gt",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 9,
+          "runs": 7,
+          "balls": 3,
+          "fours": 0,
+          "sixes": 1,
+          "strikeRate": 233.33,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "Rasikh Salam",
+            "fielders": [
+              "R Shepherd"
+            ]
+          }
+        },
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 25,
+          "wickets": 2,
+          "economy": 6.25,
+          "dots": 9,
+          "wides": 0,
+          "noballs": 0
+        },
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:e62dd25d",
+      "name": "K Rabada",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:gt",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 10,
+          "runs": 3,
+          "balls": 3,
+          "fours": 0,
+          "sixes": 0,
+          "strikeRate": 100,
+          "notOut": true,
+          "dismissal": null
+        },
+        "bowling": {
+          "balls": 18,
+          "overs": "3.0",
+          "maidens": 0,
+          "runs": 44,
+          "wickets": 1,
+          "economy": 14.67,
+          "dots": 7,
+          "wides": 0,
+          "noballs": 0
+        },
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:dadbdb68",
+      "name": "JA Duffy",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": null,
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 38,
+          "wickets": 0,
+          "economy": 9.5,
+          "dots": 5,
+          "wides": 3,
+          "noballs": 0
+        },
+        "didNotBat": true
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:2e81a32d",
+      "name": "B Kumar",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": null,
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 29,
+          "wickets": 2,
+          "economy": 7.25,
+          "dots": 11,
+          "wides": 0,
+          "noballs": 0
+        },
+        "didNotBat": true
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:03806cf8",
+      "name": "JR Hazlewood",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": null,
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 37,
+          "wickets": 2,
+          "economy": 9.25,
+          "dots": 7,
+          "wides": 1,
+          "noballs": 0
+        },
+        "didNotBat": true
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "player:rasikh-salam",
+      "name": "Rasikh Salam",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": null,
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 27,
+          "wickets": 3,
+          "economy": 6.75,
+          "dots": 8,
+          "wides": 0,
+          "noballs": 0
+        },
+        "didNotBat": true
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "player:krunal-pandya",
+      "name": "Krunal Pandya",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 5,
+          "runs": 1,
+          "balls": 2,
+          "fours": 0,
+          "sixes": 0,
+          "strikeRate": 50,
+          "notOut": false,
+          "dismissal": {
+            "kind": "lbw",
+            "bowler": "Rashid Khan",
+            "fielders": []
+          }
+        },
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 23,
+          "wickets": 1,
+          "economy": 5.75,
+          "dots": 7,
+          "wides": 0,
+          "noballs": 0
+        },
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:85e0cf10",
+      "name": "M Prasidh Krishna",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:gt",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": null,
+        "bowling": {
+          "balls": 6,
+          "overs": "1.0",
+          "maidens": 0,
+          "runs": 7,
+          "wickets": 0,
+          "economy": 7,
+          "dots": 3,
+          "wides": 0,
+          "noballs": 0
+        },
+        "didNotBat": true
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:2f49c897",
+      "name": "Mohammed Siraj",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:gt",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": null,
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 36,
+          "wickets": 1,
+          "economy": 9,
+          "dots": 9,
+          "wides": 1,
+          "noballs": 0
+        },
+        "didNotBat": true
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "player:venkatesh-iyer",
+      "name": "Venkatesh Iyer",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 1,
+          "runs": 32,
+          "balls": 16,
+          "fours": 4,
+          "sixes": 2,
+          "strikeRate": 200,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "Mohammed Siraj",
+            "fielders": [
+              "K Rabada"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "player:virat-kohli",
+      "name": "Virat Kohli",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 2,
+          "runs": 75,
+          "balls": 42,
+          "fours": 9,
+          "sixes": 3,
+          "strikeRate": 178.57,
+          "notOut": true,
+          "dismissal": null
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:2c25d4f5",
+      "name": "D Padikkal",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 3,
+          "runs": 1,
+          "balls": 4,
+          "fours": 0,
+          "sixes": 0,
+          "strikeRate": 25,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "K Rabada",
+            "fielders": [
+              "Arshad Khan"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "player:rajat-patidar",
+      "name": "Rajat Patidar",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 4,
+          "runs": 15,
+          "balls": 13,
+          "fours": 1,
+          "sixes": 1,
+          "strikeRate": 115.38,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "Rashid Khan",
+            "fielders": [
+              "K Rabada"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:f1f99156",
+      "name": "TH David",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 6,
+          "runs": 24,
+          "balls": 17,
+          "fours": 3,
+          "sixes": 1,
+          "strikeRate": 141.18,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "Arshad Khan",
+            "fielders": [
+              "JC Buttler"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:800d2d97",
+      "name": "JM Sharma",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 7,
+          "runs": 11,
+          "balls": 14,
+          "fours": 1,
+          "sixes": 0,
+          "strikeRate": 78.57,
+          "notOut": true,
+          "dismissal": null
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:c5aef772",
+      "name": "R Shepherd",
+      "matchId": "rcb-vs-gt",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": null,
+        "bowling": null,
+        "didNotBat": true
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    }
+  ]
+}

@@ -1,8 +1,9 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import { MatchView } from "@/components/match-view";
+import { MatchCentre } from "@/components/match-centre";
 import { getEntity } from "@/lib/facts/retrieve";
 import { allMatches, getMatch, matchEntities } from "@/lib/match/data";
+import { summarize } from "@/lib/match/view";
 
 export function generateStaticParams() {
   return allMatches().map((m) => ({ id: m.id }));
@@ -10,7 +11,7 @@ export function generateStaticParams() {
 
 export default function MatchPage({ params }: PageProps<"/match/[id]">) {
   return (
-    <Suspense fallback={<div className="m-4 h-48 animate-pulse rounded-2xl bg-surface" aria-hidden />}>
+    <Suspense fallback={<div className="page pt-8"><div className="skeleton h-72" aria-hidden /></div>}>
       <Match params={params} />
     </Suspense>
   );
@@ -32,15 +33,5 @@ async function Match({ params }: { params: PageProps<"/match/[id]">["params"] })
     })),
   }));
 
-  return (
-    <MatchView
-      id={m.id}
-      title={m.title}
-      subtitle={m.subtitle}
-      video={m.video}
-      timeline={m.timeline}
-      teams={teams}
-      entityIds={matchEntities(m)}
-    />
-  );
+  return <MatchCentre match={summarize(m)} title={m.title} timeline={m.timeline} teams={teams} entityIds={matchEntities(m)} />;
 }

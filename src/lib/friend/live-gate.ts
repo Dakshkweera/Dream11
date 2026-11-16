@@ -28,7 +28,7 @@ function conceptPattern(e: Entity): RegExp {
 
 export type GateInput = {
   transcript: string;
-  /** entity ids the fan cares about (interests and fantasy picks) */
+  /** entity ids the fan cares about (interests and team picks) */
   interests: Set<string>;
   /** concept topic ids the fan has already learned */
   learned: Set<string>;

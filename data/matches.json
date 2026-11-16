@@ -50,7 +50,81 @@
         }
       ]
     },
-    "timeline": []
+    "timeline": [],
+    "competition": "Paris 2024 · Olympic Final",
+    "date": "2024-08-10",
+    "result": {
+      "summary": "USA won gold, 98–87",
+      "winner": "team:usa-basketball",
+      "scores": {
+        "team:usa-basketball": "98",
+        "team:france-basketball": "87"
+      },
+      "periods": [
+        {
+          "label": "Q1",
+          "scores": {
+            "team:usa-basketball": 20,
+            "team:france-basketball": 15
+          }
+        },
+        {
+          "label": "Q2",
+          "scores": {
+            "team:usa-basketball": 29,
+            "team:france-basketball": 26
+          }
+        },
+        {
+          "label": "Q3",
+          "scores": {
+            "team:usa-basketball": 23,
+            "team:france-basketball": 25
+          }
+        },
+        {
+          "label": "Q4",
+          "scores": {
+            "team:usa-basketball": 26,
+            "team:france-basketball": 21
+          }
+        }
+      ],
+      "performers": [
+        {
+          "name": "Stephen Curry",
+          "entityId": "player:stephen-curry",
+          "team": "team:usa-basketball",
+          "line": "24 pts"
+        },
+        {
+          "name": "Victor Wembanyama",
+          "entityId": "player:victor-wembanyama",
+          "team": "team:france-basketball",
+          "line": "26 pts",
+          "note": "France top scorer"
+        },
+        {
+          "name": "LeBron James",
+          "entityId": "player:lebron-james",
+          "team": "team:usa-basketball",
+          "line": "10 ast",
+          "note": "Tournament MVP"
+        },
+        {
+          "name": "Anthony Davis",
+          "entityId": "player:anthony-davis",
+          "team": "team:usa-basketball",
+          "line": "9 reb"
+        },
+        {
+          "name": "Nicolas Batum",
+          "entityId": "player:nicolas-batum",
+          "team": "team:france-basketball",
+          "line": "8 reb · 4 ast"
+        }
+      ]
+    }
   },
   {
     "id": "rcb-vs-gt",
@@ -118,7 +192,48 @@
       ]
     },
     "timeline": [],
-    "sport": "cricket"
+    "sport": "cricket",
+    "competition": "IPL 2026 · Final",
+    "date": "2026-05-31",
+    "result": {
+      "summary": "RCB won by 5 wickets",
+      "winner": "team:rcb",
+      "scores": {
+        "team:rcb": "161/5",
+        "team:gt": "155/8"
+      },
+      "detail": {
+        "team:rcb": "18 ov",
+        "team:gt": "20 ov"
+      },
+      "performers": [
+        {
+          "name": "Virat Kohli",
+          "entityId": "player:virat-kohli",
+          "team": "team:rcb",
+          "line": "75* (42)",
+          "note": "Player of the Match"
+        },
+        {
+          "name": "Washington Sundar",
+          "entityId": "player:washington-sundar",
+          "team": "team:gt",
+          "line": "50* (37)"
+        },
+        {
+          "name": "Rasikh Salam",
+          "entityId": "player:rasikh-salam",
+          "team": "team:rcb",
+          "line": "3/27 (4)"
+        },
+        {
+          "name": "Venkatesh Iyer",
+          "entityId": "player:venkatesh-iyer",
+          "team": "team:rcb",
+          "line": "32"
+        }
+      ]
+    }
   },
   {
     "id": "rcb-vs-pbks",
@@ -241,7 +356,48 @@
       ]
     },
     "timeline": [],
-    "sport": "cricket"
+    "sport": "cricket",
+    "competition": "IPL 2025 · Final",
+    "date": "2025-06-03",
+    "result": {
+      "summary": "RCB won by 6 runs",
+      "winner": "team:rcb",
+      "scores": {
+        "team:rcb": "190/9",
+        "team:pbks": "184/7"
+      },
+      "detail": {
+        "team:rcb": "20 ov",
+        "team:pbks": "20 ov"
+      },
+      "performers": [
+        {
+          "name": "Krunal Pandya",
+          "entityId": "player:krunal-pandya",
+          "team": "team:rcb",
+          "line": "2/17 (4)",
+          "note": "Player of the Match"
+        },
+        {
+          "name": "Shashank Singh",
+          "entityId": "player:shashank-singh",
+          "team": "team:pbks",
+          "line": "61* (30)"
+        },
+        {
+          "name": "Virat Kohli",
+          "entityId": "player:virat-kohli",
+          "team": "team:rcb",
+          "line": "43 (35)"
+        },
+        {
+          "name": "Arshdeep Singh",
+          "entityId": "player:arshdeep-singh",
+          "team": "team:pbks",
+          "line": "3/40"
+        }
+      ]
+    }
   },
   {
     "id": "rcb-vs-csk",
@@ -313,7 +469,8 @@
       ]
     },
     "timeline": [],
-    "sport": "cricket"
+    "sport": "cricket",
+    "competition": "IPL"
   },
   {
     "id": "csk-vs-mi",
@@ -367,7 +524,8 @@
       ]
     },
     "timeline": [],
-    "sport": "cricket"
+    "sport": "cricket",
+    "competition": "IPL"
   },
   {
     "id": "kkr-vs-rcb",
@@ -422,6 +580,7 @@
       ]
     },
     "timeline": [],
-    "sport": "cricket"
+    "sport": "cricket",
+    "competition": "IPL"
   }
 ]

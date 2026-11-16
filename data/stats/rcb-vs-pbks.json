@@ -1,0 +1,880 @@
+{
+  "matchId": "rcb-vs-pbks",
+  "sport": "cricket",
+  "classification": "historical",
+  "verification": "source-imported",
+  "source": {
+    "name": "Cricsheet",
+    "url": "https://cricsheet.org/",
+    "license": "Open Data Commons Attribution License (ODC-By 1.0)",
+    "attribution": "Data: Cricsheet (cricsheet.org)",
+    "retrievedAt": "2026-11-16"
+  },
+  "notes": [
+    "Counted ball by ball from Cricsheet file 1473511.json (in the IPL archive ipl_json.zip).",
+    "Player names are Cricsheet's (initials + surname) unless the player is in Buzzer's dataset.",
+    "Cricsheet does not record minutes batted, so they are not shown."
+  ],
+  "cricket": {
+    "innings": [
+      {
+        "number": 1,
+        "teamId": "team:rcb",
+        "runs": 190,
+        "wickets": 9,
+        "balls": 120,
+        "overs": "20.0",
+        "extras": {
+          "byes": 0,
+          "legbyes": 0,
+          "wides": 9,
+          "noballs": 0,
+          "penalty": 0,
+          "total": 9
+        },
+        "target": null,
+        "battingOrder": [
+          "cricsheet:3d284ca3",
+          "player:virat-kohli",
+          "cricsheet:00ea847a",
+          "player:rajat-patidar",
+          "cricsheet:50c6bc2b",
+          "cricsheet:800d2d97",
+          "cricsheet:c5aef772",
+          "player:krunal-pandya",
+          "cricsheet:2e81a32d",
+          "cricsheet:7210d461"
+        ],
+        "bowlingOrder": [
+          "player:arshdeep-singh",
+          "cricsheet:68c56d09",
+          "cricsheet:8f6dd463",
+          "cricsheet:54e52590",
+          "cricsheet:57ee1fde"
+        ],
+        "didNotBat": [
+          "cricsheet:9440ef41",
+          "cricsheet:03806cf8"
+        ]
+      },
+      {
+        "number": 2,
+        "teamId": "team:pbks",
+        "runs": 184,
+        "wickets": 7,
+        "balls": 120,
+        "overs": "20.0",
+        "extras": {
+          "byes": 0,
+          "legbyes": 8,
+          "wides": 3,
+          "noballs": 0,
+          "penalty": 0,
+          "total": 11
+        },
+        "target": 191,
+        "battingOrder": [
+          "cricsheet:b5797845",
+          "cricsheet:9418198b",
+          "cricsheet:989889ff",
+          "player:shreyas-iyer",
+          "cricsheet:d1a60072",
+          "player:shashank-singh",
+          "cricsheet:d9273ee7",
+          "cricsheet:8f6dd463",
+          "cricsheet:68c56d09"
+        ],
+        "bowlingOrder": [
+          "cricsheet:2e81a32d",
+          "cricsheet:7210d461",
+          "cricsheet:03806cf8",
+          "player:krunal-pandya",
+          "cricsheet:9440ef41",
+          "cricsheet:c5aef772"
+        ],
+        "didNotBat": [
+          "cricsheet:57ee1fde",
+          "cricsheet:54e52590",
+          "player:arshdeep-singh"
+        ]
+      }
+    ]
+  },
+  "players": [
+    {
+      "playerId": "cricsheet:3d284ca3",
+      "name": "PD Salt",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 1,
+          "runs": 16,
+          "balls": 9,
+          "fours": 2,
+          "sixes": 1,
+          "strikeRate": 177.78,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "KA Jamieson",
+            "fielders": [
+              "Shreyas Iyer"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "player:virat-kohli",
+      "name": "Virat Kohli",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 2,
+          "runs": 43,
+          "balls": 35,
+          "fours": 3,
+          "sixes": 0,
+          "strikeRate": 122.86,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught and bowled",
+            "bowler": "Azmatullah Omarzai",
+            "fielders": []
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:00ea847a",
+      "name": "MA Agarwal",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 3,
+          "runs": 24,
+          "balls": 18,
+          "fours": 2,
+          "sixes": 1,
+          "strikeRate": 133.33,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "YS Chahal",
+            "fielders": [
+              "Arshdeep Singh"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "player:rajat-patidar",
+      "name": "Rajat Patidar",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 4,
+          "runs": 26,
+          "balls": 16,
+          "fours": 1,
+          "sixes": 2,
+          "strikeRate": 162.5,
+          "notOut": false,
+          "dismissal": {
+            "kind": "lbw",
+            "bowler": "KA Jamieson",
+            "fielders": []
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:50c6bc2b",
+      "name": "LS Livingstone",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 5,
+          "runs": 25,
+          "balls": 15,
+          "fours": 0,
+          "sixes": 2,
+          "strikeRate": 166.67,
+          "notOut": false,
+          "dismissal": {
+            "kind": "lbw",
+            "bowler": "KA Jamieson",
+            "fielders": []
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:800d2d97",
+      "name": "JM Sharma",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 6,
+          "runs": 24,
+          "balls": 10,
+          "fours": 2,
+          "sixes": 2,
+          "strikeRate": 240,
+          "notOut": false,
+          "dismissal": {
+            "kind": "bowled",
+            "bowler": "Vijaykumar Vyshak",
+            "fielders": []
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:c5aef772",
+      "name": "R Shepherd",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 7,
+          "runs": 17,
+          "balls": 9,
+          "fours": 1,
+          "sixes": 1,
+          "strikeRate": 188.89,
+          "notOut": false,
+          "dismissal": {
+            "kind": "lbw",
+            "bowler": "Arshdeep Singh",
+            "fielders": []
+          }
+        },
+        "bowling": {
+          "balls": 18,
+          "overs": "3.0",
+          "maidens": 0,
+          "runs": 30,
+          "wickets": 1,
+          "economy": 10,
+          "dots": 5,
+          "wides": 1,
+          "noballs": 0
+        },
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "player:krunal-pandya",
+      "name": "Krunal Pandya",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 8,
+          "runs": 4,
+          "balls": 5,
+          "fours": 0,
+          "sixes": 0,
+          "strikeRate": 80,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "Arshdeep Singh",
+            "fielders": [
+              "Shreyas Iyer"
+            ]
+          }
+        },
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 17,
+          "wickets": 2,
+          "economy": 4.25,
+          "dots": 12,
+          "wides": 0,
+          "noballs": 0
+        },
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:2e81a32d",
+      "name": "B Kumar",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 9,
+          "runs": 1,
+          "balls": 2,
+          "fours": 0,
+          "sixes": 0,
+          "strikeRate": 50,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "Arshdeep Singh",
+            "fielders": [
+              "Priyansh Arya"
+            ]
+          }
+        },
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 38,
+          "wickets": 2,
+          "economy": 9.5,
+          "dots": 9,
+          "wides": 0,
+          "noballs": 0
+        },
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:7210d461",
+      "name": "Yash Dayal",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 10,
+          "runs": 1,
+          "balls": 1,
+          "fours": 0,
+          "sixes": 0,
+          "strikeRate": 100,
+          "notOut": true,
+          "dismissal": null
+        },
+        "bowling": {
+          "balls": 18,
+          "overs": "3.0",
+          "maidens": 0,
+          "runs": 18,
+          "wickets": 1,
+          "economy": 6,
+          "dots": 7,
+          "wides": 0,
+          "noballs": 0
+        },
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "player:arshdeep-singh",
+      "name": "Arshdeep Singh",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:pbks",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": null,
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 40,
+          "wickets": 3,
+          "economy": 10,
+          "dots": 8,
+          "wides": 2,
+          "noballs": 0
+        },
+        "didNotBat": true
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:68c56d09",
+      "name": "KA Jamieson",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:pbks",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 9,
+          "runs": 0,
+          "balls": 2,
+          "fours": 0,
+          "sixes": 0,
+          "strikeRate": 0,
+          "notOut": true,
+          "dismissal": null
+        },
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 48,
+          "wickets": 3,
+          "economy": 12,
+          "dots": 9,
+          "wides": 3,
+          "noballs": 0
+        },
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:8f6dd463",
+      "name": "Azmatullah Omarzai",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:pbks",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 8,
+          "runs": 1,
+          "balls": 2,
+          "fours": 0,
+          "sixes": 0,
+          "strikeRate": 50,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "Yash Dayal",
+            "fielders": [
+              "MS Bhandage"
+            ]
+          }
+        },
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 35,
+          "wickets": 1,
+          "economy": 8.75,
+          "dots": 3,
+          "wides": 2,
+          "noballs": 0
+        },
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:54e52590",
+      "name": "Vijaykumar Vyshak",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:pbks",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": null,
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 30,
+          "wickets": 1,
+          "economy": 7.5,
+          "dots": 5,
+          "wides": 2,
+          "noballs": 0
+        },
+        "didNotBat": true
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:57ee1fde",
+      "name": "YS Chahal",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:pbks",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": null,
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 37,
+          "wickets": 1,
+          "economy": 9.25,
+          "dots": 3,
+          "wides": 0,
+          "noballs": 0
+        },
+        "didNotBat": true
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:9440ef41",
+      "name": "Suyash Sharma",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": null,
+        "bowling": {
+          "balls": 12,
+          "overs": "2.0",
+          "maidens": 0,
+          "runs": 19,
+          "wickets": 0,
+          "economy": 9.5,
+          "dots": 3,
+          "wides": 0,
+          "noballs": 0
+        },
+        "didNotBat": true
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:03806cf8",
+      "name": "JR Hazlewood",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:rcb",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": null,
+        "bowling": {
+          "balls": 24,
+          "overs": "4.0",
+          "maidens": 0,
+          "runs": 54,
+          "wickets": 1,
+          "economy": 13.5,
+          "dots": 6,
+          "wides": 2,
+          "noballs": 0
+        },
+        "didNotBat": true
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:b5797845",
+      "name": "Priyansh Arya",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:pbks",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 1,
+          "runs": 24,
+          "balls": 19,
+          "fours": 4,
+          "sixes": 0,
+          "strikeRate": 126.32,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "JR Hazlewood",
+            "fielders": [
+              "PD Salt"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:9418198b",
+      "name": "P Simran Singh",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:pbks",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 2,
+          "runs": 26,
+          "balls": 22,
+          "fours": 0,
+          "sixes": 2,
+          "strikeRate": 118.18,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "Krunal Pandya",
+            "fielders": [
+              "B Kumar"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:989889ff",
+      "name": "JP Inglis",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:pbks",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 3,
+          "runs": 39,
+          "balls": 23,
+          "fours": 1,
+          "sixes": 4,
+          "strikeRate": 169.57,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "Krunal Pandya",
+            "fielders": [
+              "LS Livingstone"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "player:shreyas-iyer",
+      "name": "Shreyas Iyer",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:pbks",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 4,
+          "runs": 1,
+          "balls": 2,
+          "fours": 0,
+          "sixes": 0,
+          "strikeRate": 50,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "R Shepherd",
+            "fielders": [
+              "JM Sharma"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:d1a60072",
+      "name": "N Wadhera",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:pbks",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 5,
+          "runs": 15,
+          "balls": 18,
+          "fours": 0,
+          "sixes": 1,
+          "strikeRate": 83.33,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "B Kumar",
+            "fielders": [
+              "Krunal Pandya"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "player:shashank-singh",
+      "name": "Shashank Singh",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:pbks",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 6,
+          "runs": 61,
+          "balls": 30,
+          "fours": 3,
+          "sixes": 6,
+          "strikeRate": 203.33,
+          "notOut": true,
+          "dismissal": null
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    },
+    {
+      "playerId": "cricsheet:d9273ee7",
+      "name": "MP Stoinis",
+      "matchId": "rcb-vs-pbks",
+      "teamId": "team:pbks",
+      "sport": "cricket",
+      "stats": {
+        "sport": "cricket",
+        "batting": {
+          "position": 7,
+          "runs": 6,
+          "balls": 2,
+          "fours": 0,
+          "sixes": 1,
+          "strikeRate": 300,
+          "notOut": false,
+          "dismissal": {
+            "kind": "caught",
+            "bowler": "B Kumar",
+            "fielders": [
+              "Yash Dayal"
+            ]
+          }
+        },
+        "bowling": null,
+        "didNotBat": false
+      },
+      "source": "Cricsheet",
+      "sourceUrl": "https://cricsheet.org/downloads/ipl_json.zip",
+      "verification": "source-imported",
+      "classification": "historical"
+    }
+  ]
+}

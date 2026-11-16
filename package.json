@@ -17,7 +17,9 @@
     "words": "tsx scripts/words.ts",
     "db:check": "tsx scripts/db-check.ts",
     "profile-chat": "tsx scripts/profile-chat.ts",
-    "compare-models": "tsx scripts/compare-models.ts"
+    "compare-models": "tsx scripts/compare-models.ts",
+    "import-scorecard": "tsx scripts/import-scorecard.ts",
+    "fetch-portraits": "tsx scripts/fetch-portraits.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.1",

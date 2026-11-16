@@ -22,27 +22,34 @@ export function CompareCard() {
     };
   }, [epoch]);
 
-  if (!data) return null;
+  if (!data)
+    return (
+      <div className="grid gap-4 md:grid-cols-2" aria-label="Loading">
+        {[0, 1].map((i) => (
+          <div key={i} className="skeleton h-56" />
+        ))}
+      </div>
+    );
 
   const col = (title: string, v: View, accent: boolean) => (
-    <div className={`rounded-xl border p-3 ${accent ? "border-brand/50 bg-brand/5" : "border-line bg-bg"}`}>
-      <p className={`text-[11px] font-semibold uppercase tracking-wider ${accent ? "text-brand-2" : "text-muted"}`}>{title}</p>
-      <p className="mt-2 text-[10px] uppercase tracking-wider text-muted">Would bring up</p>
+    <div className={`rounded-[var(--r-lg)] border p-5 md:p-6 ${accent ? "border-brand/40 bg-gradient-to-br from-brand/15 to-surface" : "border-line bg-surface"}`}>
+      <p className={`font-display text-[20px] font-bold uppercase tracking-wide ${accent ? "text-brand-2" : "text-muted"}`}>{title}</p>
+      <p className="eyebrow mt-3 !text-[11px]">Would bring up</p>
       {v.next.length ? (
         <ul className="mt-1 space-y-1">
           {v.next.map((n) => (
-            <li key={n.topic} className="text-[12px] leading-snug">
+            <li key={n.topic} className="text-[14.5px] leading-snug">
               {n.topic} <span className="text-muted">· {n.why}</span>
             </li>
           ))}
         </ul>
       ) : (
-        <p className="mt-1 text-[12px] text-muted">Nothing yet</p>
+        <p className="mt-1 text-[14px] text-muted">Nothing yet</p>
       )}
-      <p className="mt-3 text-[10px] uppercase tracking-wider text-muted">Suggests</p>
+      <p className="eyebrow mt-4 !text-[11px]">Suggests</p>
       <ul className="mt-1 space-y-1">
         {v.chips.map((c) => (
-          <li key={c} className="text-[12px] leading-snug text-fg/90">
+          <li key={c} className="text-[14px] leading-snug text-fg/90">
             “{c}”
           </li>
         ))}
@@ -51,10 +58,10 @@ export function CompareCard() {
   );
 
   return (
-    <section className="mt-8">
-      <h2 className="text-sm font-semibold">What a new fan sees vs. you</h2>
-      <p className="mb-2 text-[11px] text-muted">The same screen, before and after Buzzer has learned about you.</p>
-      <div className="grid grid-cols-2 gap-2">
+    <section>
+      <h2 className="text-[18px] font-semibold">Same app, two people</h2>
+      <p className="mb-4 text-[14px] text-muted">What Buzzer would bring up for a brand-new fan, and for you now that it knows you.</p>
+      <div className="grid gap-4 md:grid-cols-2">
         {col("A new fan", data.newFan, false)}
         {col("You", data.you, true)}
       </div>

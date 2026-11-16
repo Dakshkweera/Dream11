@@ -1,16 +1,9 @@
 import { HomeView } from "@/components/home-view";
-import { getEntity } from "@/lib/facts/retrieve";
+import { discoverCatalog } from "@/lib/discover/catalog";
 import { allMatches } from "@/lib/match/data";
+import { summarize } from "@/lib/match/view";
 
 export default function Home() {
-  const matches = allMatches().map((m) => ({
-    id: m.id,
-    title: m.title,
-    subtitle: m.subtitle,
-    status: m.status,
-    teams: m.teams,
-    teamNames: [getEntity(m.teams[0])?.name ?? m.teams[0], getEntity(m.teams[1])?.name ?? m.teams[1]] as [string, string],
-    hasClip: !!m.video,
-  }));
-  return <HomeView matches={matches} />;
+  const { items, rivalries } = discoverCatalog();
+  return <HomeView matches={allMatches().map(summarize)} discover={items} rivalries={rivalries} />;
 }

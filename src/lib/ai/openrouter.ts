@@ -4,7 +4,7 @@
  * The API key is read on the server only and never sent to the browser.
  */
 import { toJSONSchema, type z } from "zod";
-import { MODELS, TTS_VOICE } from "./models";
+import { MODELS, TTS_VOICE, pcmOnly } from "./models";
 
 const BASE_URL = "https://openrouter.ai/api/v1";
 const DEFAULT_TIMEOUT_MS = 45_000;
@@ -47,13 +47,14 @@ function headers(json = true): Record<string, string> {
 const MAX_RETRIES = 2;
 const RETRYABLE = new Set([429, 502, 503]);
 
-async function post(path: string, body: unknown, timeoutMs = DEFAULT_TIMEOUT_MS): Promise<Response> {
+async function post(path: string, body: unknown, timeoutMs = DEFAULT_TIMEOUT_MS, signal?: AbortSignal): Promise<Response> {
   for (let attempt = 0; ; attempt++) {
+    const timeout = AbortSignal.timeout(timeoutMs);
     const res = await fetch(`${BASE_URL}${path}`, {
       method: "POST",
       headers: headers(),
       body: JSON.stringify(body),
-      signal: AbortSignal.timeout(timeoutMs),
+      signal: signal ? AbortSignal.any([timeout, signal]) : timeout,
     });
     if (res.ok) return res;
 
@@ -78,10 +79,68 @@ type ChatOptions = {
    * How hard the model thinks before answering. These models think by default (Sonnet cannot turn it
    * off), which costs seconds and eats the token limit. "low" cut Sonnet's first word from ~5s to ~1s.
    */
-  effort?: "minimal" | "low" | "medium" | "high";
+  effort?: "none" | "minimal" | "low" | "medium" | "high";
+  /**
+   * Route to whichever provider is answering fastest right now. In tests the default routing sometimes took
+   * ~3 s to the first word where the fastest provider took ~0.8 s; this matters for spoken conversation.
+   */
+  fastest?: boolean;
+  /** Cancels the request (used to drop the slower of two hedged requests). */
+  signal?: AbortSignal;
 };
 
+/**
+ * Hedged request: run `make`; if it hasn't succeeded within `afterMs`, start a second copy and take whichever
+ * succeeds first, cancelling the other. Providers occasionally stall for seconds on one request while an
+ * identical one returns in under a second; in a spoken conversation that stall is what feels unnatural.
+ * If the first attempt fails outright, the second starts immediately.
+ */
+export function hedge<T>(make: (signal: AbortSignal, attempt: number) => Promise<T>, afterMs: number): Promise<T> {
+  return new Promise<T>((resolve, reject) => {
+    const ctrls: AbortController[] = [];
+    let settled = false;
+    let failed = 0;
+    const launch = () => {
+      const i = ctrls.length;
+      const ctrl = new AbortController();
+      ctrls.push(ctrl);
+      make(ctrl.signal, i).then(
+        (value) => {
+          if (settled) return;
+          settled = true;
+          clearTimeout(timer);
+          ctrls.forEach((c, j) => j !== i && c.abort());
+          resolve(value);
+        },
+        (err) => {
+          if (settled) return;
+          failed++;
+          if (ctrls.length < 2) {
+            clearTimeout(timer);
+            launch();
+          } else if (failed >= ctrls.length) {
+            settled = true;
+            reject(err);
+          }
+        },
+      );
+    };
+    launch();
+    // Callbacks above run asynchronously, after this line, so they always see the timer.
+    const timer = setTimeout(() => !settled && ctrls.length < 2 && launch(), afterMs);
+  });
+}
+
 const DEFAULT_EFFORT = (process.env.AI_EFFORT as ChatOptions["effort"]) ?? "low";
+
+/**
+ * "none" switches thinking off. Spoken replies use it: even at "minimal", Haiku sometimes thought silently
+ * for 3-5 s and then sent the whole reply at once; with thinking off the first word came in under a second.
+ */
+function reasoningFor(effort: ChatOptions["effort"]) {
+  const e = effort ?? DEFAULT_EFFORT;
+  return e === "none" ? { enabled: false } : { effort: e };
+}
 
 type ChatCompletion = {
   choices: { message: { content: string | null }; finish_reason?: string }[];
@@ -97,7 +156,7 @@ async function completion(
       messages,
       temperature: opts.temperature ?? 0.7,
       max_tokens: maxTokens,
-      reasoning: { effort: opts.effort ?? DEFAULT_EFFORT },
+      reasoning: reasoningFor(opts.effort),
       ...(opts.responseFormat ? { response_format: opts.responseFormat } : {}),
     });
     const data = (await res.json()) as ChatCompletion;
@@ -181,10 +240,12 @@ export async function* chatStream(
       messages,
       temperature: opts.temperature ?? 0.7,
       max_tokens: opts.maxTokens ?? 1500,
-      reasoning: { effort: opts.effort ?? DEFAULT_EFFORT },
+      reasoning: reasoningFor(opts.effort),
+      ...(opts.fastest ? { provider: { sort: "latency" } } : {}),
       stream: true,
     },
     90_000,
+    opts.signal,
   );
   if (!res.body) throw new AIError("No stream body");
 
@@ -243,7 +304,7 @@ export type Transcript = { text: string; segments: TranscriptSegment[] };
 export async function transcribe(
   audio: ArrayBuffer | Buffer,
   format: string,
-  opts: { model?: string; language?: string; prompt?: string; timestamps?: boolean } = {},
+  opts: { model?: string; language?: string; prompt?: string; timestamps?: boolean; signal?: AbortSignal } = {},
 ): Promise<Transcript> {
   const data = Buffer.from(audio as ArrayBuffer).toString("base64");
   const res = await post(
@@ -256,6 +317,7 @@ export async function transcribe(
       ...(opts.timestamps ? { response_format: "verbose_json" } : {}),
     },
     60_000,
+    opts.signal,
   );
   const body = (await res.json()) as {
     text?: string;
@@ -283,6 +345,59 @@ export async function speak(
     60_000,
   );
   return res.arrayBuffer();
+}
+
+/** Wrap raw 16-bit mono PCM in a WAV header so any browser can play it. */
+export function pcmToWav(pcm: Uint8Array, rate = 24_000): Uint8Array<ArrayBuffer> {
+  const out = new Uint8Array(new ArrayBuffer(44 + pcm.byteLength));
+  const v = new DataView(out.buffer);
+  const str = (at: number, s: string) => [...s].forEach((c, i) => v.setUint8(at + i, c.charCodeAt(0)));
+  str(0, "RIFF");
+  v.setUint32(4, 36 + pcm.byteLength, true);
+  str(8, "WAVE");
+  str(12, "fmt ");
+  v.setUint32(16, 16, true);
+  v.setUint16(20, 1, true);
+  v.setUint16(22, 1, true);
+  v.setUint32(24, rate, true);
+  v.setUint32(28, rate * 2, true);
+  v.setUint16(32, 2, true);
+  v.setUint16(34, 16, true);
+  str(36, "data");
+  v.setUint32(40, pcm.byteLength, true);
+  out.set(pcm, 44);
+  return out;
+}
+
+/**
+ * Speech in whatever form the model gives it: MP3 streamed as it arrives, or (PCM-only models such as Gemini)
+ * the whole clip as WAV.
+ */
+export async function speakAudio(
+  text: string,
+  opts: { model?: string; voice?: string; signal?: AbortSignal } = {},
+): Promise<{ body: ReadableStream<Uint8Array> | Uint8Array<ArrayBuffer>; type: string }> {
+  const model = opts.model ?? MODELS.tts;
+  if (!pcmOnly(model)) return { body: await speakStream(text, opts), type: "audio/mpeg" };
+  const res = await post("/audio/speech", { model, input: text, voice: opts.voice ?? TTS_VOICE, response_format: "pcm" }, 60_000, opts.signal);
+  const pcm = new Uint8Array(await res.arrayBuffer());
+  if (!pcm.byteLength) throw new AIError("OpenRouter /audio/speech returned no audio", 502, "");
+  return { body: pcmToWav(pcm), type: "audio/wav" };
+}
+
+/** Same as speak(), but returns the audio as a stream so the first bytes reach the browser sooner. */
+export async function speakStream(
+  text: string,
+  opts: { model?: string; voice?: string; signal?: AbortSignal } = {},
+): Promise<ReadableStream<Uint8Array>> {
+  const res = await post(
+    "/audio/speech",
+    { model: opts.model ?? MODELS.tts, input: text, voice: opts.voice ?? TTS_VOICE, response_format: "mp3" },
+    60_000,
+    opts.signal,
+  );
+  if (!res.body) throw new AIError("OpenRouter /audio/speech returned no audio", 502, "");
+  return res.body;
 }
 
 // ---------------------------------------------------------------------------
@@ -326,7 +441,7 @@ export async function chatWithWeb(
       messages,
       temperature: opts.temperature ?? 0.5,
       max_tokens: opts.maxTokens ?? 2000,
-      reasoning: { effort: opts.effort ?? DEFAULT_EFFORT },
+      reasoning: reasoningFor(opts.effort),
       // engine is pinned: the default silently picks a provider whose search often returns nothing (measured 2/9 vs 9/9).
       plugins: [{ id: "web", engine: "exa", max_results: opts.maxResults ?? 4 }],
     },
@@ -357,7 +472,7 @@ export async function jsonWithWeb<T>(
         messages,
         temperature: opts.temperature ?? 0.2,
         max_tokens: opts.maxTokens ?? 3000,
-        reasoning: { effort: opts.effort ?? DEFAULT_EFFORT },
+        reasoning: reasoningFor(opts.effort),
         response_format: { type: "json_schema", json_schema: { name: opts.schemaName ?? "response", strict: true, schema: jsonSchema } },
         plugins: [{ id: "web", engine: "exa", max_results: opts.maxResults ?? 6 }],
       },

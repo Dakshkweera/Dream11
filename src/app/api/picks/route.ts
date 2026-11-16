@@ -9,7 +9,7 @@ export const GET = route(null, async ({ user }) => ({ picks: await getStore().li
 const Body = z.object({ key: z.string().min(1).max(80), picked: z.boolean() });
 
 /**
- * Pick or drop a player for the fan's fantasy team. Picks live in their own list (not as memories),
+ * Pick or drop a player for the fan's team. Picks live in their own list (not as memories),
  * and feed discovery and the friend's prompts through the profile.
  */
 export const POST = route(Body, async ({ user, now, body }) => {

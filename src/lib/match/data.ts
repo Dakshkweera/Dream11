@@ -19,6 +19,26 @@ export const TimelineBall = z.object({
   event: z.string(), // "FOUR", "WICKET — caught", "1 run"
 });
 
+/**
+ * The final result of a finished match, for the scoreboard. Display data only: every value must come from a
+ * fact in data/facts.json (the friend never reads this; it answers from the facts).
+ */
+export const MatchResult = z.object({
+  /** "RCB won by 5 wickets" */
+  summary: z.string(),
+  winner: z.string().optional(),
+  /** team id → score as shown ("98", "161/5") */
+  scores: z.record(z.string(), z.string()),
+  /** team id → small print under the score ("18 ov") */
+  detail: z.record(z.string(), z.string()).optional(),
+  /** Linescore by period (basketball quarters). */
+  periods: z.array(z.object({ label: z.string(), scores: z.record(z.string(), z.number()) })).optional(),
+  /** Standout performances. */
+  performers: z
+    .array(z.object({ name: z.string(), entityId: z.string().optional(), team: z.string(), line: z.string(), note: z.string().optional() }))
+    .optional(),
+});
+
 export const Match = z.object({
   id: z.string(),
   title: z.string(),
@@ -26,14 +46,20 @@ export const Match = z.object({
   sport: z.string().default("cricket"),
   status: z.enum(["replay", "upcoming", "live"]),
   season: z.string(),
+  /** Short competition label for cards ("IPL 2026 Final"). */
+  competition: z.string().optional(),
+  /** ISO date the match was (or will be) played, when known. */
+  date: z.string().optional(),
   venue: z.string().nullable(),
   teams: z.tuple([z.string(), z.string()]),
   video: z.string().nullable(),
   squads: z.record(z.string(), z.array(SquadPlayer)),
   timeline: z.array(TimelineBall),
+  result: MatchResult.optional(),
 });
 
 export type Match = z.infer<typeof Match>;
+export type MatchResult = z.infer<typeof MatchResult>;
 export type TimelineBall = z.infer<typeof TimelineBall>;
 
 const matches = z.array(Match).parse(matchesJson);

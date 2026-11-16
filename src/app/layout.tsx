@@ -1,29 +1,31 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
+import { Barlow_Condensed, Geist } from "next/font/google";
 import "./globals.css";
-import { BottomNav } from "@/components/bottom-nav";
 import { FriendPanel } from "@/components/friend-panel";
 import { FriendProvider } from "@/components/friend-provider";
+import { AppShell } from "@/components/shell/app-shell";
+import { VoiceProvider } from "@/components/voice/voice-provider";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+/** Condensed display face for scores, team codes and big headlines. */
+const display = Barlow_Condensed({ variable: "--font-display", subsets: ["latin"], weight: ["600", "700", "800"] });
 
 export const metadata: Metadata = {
   title: "Buzzer — your sports friend",
   description: "A personal AI sports friend that learns what you care about and shows you the stories behind it.",
 };
 
-export const viewport: Viewport = { themeColor: "#0b0b10", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#07090f", width: "device-width", initialScale: 1, viewportFit: "cover" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
+    <html lang="en" className={`${geistSans.variable} ${display.variable} h-full antialiased`}>
       <body className="min-h-full">
         <FriendProvider>
-          <div className="app-frame pb-20">
-            {children}
-            <BottomNav />
-          </div>
-          <FriendPanel />
+          <VoiceProvider>
+            <AppShell>{children}</AppShell>
+            <FriendPanel />
+          </VoiceProvider>
         </FriendProvider>
       </body>
     </html>

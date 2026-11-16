@@ -13,6 +13,13 @@ export const PageContext = z.object({
       transcript: z.string().max(4000).optional(), // rolling commentary window
     })
     .optional(),
+  /** Which match's statistics and which players the fan is looking at (scorecard, player detail, comparison). */
+  stats: z
+    .object({
+      matchId: z.string().max(80).optional(),
+      playerIds: z.array(z.string().max(80)).max(4).default([]),
+    })
+    .optional(),
 });
 export type PageContext = z.infer<typeof PageContext>;
 

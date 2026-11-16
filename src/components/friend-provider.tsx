@@ -25,6 +25,10 @@ export type Msg = {
   /** What a pending reply is doing, e.g. "Looking that up…". */
   label?: string;
   pending?: boolean;
+  /** Text is still streaming in. */
+  streaming?: boolean;
+  /** The fan cut this reply off. */
+  interrupted?: boolean;
   kind?: "live" | "moment";
 };
 
@@ -41,13 +45,22 @@ type Friend = {
   /** Increments whenever the user's profile changes enough that nudges should refresh. */
   epoch: number;
   sessionId: string;
-  send: (text: string) => Promise<void>;
+  send: (text: string, opts?: { voice?: boolean }) => Promise<void>;
+  /** Stop the reply that is streaming in (the fan interrupted). */
+  interrupt: () => void;
   openStory: (entityId: string, opts?: { angle?: string; fromThread?: boolean; reveal?: boolean }) => Promise<void>;
   say: (text: string, kind?: Msg["kind"]) => void;
   askMoment: (question: string, frames: string[], ctx: PageContext) => Promise<void>;
   refreshState: () => Promise<void>;
   resetSession: () => void;
   toast: string | null;
+  /**
+   * A page is showing Buzzer's conversation inline (the watch-along panel). While it is, the floating drawer
+   * never opens: `setOpen(true)` asks that panel to come forward instead, so nothing covers the video.
+   */
+  embedded: boolean;
+  /** Register an inline Buzzer panel; `onSummon` runs instead of opening the drawer. Returns the cleanup. */
+  embed: (onSummon?: () => void) => () => void;
 };
 
 const Ctx = createContext<Friend | null>(null);
@@ -61,7 +74,13 @@ let seq = 0;
 const mid = () => `c${Date.now().toString(36)}${seq++}`;
 
 export function FriendProvider({ children }: { children: ReactNode }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpenState] = useState(false);
+  const summon = useRef<(() => void) | null>(null);
+  /** Open/close the drawer — or, while a page shows Buzzer inline, bring that panel forward instead. */
+  const setOpen = useCallback((v: boolean) => {
+    if (v && summon.current) summon.current();
+    else setOpenState(v);
+  }, []);
   const [messages, setMessages] = useState<Msg[]>([]);
   const [busy, setBusy] = useState(false);
   const [ctx, setCtxState] = useState<PageContext>({ surface: "home", entityIds: [] });
@@ -69,6 +88,17 @@ export function FriendProvider({ children }: { children: ReactNode }) {
   const [epoch, setEpoch] = useState(0);
   const [toast, setToast] = useState<string | null>(null);
   const [sessionId, setSessionId] = useState("s_init");
+  const [embeds, setEmbeds] = useState(0);
+  const embed = useCallback((onSummon?: () => void) => {
+    summon.current = onSummon ?? null;
+    setOpenState(false);
+    setEmbeds((n) => n + 1);
+    return () => {
+      if (summon.current === onSummon) summon.current = null;
+      setEmbeds((n) => n - 1);
+    };
+  }, []);
+  const embedded = embeds > 0;
   const ctxRef = useRef(ctx);
   ctxRef.current = ctx;
 
@@ -112,22 +142,39 @@ export function FriendProvider({ children }: { children: ReactNode }) {
     setMessages([]);
   }, []);
 
-  const setCtx = useCallback((c: PageContext) => setCtxState(c), []);
+  // [stats] Update the ref at once too, so a question sent right after setCtx (e.g. "Ask Buzzer about this
+  // performance") carries the new context instead of the previous page's.
+  const setCtx = useCallback((c: PageContext) => {
+    ctxRef.current = c;
+    setCtxState(c);
+  }, []);
 
   const say = useCallback((text: string, kind?: Msg["kind"]) => {
     setMessages((m) => [...m, { id: mid(), role: "assistant", text, kind }]);
   }, []);
 
+  const inflight = useRef<AbortController | null>(null);
+
+  const interrupt = useCallback(() => {
+    inflight.current?.abort();
+    inflight.current = null;
+  }, []);
+
   const send = useCallback(
-    async (text: string) => {
-      const reply: Msg = { id: mid(), role: "assistant", text: "", pending: true };
+    async (text: string, opts: { voice?: boolean } = {}) => {
+      interrupt(); // a new message always replaces a reply still in progress
+      const ctrl = new AbortController();
+      inflight.current = ctrl;
+      const reply: Msg = { id: mid(), role: "assistant", text: "", pending: true, streaming: true };
       setMessages((m) => [...m, { id: mid(), role: "user", text }, reply]);
       setBusy(true);
+      let shown = "";
       try {
         const res = await fetch("/api/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: text, context: ctxRef.current }),
+          body: JSON.stringify({ message: text, context: ctxRef.current, voice: opts.voice || undefined }),
+          signal: ctrl.signal,
         });
         if (!res.ok || !res.body) {
           const err = (await res.json().catch(() => ({}))) as { error?: string };
@@ -142,10 +189,19 @@ export function FriendProvider({ children }: { children: ReactNode }) {
           // A leading \u0001 means the friend is running a web lookup.
           const searching = acc.includes("\u0001");
           const visible = stripFactIds(acc.split("\u0000")[0].replace(/\u0001/g, ""));
+          // The reply text is complete as soon as the NUL marker arrives; memory notes follow it later.
+          const textDone = acc.includes("\u0000");
+          shown = visible;
           setMessages((m) =>
             m.map((x) =>
               x.id === reply.id
-                ? { ...x, text: visible, pending: visible.length === 0, label: searching && visible.length === 0 ? "🌐 Looking that up…" : undefined }
+                ? {
+                    ...x,
+                    text: visible,
+                    pending: visible.length === 0 && !textDone,
+                    streaming: !textDone,
+                    label: searching && visible.length === 0 ? "Looking that up…" : undefined,
+                  }
                 : x,
             ),
           );
@@ -161,26 +217,42 @@ export function FriendProvider({ children }: { children: ReactNode }) {
             sources = parsed.sources ?? [];
           } catch {}
         }
-        setMessages((m) => m.map((x) => (x.id === reply.id ? { ...x, text: visible, pending: false, label: undefined, notes, sources } : x)));
+        setMessages((m) =>
+          m.map((x) => (x.id === reply.id ? { ...x, text: visible, pending: false, streaming: false, label: undefined, notes, sources } : x)),
+        );
         if (notes.length) {
           flash(notes[0]);
           refreshState().catch(() => {});
         }
       } catch (e) {
-        setMessages((m) =>
-          m.map((x) => (x.id === reply.id ? { ...x, pending: false, text: (e as Error).message || "Something went wrong — try again." } : x)),
-        );
+        if (ctrl.signal.aborted) {
+          // Cut off by the fan: keep what had arrived, drop the bubble if nothing had.
+          setMessages((m) =>
+            shown
+              ? m.map((x) => (x.id === reply.id ? { ...x, text: shown, pending: false, streaming: false, label: undefined, interrupted: true } : x))
+              : m.filter((x) => x.id !== reply.id),
+          );
+        } else {
+          setMessages((m) =>
+            m.map((x) =>
+              x.id === reply.id ? { ...x, pending: false, streaming: false, text: (e as Error).message || "Something went wrong — try again." } : x,
+            ),
+          );
+        }
       } finally {
-        setBusy(false);
+        if (inflight.current === ctrl) {
+          inflight.current = null;
+          setBusy(false);
+        }
       }
     },
-    [flash, refreshState],
+    [flash, refreshState, interrupt],
   );
 
   const openStory = useCallback(
     async (entityId: string, opts: { angle?: string; fromThread?: boolean; reveal?: boolean } = {}) => {
       if (opts.reveal !== false) setOpen(true);
-      const reply: Msg = { id: mid(), role: "assistant", text: "", pending: true, label: "📖 Digging up the story…" };
+      const reply: Msg = { id: mid(), role: "assistant", text: "", pending: true, label: "Digging up the story…" };
       setMessages((m) => [...m, reply]);
       setBusy(true);
       try {
@@ -204,13 +276,13 @@ export function FriendProvider({ children }: { children: ReactNode }) {
         setBusy(false);
       }
     },
-    [flash, refreshState],
+    [flash, refreshState, setOpen],
   );
 
   const askMoment = useCallback(
     async (question: string, frames: string[], c: PageContext) => {
       setOpen(true);
-      const reply: Msg = { id: mid(), role: "assistant", text: "", pending: true, kind: "moment", label: "👀 Looking at the last few seconds…" };
+      const reply: Msg = { id: mid(), role: "assistant", text: "", pending: true, kind: "moment", label: "Looking at the last few seconds…" };
       setMessages((m) => [...m, { id: mid(), role: "user", text: question, kind: "moment" }, reply]);
       setBusy(true);
       try {
@@ -224,12 +296,12 @@ export function FriendProvider({ children }: { children: ReactNode }) {
         setBusy(false);
       }
     },
-    [refreshState],
+    [refreshState, setOpen],
   );
 
   const value = useMemo<Friend>(
-    () => ({ open, setOpen, messages, busy, ctx, setCtx, state, epoch, sessionId, send, openStory, say, askMoment, refreshState, resetSession, toast }),
-    [open, messages, busy, ctx, setCtx, state, epoch, sessionId, send, openStory, say, askMoment, refreshState, resetSession, toast],
+    () => ({ open, setOpen, messages, busy, ctx, setCtx, state, epoch, sessionId, send, interrupt, openStory, say, askMoment, refreshState, resetSession, toast, embedded, embed }),
+    [open, setOpen, messages, busy, ctx, setCtx, state, epoch, sessionId, send, interrupt, openStory, say, askMoment, refreshState, resetSession, toast, embedded, embed],
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
