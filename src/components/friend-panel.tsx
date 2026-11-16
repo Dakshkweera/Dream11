@@ -184,7 +184,8 @@ function Dock() {
 
 export function FriendPanel() {
   const { open, setOpen, toast, embedded } = useFriend();
-  const onWelcome = usePathname() === "/welcome";
+  const path = usePathname();
+  const focused = path === "/welcome"; // first run: no floating Buzzer
   const fullscreenTarget = useFullscreenTarget();
   const showDrawer = open && !embedded;
 
@@ -215,7 +216,7 @@ export function FriendPanel() {
           <IconBrain size={16} className="shrink-0 text-good" /> {toast}
         </div>
       )}
-      {!embedded && !onWelcome && !showDrawer && <Dock />}
+      {!embedded && !focused && !showDrawer && <Dock />}
       {showDrawer && <Drawer />}
     </>
   );

@@ -1,10 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Barlow_Condensed, Geist } from "next/font/google";
 import "./globals.css";
-import { FriendPanel } from "@/components/friend-panel";
-import { FriendProvider } from "@/components/friend-provider";
-import { AppShell } from "@/components/shell/app-shell";
-import { VoiceProvider } from "@/components/voice/voice-provider";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 /** Condensed display face for scores, team codes and big headlines. */
@@ -17,17 +13,11 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { themeColor: "#07090f", width: "device-width", initialScale: 1, viewportFit: "cover" };
 
+/** Shared by the landing page ("/") and the app (the (app) route group, which adds the shell and Buzzer). */
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${geistSans.variable} ${display.variable} h-full antialiased`}>
-      <body className="min-h-full">
-        <FriendProvider>
-          <VoiceProvider>
-            <AppShell>{children}</AppShell>
-            <FriendPanel />
-          </VoiceProvider>
-        </FriendProvider>
-      </body>
+      <body className="min-h-full">{children}</body>
     </html>
   );
 }

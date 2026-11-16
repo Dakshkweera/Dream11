@@ -74,7 +74,7 @@ export function WelcomeView() {
       });
       await refreshState();
       say("Done, I've got you! Ask me anything, tap Talk to chat out loud, or keep an eye on the home screen: I'll bring up things I think you'll love.");
-      router.push("/");
+      router.push("/home");
     } catch (e) {
       setErr((e as Error).message);
       setSaving(false);

@@ -1,9 +1,13 @@
-import { HomeView } from "@/components/home-view";
-import { discoverCatalog } from "@/lib/discover/catalog";
-import { allMatches } from "@/lib/match/data";
-import { summarize } from "@/lib/match/view";
+import type { Metadata } from "next";
+import { LandingPage } from "@/components/landing/landing-page";
 
-export default function Home() {
-  const { items, rivalries } = discoverCatalog();
-  return <HomeView matches={allMatches().map(summarize)} discover={items} rivalries={rivalries} />;
+export const metadata: Metadata = {
+  title: "Buzzer — your personal AI sports friend",
+  description:
+    "Don't just watch sports. Feel the story. Buzzer is a personal AI sports friend: talk to it, discover the stories behind the players, watch along with context, and let it get to know you.",
+};
+
+/** The public landing page. The app itself starts at /home. */
+export default function Landing() {
+  return <LandingPage />;
 }

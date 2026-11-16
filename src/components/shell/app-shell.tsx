@@ -19,7 +19,7 @@ import { useVoice } from "../voice/voice-provider";
 type NavItem = { href: string; label: string; icon: ComponentType<{ size?: number }>; active: (p: string) => boolean };
 
 const NAV: NavItem[] = [
-  { href: "/", label: "Home", icon: IconHome, active: (p) => p === "/" },
+  { href: "/home", label: "Home", icon: IconHome, active: (p) => p === "/home" },
   { href: "/matches", label: "Matches", icon: IconMatches, active: (p) => p.startsWith("/matches") || p.startsWith("/match/") },
   { href: "/discover", label: "Discover", icon: IconCompass, active: (p) => p.startsWith("/discover") },
   { href: "/memory", label: "Memory", icon: IconBrain, active: (p) => p.startsWith("/memory") },
@@ -52,7 +52,7 @@ function Sidebar({ path, rail }: { path: string; rail: boolean }) {
     >
       {/* full sidebar */}
       <div className={`${full} h-full flex-col px-4 pb-5 pt-6`}>
-        <Link href="/" className="px-2" aria-label="Buzzer home">
+        <Link href="/home" className="px-2" aria-label="Buzzer home">
           <BuzzerLogo size={34} />
         </Link>
         <nav className="mt-9 flex flex-col gap-1">
@@ -92,7 +92,7 @@ function Sidebar({ path, rail }: { path: string; rail: boolean }) {
 
       {/* icon rail */}
       <div className={`${compact} h-full flex-col items-center pb-5 pt-5`}>
-        <Link href="/" aria-label="Buzzer home">
+        <Link href="/home" aria-label="Buzzer home">
           <BuzzerAvatar size={38} />
         </Link>
         <nav className="mt-8 flex flex-col items-center gap-1.5">
@@ -129,7 +129,7 @@ function Sidebar({ path, rail }: { path: string; rail: boolean }) {
 function MobileHeader() {
   return (
     <header className="sticky top-0 z-40 flex h-14 items-center justify-between border-b border-line bg-bg/85 px-4 backdrop-blur md:hidden">
-      <Link href="/" aria-label="Buzzer home">
+      <Link href="/home" aria-label="Buzzer home">
         <BuzzerLogo size={30} />
       </Link>
       <Link href="/memory" aria-label="Your profile">

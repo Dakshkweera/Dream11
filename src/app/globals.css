@@ -353,6 +353,7 @@ body {
   gap: 12px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scroll-padding-inline: 16px; /* snap cards to the page gutter, not the screen edge */
   scrollbar-width: none;
   overscroll-behavior-x: contain;
 }

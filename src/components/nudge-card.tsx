@@ -131,16 +131,16 @@ export function NudgeCard({
   return (
     <article className="anim-fade-in card relative flex h-full min-h-[280px] flex-col overflow-hidden">
       <div
-        className="relative flex h-36 items-end overflow-hidden px-6 pb-0"
+        className="relative flex h-36 items-end px-6 pb-0"
         style={{ background: `radial-gradient(120% 140% at 85% 0%, ${who.primary}cc 0%, ${who.primary}33 45%, transparent 75%), linear-gradient(180deg, var(--surface-2), var(--surface))` }}
       >
-        <div className="pitch-lines absolute inset-0 opacity-60" aria-hidden />
-        <span
-          aria-hidden
-          className="pointer-events-none absolute -right-2 -top-6 select-none font-display text-[120px] font-extrabold uppercase leading-none text-white/[0.06]"
-        >
-          {who.code}
-        </span>
+        {/* decoration is clipped to the band; the avatar overlaps the band's bottom edge */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+          <div className="pitch-lines absolute inset-0 opacity-60" />
+          <span className="absolute -right-2 -top-6 select-none font-display text-[120px] font-extrabold uppercase leading-none text-white/[0.06]">
+            {who.code}
+          </span>
+        </div>
         <EntityAvatar id={nudge.entityId} name={nudge.entityName} size={76} className="relative translate-y-1/2 ring-4 ring-surface" />
       </div>
       <div className="flex flex-1 flex-col px-6 pb-6 pt-12">

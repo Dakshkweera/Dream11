@@ -246,6 +246,7 @@ npm run db:check    # proves storage works on your real database (7 checks)
 ```bash
 npm run dev         # http://localhost:3000
 ```
+`/` is the landing page that introduces Buzzer; the app itself starts at `/home` (the "Meet Buzzer" button). First-time visitors are offered the three-question welcome from there.
 
 ### Other commands
 | Command | What it does |
@@ -272,6 +273,7 @@ See [`DEPLOY.md`](DEPLOY.md) for the Vercel checklist.
 
 ## Try it: a demo journey
 
+0. **Start.** Open `/` and press "Meet Buzzer" (or go straight to `/home`).
 1. **Say hello.** Pick Cricket and Basketball. Tell it you are casual at cricket and new to basketball. Follow Virat Kohli and Stephen Curry.
 2. **Home nudge.** One teaser appears, built from someone connected to who you follow, not a feed. Tap "Tell me" for the story, then a "Go deeper" thread.
 3. **Ask anything.** "Why does everyone love MS Dhoni?" gets a casual-level answer. "Who won the last Premier League?" gets a labelled web answer with links.
